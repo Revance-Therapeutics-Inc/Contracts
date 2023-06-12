@@ -1,12 +1,11 @@
 # Data Contract Template
 
 ## Executive summary
-This document describes the keys and values expected in a YAML data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [data quality](#Data-quality), [pricing](#Pricing), [stakeholders](#Stakeholders), [roles](#Roles), [service-level agreement](#Service-level-agreement), and [other properties](#Other-properties). Each section starts with at least an example followed by definition of each field/key.
+This document describes the keys and values expected in the URL_MASTER data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [pricing](#Pricing), [stakeholders](#Stakeholders), [roles](#Roles), [service-level agreement](#Service-level-agreement), and [other properties](#Other-properties). Each section starts with at least an example followed by definition of each field/key.
 
 ## Table of content
 * [Demographics](#Demographics)
 * [Dataset & schema](#Dataset-&-schema)
-* [Data quality](#Data-quality)
 * [Pricing](#Pricing)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
@@ -61,9 +60,6 @@ database: pypl-edw.pp_access_views
 username: '${env.username}'
 password: '${env.password}'
 schedulerAppName: name_coming_from_scheduler # NEW 2.1.0 Required if you want to schedule stuff, comes from DataALM.
-
-# Data Quality
-quality: null # See more information below
 
 # Tags
 tags: null
