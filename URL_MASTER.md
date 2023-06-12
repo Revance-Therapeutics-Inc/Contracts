@@ -66,7 +66,7 @@ tags: null
 ```
 
 |Key|UX label|Required|Description|
-| --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 | version|Version|Yes|Current version of the data contract.|
 | uuid|Identifier|Yes| A unique identifier used to reduce the risk of dataset name collisions; initially the UUID will be created using a UUID generator tool ([example](https://www.uuidgenerator.net/)). However, we may want to develop a method that accepts a seed value using a combination of fields–such as name, kind and source–to create a repeatable value.|
 |username|Username|Yes|User credentials for connecting to the dataset; how the credentials will be stored/passed is outside of the scope of the contract.|
