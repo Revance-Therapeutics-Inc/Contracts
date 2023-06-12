@@ -64,9 +64,12 @@ schedulerAppName: name_coming_from_scheduler # NEW 2.1.0 Required if you want to
 # Tags
 tags: null
 ```
+|A table|
+|A row for the table|
+|A really long paragraph for the table about something that really doesn't matter. This is just a test for the table but to be honest I'm just kind of wasting time right now. I don't like learning this much this fast. I don't like how bad I am at typing. It really sucks.|
 
 |Key|UX label|Required|Description|
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | version|Version|Yes|Current version of the data contract.|
 | uuid|Identifier|Yes| A unique identifier used to reduce the risk of dataset name collisions; initially the UUID will be created using a UUID generator tool ([example](https://www.uuidgenerator.net/)). However, we may want to develop a method that accepts a seed value using a combination of fields–such as name, kind and source–to create a repeatable value.|
 |username|Username|Yes|User credentials for connecting to the dataset; how the credentials will be stored/passed is outside of the scope of the contract.|
