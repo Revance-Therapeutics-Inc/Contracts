@@ -64,9 +64,9 @@ schedulerAppName: name_coming_from_scheduler # NEW 2.1.0 Required if you want to
 # Tags
 tags: null
 ```
-|A table|
-|A row for the table|
-|A really long paragraph for the table about something that really doesn't matter. This is just a test for the table but to be honest I'm just kind of wasting time right now. I don't like learning this much this fast. I don't like how bad I am at typing. It really sucks.|
+|A table|Another collumn|
+|A row for the table|Another collumn for this row of the table|
+|A really long paragraph for the table about something that really doesn't matter. This is just a test for the table but to be honest I'm just kind of wasting time right now. I don't like learning this much this fast. I don't like how bad I am at typing. It really sucks.|Okay|
 
 |Key|UX label|Required|Description|
 | --- | --- | --- | --- |
