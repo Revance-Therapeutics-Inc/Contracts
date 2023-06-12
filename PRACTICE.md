@@ -1,4 +1,4 @@
-# Data Contract Practice
+# Practice Data Contract
 ## Executive summary
 This document describes the keys and values in the Practice domain. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [data quality](#Data-quality), [pricing](#Pricing), [stakeholders](#Stakeholders), [roles](#Roles), [service-level agreement](#Service-level-agreement), and [other properties](#Other-properties). Each section starts with at least an example followed by definition of each field/key.
 ## Table of content
