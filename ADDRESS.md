@@ -1,7 +1,7 @@
-# Data Contract Template
+# ADDRESS Contract Template
 
 ## Executive summary
-This document describes the keys and values expected in the URL_MASTER data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [pricing](#Pricing), [stakeholders](#Stakeholders), [roles](#Roles), [service-level agreement](#Service-level-agreement), and [other properties](#Other-properties). Each section starts with at least an example followed by definition of each field/key.
+This document describes the keys and values expected in the ADDRESS data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [pricing](#Pricing), [stakeholders](#Stakeholders), [roles](#Roles), [service-level agreement](#Service-level-agreement), and [other properties](#Other-properties). Each section starts with at least an example followed by definition of each field/key.
 
 ## Table of content
 * [Demographics](#Demographics)
@@ -13,9 +13,9 @@ This document describes the keys and values expected in the URL_MASTER data cont
 * [Other properties](#Other-properties)
 
 ## Notes
-* This contract is containing example values, we reviewed very carefully the consistency of those values, but we cannot guarantee that there are no errors. If you spot one, please raise an [issue](https://github.com/paypal/data-contract-template/issues).
+* This contract is containing example values, we reviewed very carefully the consistency of those values, but we cannot guarantee that there are no errors. If you spot one, please raise an issue(link for raising issue yet to be added)
 * Some fields have `null` value: even if it is equivalent to not having the field in the contract, we wanted to have the field for illustration purpose.
-* This contract leverages BigQuery but should be **platform agnostic**. If you think it is not the case, please raise an [issue](https://github.com/paypal/data-contract-template/issues).
+* This contract leverages Snowflake but should be **platform agnostic**. If you think it is not the case, please raise an issue.
 
 ## Demographics
 This section contains general information about the contract.
@@ -24,16 +24,16 @@ This section contains general information about the contract.
 
 ```YAML
 # What's this data  identification?
-datasetDomain: seller # Domain
-quantumName: my quantum # Data product name
+datasetDomain: Address # Domain
+quantumName: Address quantum # Data product name
 userConsumptionMode: Analytical
-version: 1.1.0 # Version follows semantic versioning
+version: 1.1.0 # Version follows semantic versioning (Are we still using this?)
 status: current
-uuid: 53581432-6c55-4ba2-a65f-72344a91553a
+uuid: 53581432-6c55-4ba2-a65f-72344a91553a # Yet to be determined
 
 # Lots of information
 description:
-  purpose: Views built on top of the seller tables.
+  purpose: ---
   limitations: null
   usage: null
 tenant: paypal
