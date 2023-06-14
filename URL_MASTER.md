@@ -6,11 +6,8 @@ This document describes the keys and values expected in the URL_MASTER data cont
 ## Table of content
 * [Demographics](#Demographics)
 * [Dataset & schema](#Dataset-&-schema)
-* [Pricing](#Pricing)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
-* [Service-level agreement](#Service-level-agreement)
-* [Other properties](#Other-properties)
 
 ## Notes
 * This contract is containing example values, we reviewed very carefully the consistency of those values, but we cannot guarantee that there are no errors. If you spot one, please raise an [issue](https://github.com/paypal/data-contract-template/issues).
