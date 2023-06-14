@@ -1,7 +1,7 @@
 # Data Contract Template
 
 ## Executive summary
-This document describes the keys and values expected in the ADDRESS data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [stakeholders](#Stakeholders), and [roles](#Roles). Each section starts with at least an example followed by definition of each field/key.
+This document describes the keys and values expected in the AGENT data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [stakeholders](#Stakeholders), and [roles](#Roles). Each section starts with at least an example followed by definition of each field/key.
 
 ## Table of content
 * [Demographics](#Demographics)
@@ -21,8 +21,8 @@ This section contains general information about the contract.
 
 ```YAML
 # What's this data  identification?
-datasetDomain: practice
-quantumName: practice quantum
+datasetDomain: agent
+quantumName: agent quantum
 userConsumptionMode: Analytical
 version: 1.0.0
 status: current
@@ -30,7 +30,7 @@ uuid: 53581432-6c55-4ba2-a65f-72344a91553a #
 
 # Lots of information
 description:
-  purpose: Tables and attributes related to Practices.
+  purpose: Tables and attributes related to Agents.
   limitations: null
   usage: null
 tenant: revance
