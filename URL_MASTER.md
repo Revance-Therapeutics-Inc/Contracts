@@ -237,11 +237,10 @@ This section lists the roles that a consumer may need to access the dataset depe
 ### Example
 
 ```YAML
-roles:
-  - role: microstrategy_user_opr
+- role: datagov_r
     access: read
-    firstLevelApprovers: Reporting Manager
-    secondLevelApprovers: 'mandolorian'
+    firstLevelApprovers: IT
+    secondLevelApprovers: null
   - role: bq_queryman_user_opr
     access: read
     firstLevelApprovers: Reporting Manager
