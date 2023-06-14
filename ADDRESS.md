@@ -1,7 +1,7 @@
 # Data Contract Template
 
 ## Executive summary
-This document describes the keys and values expected in the URL_MASTER data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [pricing](#Pricing), [stakeholders](#Stakeholders), [roles](#Roles), [service-level agreement](#Service-level-agreement), and [other properties](#Other-properties). Each section starts with at least an example followed by definition of each field/key.
+This document describes the keys and values expected in the ADDRESS data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [stakeholders](#Stakeholders), and [roles](#Roles). Each section starts with at least an example followed by definition of each field/key.
 
 ## Table of content
 * [Demographics](#Demographics)
