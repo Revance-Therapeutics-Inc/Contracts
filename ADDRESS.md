@@ -103,65 +103,259 @@ This section describes the dataset and the schema of the data contract. It is th
 ```YAML
 dataset:
   - table: address master
-    physicalName: addressmasterdim # default value is table name + version separated by underscores, as table_1_2_0
+    physicalName: address_master # default value is table name + version separated by underscores, as table_1_2_0
     priorTableName: null # if needed
     description: Master dimension of all addresses 
     tags: null
-    dataGranularity: One row per practice
+    dataGranularity: One row per address
     columns:
-      - column: txn_ref_dt
-        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: transaction reference date
-        logicalType: date
-        physicalType: date
+      - column: oce_salesforce_id
+        isPrimary: maybe 
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
         isNullable: false
-        description: null
-        partitionStatus: true
-        clusterStatus: false
-        criticalDataElementStatus: false
-        tags: null
-        classification: null
-        encryptedColumnName: null
-        transformSourceTables:
-          - table_name_1
-          - table_name_2
-          - table_name_3
-        transformLogic: sel t1.txn_dt as txn_ref_dt from table_name_1 as t1, table_name_2 as t2, table_name_3 as t3 where t1.txn_dt=date-3
-        transformDescription: defines the logic in business terms; logic for dummies
-        sampleValues:
-          - 2022-10-03
-          - 2020-01-28
-      - column: rcvr_id
-        isPrimary: true # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: receiver id
-        logicalType: string
-        physicalType: varchar(18)
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: customer_number
+        isPrimary: maybe 
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
         isNullable: false
-        description: A description for column rcvr_id.
-        partitionStatus: false
-        clusterStatus: true
-        criticalDataElementStatus: false
-        tags: null
-        classification: null
-        encryptedColumnName: null
-      - column: rcvr_cntry_code
-        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: receiver country code
-        logicalType: string
-        physicalType: varchar(2)
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: practice_name
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
         isNullable: false
-        description: null
-        partitionStatus: false
-        clusterStatus: false
-        criticalDataElementStatus: false
-        tags: null
-        classification: null
-        authoritativeDefinitions:
-          - url: https://collibra.com/asset/742b358f-71a5-4ab1-bda4-dcdba9418c25
-            type: Business definition
-          - url: https://github.com/myorg/myrepo
-            type: Reference implementation
-        encryptedColumnName: rcvr_cntry_code_encrypted
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: street
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: suite
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: city
+        isPrimary: false 
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: state
+        isPrimary: false 
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: postal_code
+        isPrimary: maybe 
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: fulladdress
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: url
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: domain
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: is_primary_address
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: NUMBER(1,0)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: is_ship_to
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: NUMBER(1,0)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: ship_product_quantity
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: oce_salesforce_id
+        isPrimary: maybe 
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: oce_salesforce_id
+        isPrimary: maybe 
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: oce_salesforce_id
+        isPrimary: maybe 
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: oce_salesforce_id
+        isPrimary: maybe 
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: oce_salesforce_id
+        isPrimary: maybe 
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
 ```
 
 ### Definitions
