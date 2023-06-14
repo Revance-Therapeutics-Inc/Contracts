@@ -6,11 +6,8 @@ This document describes the keys and values expected in the URL_MASTER data cont
 ## Table of content
 * [Demographics](#Demographics)
 * [Dataset & schema](#Dataset-&-schema)
-* [Pricing](#Pricing)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
-* [Service-level agreement](#Service-level-agreement)
-* [Other properties](#Other-properties)
 
 ## Notes
 * This contract is containing example values, we reviewed very carefully the consistency of those values, but we cannot guarantee that there are no errors. If you spot one, please raise an [issue](https://github.com/paypal/data-contract-template/issues).
@@ -24,30 +21,30 @@ This section contains general information about the contract.
 
 ```YAML
 # What's this data  identification?
-datasetDomain: seller # Domain
-quantumName: my quantum # Data product name
+datasetDomain: practice
+quantumName: practice quantum
 userConsumptionMode: Analytical
-version: 1.1.0 # Version follows semantic versioning
+version: 1.0.0
 status: current
-uuid: 53581432-6c55-4ba2-a65f-72344a91553a
+uuid: 53581432-6c55-4ba2-a65f-72344a91553a #
 
 # Lots of information
 description:
-  purpose: Views built on top of the seller tables.
+  purpose: Tables and attributes related to Practices.
   limitations: null
   usage: null
-tenant: paypal
+tenant: revance
 
 # Getting support
-productDl: product-dl@paypal.com
-productSlackChannel: '#product-help'
+productDl: null
+productSlackChannel: null
 productFeedbackUrl: null
 
-# Physical parts / GCP / BigQuery specific
-sourcePlatform: googleCloudPlatform
-sourceSystem: bigQuery
-datasetProject: edw # BQ dataset
-datasetName: access_views # BQ dataset
+# Physical parts Snowflake specific
+sourcePlatform: snowflake
+sourceSystem: snowflake
+datasetProject: staging_test # snowflake database
+datasetName: cdp # snowflake schema
 
 kind: virtualDataset
 type: tables
@@ -60,6 +57,9 @@ database: pypl-edw.pp_access_views
 username: '${env.username}'
 password: '${env.password}'
 schedulerAppName: name_coming_from_scheduler # NEW 2.1.0 Required if you want to schedule stuff, comes from DataALM.
+
+# Data Quality
+quality: null # See more information below
 
 # Tags
 tags: null
@@ -102,12 +102,12 @@ This section describes the dataset and the schema of the data contract. It is th
 
 ```YAML
 dataset:
-  - table: tbl
-    physicalName: tbl_1 # NEW in v2.1.0, Optional, default value is table name + version separated by underscores, as table_1_2_0
+  - table: practice master
+    physicalName: practicemasterdim # default value is table name + version separated by underscores, as table_1_2_0
     priorTableName: null # if needed
-    description: Provides core payment metrics 
+    description: Master dimension of all practices 
     tags: null
-    dataGranularity: Aggregation on columns txn_ref_dt, pmt_txn_id
+    dataGranularity: One row per practice
     columns:
       - column: txn_ref_dt
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
@@ -234,11 +234,10 @@ This section lists the roles that a consumer may need to access the dataset depe
 ### Example
 
 ```YAML
-roles:
-  - role: microstrategy_user_opr
+- role: datagov_r
     access: read
-    firstLevelApprovers: Reporting Manager
-    secondLevelApprovers: 'mandolorian'
+    firstLevelApprovers: IT
+    secondLevelApprovers: null
   - role: bq_queryman_user_opr
     access: read
     firstLevelApprovers: Reporting Manager
