@@ -12,7 +12,7 @@ This document describes the keys and values expected in the ADDRESS data contrac
 ## Notes
 * This contract is containing example values, we reviewed very carefully the consistency of those values, but we cannot guarantee that there are no errors. If you spot one, please raise an [issue](https://github.com/paypal/data-contract-template/issues).
 * Some fields have `null` value: even if it is equivalent to not having the field in the contract, we wanted to have the field for illustration purpose.
-* This contract leverages BigQuery but should be **platform agnostic**. If you think it is not the case, please raise an [issue](https://github.com/paypal/data-contract-template/issues).
+* This contract leverages BigQuery but should be **platform agnostic**. If you think it is not the case, please raise an issue(link yet to be added).
 
 ## Demographics
 This section contains general information about the contract.
@@ -21,16 +21,16 @@ This section contains general information about the contract.
 
 ```YAML
 # What's this data  identification?
-datasetDomain: practice
-quantumName: practice quantum
+datasetDomain: address
+quantumName: address quantum
 userConsumptionMode: Analytical
 version: 1.0.0
 status: current
-uuid: 53581432-6c55-4ba2-a65f-72344a91553a #
+uuid: 53581432-6c55-4ba2-a65f-72344a91553a #still need to figure out what we're going to do for UUID
 
 # Lots of information
 description:
-  purpose: Tables and attributes related to Practices.
+  purpose: Tables and attributes related to Addresses.
   limitations: null
   usage: null
 tenant: revance
@@ -49,7 +49,7 @@ datasetName: cdp # snowflake schema
 kind: virtualDataset
 type: tables
 
-# Physical access
+# Physical access - still needs work
 driver: null
 driverVersion: null
 server: null
@@ -102,10 +102,10 @@ This section describes the dataset and the schema of the data contract. It is th
 
 ```YAML
 dataset:
-  - table: practice master
-    physicalName: practicemasterdim # default value is table name + version separated by underscores, as table_1_2_0
+  - table: address master
+    physicalName: addressmasterdim # default value is table name + version separated by underscores, as table_1_2_0
     priorTableName: null # if needed
-    description: Master dimension of all practices 
+    description: Master dimension of all addresses 
     tags: null
     dataGranularity: One row per practice
     columns:
