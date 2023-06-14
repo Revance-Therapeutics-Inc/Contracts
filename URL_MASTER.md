@@ -21,16 +21,16 @@ This section contains general information about the contract.
 
 ```YAML
 # What's this data  identification?
-datasetDomain: practice
-quantumName: practice quantum
-userConsumptionMode: Analytical
+datasetDomain: url
+quantumName: url quantum
+userConsumptionMode: Analytical 
 version: 1.0.0
 status: current
 uuid: 53581432-6c55-4ba2-a65f-72344a91553a #
 
 # Lots of information
 description:
-  purpose: Tables and attributes related to Practices.
+  purpose: Tables and attributes related to URLs.
   limitations: null
   usage: null
 tenant: revance
@@ -102,66 +102,117 @@ This section describes the dataset and the schema of the data contract. It is th
 
 ```YAML
 dataset:
-  - table: practice master
-    physicalName: practicemasterdim # default value is table name + version separated by underscores, as table_1_2_0
+  - table: url master
+    physicalName: URL_MASTER # default value is table name + version separated by underscores, as table_1_2_0
     priorTableName: null # if needed
     description: Master dimension of all practices 
     tags: null
     dataGranularity: One row per practice
     columns:
-      - column: txn_ref_dt
-        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: transaction reference date
-        logicalType: date
-        physicalType: date
+      - column: url_key
+        isPrimary: true # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
         partitionStatus: true
-        clusterStatus: false
-        criticalDataElementStatus: false
+        clusterStatus: ???
+        criticalDataElementStatus: ???
         tags: null
         classification: null
         encryptedColumnName: null
-        transformSourceTables:
-          - table_name_1
-          - table_name_2
-          - table_name_3
-        transformLogic: sel t1.txn_dt as txn_ref_dt from table_name_1 as t1, table_name_2 as t2, table_name_3 as t3 where t1.txn_dt=date-3
-        transformDescription: defines the logic in business terms; logic for dummies
-        sampleValues:
-          - 2022-10-03
-          - 2020-01-28
-      - column: rcvr_id
-        isPrimary: true # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: receiver id
-        logicalType: string
-        physicalType: varchar(18)
-        isNullable: false
-        description: A description for column rcvr_id.
-        partitionStatus: false
-        clusterStatus: true
-        criticalDataElementStatus: false
-        tags: null
-        classification: null
-        encryptedColumnName: null
-      - column: rcvr_cntry_code
+      - column: url
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: receiver country code
-        logicalType: string
-        physicalType: varchar(2)
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: false
-        clusterStatus: false
-        criticalDataElementStatus: false
+        partitionStatus: true
+        clusterStatus: ???
+        criticalDataElementStatus: ???
         tags: null
         classification: null
-        authoritativeDefinitions:
-          - url: https://collibra.com/asset/742b358f-71a5-4ab1-bda4-dcdba9418c25
-            type: Business definition
-          - url: https://github.com/myorg/myrepo
-            type: Reference implementation
-        encryptedColumnName: rcvr_cntry_code_encrypted
+        encryptedColumnName: null
+        - column: domain
+        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: true
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: hp_score
+        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: true
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: source
+        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: true
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: url_status
+        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: true
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: load_date
+        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: true
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: modified_date
+        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: true
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: null
+        classification: null
+        encryptedColumnName: null
 ```
 
 ### Definitions
