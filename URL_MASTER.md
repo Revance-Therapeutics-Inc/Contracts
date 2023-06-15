@@ -236,10 +236,6 @@ dataset.columns.clusterStatus||Yes|indicates of the column is clustered; possibl
 dataset.columns.classification||Yes|the PayPal data classification indicating the class of data in the column; expected values are 1, 2, 3, 4, or 5.|
 |dataset.columns.authoritativeDefinitions||No|list of links to sources that provide more detail on column logic or values; examples would be URL to a GitHub repo, Collibra, on another tool.|
 dataset.columns.encryptedColumnName||Yes|The column name within the table that contains the encrypted column value. For example, unencrypted column `email_address` might have an encryptedColumnName of `email_address_encrypt`.
-dataset.columns.transformSourceTables||No|List of sources used in column transformation.|
-dataset.columns.transformLogic||No|Logic used in the column transformation.|
-dataset.columns.transformDescription||No|Describes the transform logic in very simple terms.|
-dataset.columns.sampleValues||No|List of sample column values.|
 dataset.columns.criticalDataElementStatus||No|True or false indicator; If element is considered a critical data element (CDE) then true else false.|
 dataset.columns.tags||No|A list of tags that may be assigned to the dataset, table or column; the tags keyword may appear at any level.|
 
