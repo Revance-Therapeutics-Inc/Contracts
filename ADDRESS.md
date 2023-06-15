@@ -291,8 +291,34 @@ dataset:
         tags: ???
         classification: ???
         encryptedColumnName: ???
-        - column: oce_salesforce_id
-        isPrimary: maybe 
+        - column: is_daxi_unlocked
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: NUMBER(1,0)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: is_sample_sent_to
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: NUMBER(1,0)
+        isNullable: false
+        description: ???
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: ???
+        tags: ???
+        classification: ???
+        encryptedColumnName: ???
+        - column: sample_product_quantity_orders
+        isPrimary: false
         businessName: ???
         logicalType: ???
         physicalType: VARCHAR(16777216)
@@ -304,11 +330,11 @@ dataset:
         tags: ???
         classification: ???
         encryptedColumnName: ???
-        - column: oce_salesforce_id
-        isPrimary: maybe 
+        - column: incomplete
+        isPrimary: false 
         businessName: ???
         logicalType: ???
-        physicalType: VARCHAR(16777216)
+        physicalType: NUMBER(1,0)
         isNullable: false
         description: ???
         partitionStatus: ???
@@ -317,34 +343,8 @@ dataset:
         tags: ???
         classification: ???
         encryptedColumnName: ???
-        - column: oce_salesforce_id
-        isPrimary: maybe 
-        businessName: ???
-        logicalType: ???
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
-        encryptedColumnName: ???
-        - column: oce_salesforce_id
-        isPrimary: maybe 
-        businessName: ???
-        logicalType: ???
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
-        encryptedColumnName: ???
-        - column: oce_salesforce_id
-        isPrimary: maybe 
+        - column: addresstoken
+        isPrimary: false
         businessName: ???
         logicalType: ???
         physicalType: VARCHAR(16777216)
