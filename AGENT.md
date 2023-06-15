@@ -1,4 +1,4 @@
-# Data Contract Template
+# Agent Data Contract
 
 ## Executive summary
 This document describes the keys and values expected in the AGENT data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [stakeholders](#Stakeholders), and [roles](#Roles). Each section starts with at least an example followed by definition of each field/key.
@@ -102,66 +102,260 @@ This section describes the dataset and the schema of the data contract. It is th
 
 ```YAML
 dataset:
-  - table: practice master
-    physicalName: practicemasterdim # default value is table name + version separated by underscores, as table_1_2_0
+  - table: agent master
+    physicalName: agent_master # default value is table name + version separated by underscores, as table_1_2_0
     priorTableName: null # if needed
-    description: Master dimension of all practices 
+    description: Master dimension of all agents
     tags: null
-    dataGranularity: One row per practice
+    dataGranularity: One row per agent
     columns:
-      - column: txn_ref_dt
-        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: transaction reference date
-        logicalType: date
-        physicalType: date
+      - column: ag_key
+        isPrimary: true
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: true
-        clusterStatus: false
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
         criticalDataElementStatus: false
         tags: null
         classification: null
         encryptedColumnName: null
-        transformSourceTables:
-          - table_name_1
-          - table_name_2
-          - table_name_3
-        transformLogic: sel t1.txn_dt as txn_ref_dt from table_name_1 as t1, table_name_2 as t2, table_name_3 as t3 where t1.txn_dt=date-3
-        transformDescription: defines the logic in business terms; logic for dummies
-        sampleValues:
-          - 2022-10-03
-          - 2020-01-28
-      - column: rcvr_id
-        isPrimary: true # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: receiver id
-        logicalType: string
-        physicalType: varchar(18)
-        isNullable: false
-        description: A description for column rcvr_id.
-        partitionStatus: false
-        clusterStatus: true
+      - column: customer_number
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
         criticalDataElementStatus: false
         tags: null
         classification: null
         encryptedColumnName: null
-      - column: rcvr_cntry_code
-        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: receiver country code
-        logicalType: string
-        physicalType: varchar(2)
+        - column: full_name
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: false
-        clusterStatus: false
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
         criticalDataElementStatus: false
         tags: null
         classification: null
-        authoritativeDefinitions:
-          - url: https://collibra.com/asset/742b358f-71a5-4ab1-bda4-dcdba9418c25
-            type: Business definition
-          - url: https://github.com/myorg/myrepo
-            type: Reference implementation
-        encryptedColumnName: rcvr_cntry_code_encrypted
+        encryptedColumnName: null
+        - column: title
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: practice_name
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: url
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: domain
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: email
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: phone
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: street
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: street
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: city
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: state
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: postal_code
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: full_address
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true 
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: addresstoken # seems like more duplicate data
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: source
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: provider of current row of data
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: load_date
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: TIMESTAMP_NTZ(9)
+        isNullable: false
+        description: null
+        partitionStatus: ???
+        clusterStatus: ??? #maybe means this column can contain multivalued attributes?
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: modified_date
+        isPrimary: false
+        businessName: ???
+        logicalType: ???
+        physicalType: TIMESTAMP_NTZ(9)
+        isNullable: true
+        description: date that row was modified, if not modified, this value null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
 ```
 
 ### Definitions
