@@ -285,18 +285,6 @@ This section lists the roles that a consumer may need to access the dataset depe
     access: read
     firstLevelApprovers: IT
     secondLevelApprovers: null
-  - role: bq_queryman_user_opr
-    access: read
-    firstLevelApprovers: Reporting Manager
-    secondLevelApprovers: na
-  - role: risk_data_access_opr
-    access: read
-    firstLevelApprovers: Reporting Manager
-    secondLevelApprovers: 'dathvador'
-  - role: bq_unica_user_opr
-    access: write
-    firstLevelApprovers: Reporting Manager
-    secondLevelApprovers: 'mickey'
 ```
 
 ### Definitions
