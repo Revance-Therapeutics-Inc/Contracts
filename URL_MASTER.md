@@ -117,28 +117,28 @@ dataset:
         isNullable: false
         description: null
         partitionStatus: true
-        clusterStatus: ???
-        criticalDataElementStatus: ???
+        clusterStatus: null
+        criticalDataElementStatus: null
         tags: null
         classification: null
         encryptedColumnName: null
       - column: url
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: ???
-        logicalType: ???
+        businessName: url
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
         partitionStatus: true
-        clusterStatus: ???
-        criticalDataElementStatus: ???
+        clusterStatus: null
+        criticalDataElementStatus: null
         tags: null
         classification: null
         encryptedColumnName: null
         - column: domain
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: ???
-        logicalType: ???
+        businessName: url domain
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
