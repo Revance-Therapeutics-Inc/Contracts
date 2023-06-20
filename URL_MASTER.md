@@ -111,8 +111,8 @@ dataset:
     columns:
       - column: url_key
         isPrimary: true # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: ???
-        logicalType: ???
+        businessName: url primary identifier
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
