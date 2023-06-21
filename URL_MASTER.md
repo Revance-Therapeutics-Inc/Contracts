@@ -121,7 +121,12 @@ dataset:
         criticalDataElementStatus: null
         tags: null
         classification: null
+        authoritativeDefinitions: null
         encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
       - column: url
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
         businessName: url
@@ -134,7 +139,12 @@ dataset:
         criticalDataElementStatus: null
         tags: null
         classification: null
+        authoritativeDefinitions: null
         encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: domain
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
         businessName: url domain
@@ -147,7 +157,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: null
         classification: null
+        authoritativeDefinitions: null
         encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: hp_score
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
         businessName: ???
@@ -160,7 +175,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: null
         classification: null
+        authoritativeDefinitions: null
         encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: source
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
         businessName: ???
@@ -173,7 +193,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: null
         classification: null
+        authoritativeDefinitions: null
         encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: url_status
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
         businessName: ???
@@ -186,7 +211,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: null
         classification: null
+        authoritativeDefinitions: null
         encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: load_date
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
         businessName: ???
@@ -199,7 +229,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: null
         classification: null
+        authoritativeDefinitions: null
         encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: modified_date
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
         businessName: ???
@@ -212,7 +247,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: null
         classification: null
+        authoritativeDefinitions: null
         encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
 ```
 
 ### Definitions
