@@ -164,7 +164,7 @@ dataset:
         transformDescription: null
         sampleValues: null
         - column: hp_score
-        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        isPrimary: false 
         businessName: ???
         logicalType: ???
         physicalType: VARCHAR(16777216)
