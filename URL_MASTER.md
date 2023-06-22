@@ -147,14 +147,14 @@ dataset:
         sampleValues: null
         - column: domain
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: url domain
+        businessName: url domain name
         logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
         partitionStatus: true
-        clusterStatus: ???
-        criticalDataElementStatus: ???
+        clusterStatus: null
+        criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
@@ -165,14 +165,14 @@ dataset:
         sampleValues: null
         - column: hp_score
         isPrimary: false 
-        businessName: ???
-        logicalType: ???
+        businessName: url business score
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
         partitionStatus: true
-        clusterStatus: ???
-        criticalDataElementStatus: ???
+        clusterStatus: null
+        criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
@@ -183,14 +183,14 @@ dataset:
         sampleValues: null
         - column: source
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: ???
-        logicalType: ???
+        businessName: url source
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: null
+        description: method used to attain the url ex: webscrape, linkedin, etc.
         partitionStatus: true
-        clusterStatus: ???
-        criticalDataElementStatus: ???
+        clusterStatus: null
+        criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
@@ -200,15 +200,15 @@ dataset:
         transformDescription: null
         sampleValues: null
         - column: url_status
-        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        isPrimary: false 
         businessName: ???
-        logicalType: ???
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: null
+        description: ???
         partitionStatus: true
-        clusterStatus: ???
-        criticalDataElementStatus: ???
+        clusterStatus: null
+        criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
@@ -219,14 +219,14 @@ dataset:
         sampleValues: null
         - column: load_date
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: ???
-        logicalType: ???
+        businessName: date added
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
         partitionStatus: true
-        clusterStatus: ???
-        criticalDataElementStatus: ???
+        clusterStatus: null
+        criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
@@ -237,14 +237,14 @@ dataset:
         sampleValues: null
         - column: modified_date
         isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: ???
-        logicalType: ???
+        businessName: modified date
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: true
-        description: null
+        description: date the url was modified(if not modified, set to null)
         partitionStatus: true
-        clusterStatus: ???
-        criticalDataElementStatus: ???
+        clusterStatus: null
+        criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
