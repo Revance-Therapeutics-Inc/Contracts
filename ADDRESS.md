@@ -1,4 +1,4 @@
-# Data Contract Template
+# AddressData Contract
 
 ## Executive summary
 This document describes the keys and values expected in the ADDRESS data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [stakeholders](#Stakeholders), and [roles](#Roles). Each section starts with at least an example followed by definition of each field/key.
