@@ -1,4 +1,4 @@
-# AddressData Contract
+# Address Data Contract
 
 ## Executive summary
 This document describes the keys and values expected in the ADDRESS data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [stakeholders](#Stakeholders), and [roles](#Roles). Each section starts with at least an example followed by definition of each field/key.
@@ -112,341 +112,341 @@ dataset:
       - column: oce_salesforce_id
         isPrimary: maybe 
         businessName: ???
-        logicalType: ???
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: customer_number
         isPrimary: maybe 
-        businessName: ???
-        logicalType: ???
+        businessName: customer primary identification key
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: foreign key relating to customer_master table
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: practice_name
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: practice name
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: null
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: street
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: address line 1
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: null
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: suite
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: address line 2
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: true
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: suite or unit for practice
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: city
         isPrimary: false 
-        businessName: ???
-        logicalType: ???
+        businessName: city
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: null
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: state
         isPrimary: false 
-        businessName: ???
-        logicalType: ???
+        businessName: state
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: null
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: postal_code
         isPrimary: maybe 
-        businessName: ???
-        logicalType: ???
+        businessName: postal or zip code
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: 5 digit postal code(for areas in the USA)
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: fulladdress
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: full address
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: concatenation of street, suite, city, state, country, and postal_code
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: url
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: url 
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: domain
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: url domain name
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: url domain name
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: is_primary_address
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: is primary address?
+        logicalType: boolean
         physicalType: NUMBER(1,0)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: null
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: is_ship_to
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: is ship to?
+        logicalType: boolean
         physicalType: NUMBER(1,0)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: null
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: ship_product_quantity
+        - column: ship_product_quantity_orders
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: ship product quantity orders
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: a summary of orders done shipped to current address???
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: is_daxi_unlocked
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: is daxxify unlocked
+        logicalType: boolean
         physicalType: NUMBER(1,0)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: null
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: is_sample_sent_to
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: is sample sent to
+        logicalType: boolean
         physicalType: NUMBER(1,0)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: null
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: sample_product_quantity_orders
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: sample product qantity orders
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: summary of sample product quantity orders for address
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: incomplete
         isPrimary: false 
-        businessName: ???
-        logicalType: ???
+        businessName: is incomplete
+        logicalType: boolean
         physicalType: NUMBER(1,0)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: null
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
         - column: addresstoken
         isPrimary: false
-        businessName: ???
-        logicalType: ???
+        businessName: address token
+        logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
-        partitionStatus: ???
-        clusterStatus: ???
-        criticalDataElementStatus: ???
-        tags: ???
-        classification: ???
+        description: null
+        partitionStatus: null
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: ???
+        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
