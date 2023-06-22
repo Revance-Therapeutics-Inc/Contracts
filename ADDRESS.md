@@ -121,7 +121,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: customer_number
         isPrimary: maybe 
         businessName: ???
@@ -134,7 +139,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: practice_name
         isPrimary: false
         businessName: ???
@@ -147,7 +157,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: street
         isPrimary: false
         businessName: ???
@@ -160,7 +175,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: suite
         isPrimary: false
         businessName: ???
@@ -173,7 +193,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: city
         isPrimary: false 
         businessName: ???
@@ -186,7 +211,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: state
         isPrimary: false 
         businessName: ???
@@ -199,7 +229,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: postal_code
         isPrimary: maybe 
         businessName: ???
@@ -212,7 +247,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: fulladdress
         isPrimary: false
         businessName: ???
@@ -225,7 +265,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: url
         isPrimary: false
         businessName: ???
@@ -238,7 +283,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: domain
         isPrimary: false
         businessName: ???
@@ -251,7 +301,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: is_primary_address
         isPrimary: false
         businessName: ???
@@ -264,7 +319,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: is_ship_to
         isPrimary: false
         businessName: ???
@@ -277,7 +337,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: ship_product_quantity
         isPrimary: false
         businessName: ???
@@ -290,7 +355,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: is_daxi_unlocked
         isPrimary: false
         businessName: ???
@@ -303,7 +373,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: is_sample_sent_to
         isPrimary: false
         businessName: ???
@@ -316,7 +391,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: sample_product_quantity_orders
         isPrimary: false
         businessName: ???
@@ -329,7 +409,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: incomplete
         isPrimary: false 
         businessName: ???
@@ -342,7 +427,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
         - column: addresstoken
         isPrimary: false
         businessName: ???
@@ -355,7 +445,12 @@ dataset:
         criticalDataElementStatus: ???
         tags: ???
         classification: ???
+        authoritativeDefinitions: null
         encryptedColumnName: ???
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
 ```
 
 ### Definitions
