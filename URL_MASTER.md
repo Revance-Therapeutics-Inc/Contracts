@@ -285,20 +285,9 @@ This section lists stakeholders and the history of their relation with this data
 ### Example
 ```YAML
 stakeholders:
-  - username: ceastwood
+  - username: null
     role: Data Scientist
     dateIn: 2022-08-02
-    dateOut: 2022-10-01
-    replacedByUsername: mhopper
-  - username: mhopper
-    role: Data Scientist
-    dateIn: 2022-10-01
-    dateOut: null
-    replacedByUsername: null
-  - username: daustin
-    role: Owner
-    comment: Keeper of the grail
-    dateIn: 2022-10-01
     dateOut: null
     replacedByUsername: null
 ```
