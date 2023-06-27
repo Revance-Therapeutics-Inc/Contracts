@@ -5,7 +5,7 @@ This document describes the keys and values expected in the URL data contract. I
 
 ## Table of content
 * [Demographics](#Demographics)
-* [Dataset & schema](#Dataset-&-schema)
+* [Dataset & schema](#Dataset_&_schema)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
 
