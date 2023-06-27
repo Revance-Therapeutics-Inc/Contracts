@@ -13,7 +13,7 @@ This document describes the keys and values expected in the ADDRESS data contrac
 * This contract is containing example values, we reviewed very carefully the consistency of those values, but we cannot guarantee that there are no errors. If you spot one, please raise an [issue](https://github.com/paypal/data-contract-template/issues).
 * Some fields have `null` value: even if it is equivalent to not having the field in the contract, we wanted to have the field for illustration purpose.
 
-## Demographics
+## Demographics(MetaData?)
 This section contains general information about the contract.
 
 ### Example
