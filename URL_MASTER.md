@@ -4,7 +4,7 @@
 This document describes the keys and values expected in the URL data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [stakeholders](#Stakeholders), and [roles](#Roles). Each section starts with at least an example followed by definition of each field/key.
 
 ## Table of content
-* [Demographics](#Demographics(Meta-Data?))
+* [Demographics](#Demographics)
 * [Dataset & schema](#Dataset-&-schema)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
