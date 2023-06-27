@@ -14,7 +14,7 @@ This document describes the keys and values expected in the URL data contract. I
 * Some fields have `null` value: even if it is equivalent to not having the field in the contract, we wanted to have the field for illustration purpose.
 * This contract leverages BigQuery but should be **platform agnostic**. If you think it is not the case, please raise an [issue](https://github.com/paypal/data-contract-template/issues).
 
-## Demographics
+## Demographics(Meta-Data?)
 This section contains general information about the contract.
 
 ### Example
