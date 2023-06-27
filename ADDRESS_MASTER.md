@@ -58,7 +58,7 @@ password: '${env.password}'
 schedulerAppName: name_coming_from_scheduler # NEW 2.1.0 Required if you want to schedule stuff, comes from DataALM.
 
 # Data Quality
-quality: null # See more information below
+quality: null # Talj to Parker about this, SmartyStreets ESRI
 
 # Tags
 tags: null
