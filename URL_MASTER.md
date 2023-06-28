@@ -20,15 +20,15 @@ This section contains general information about the contract.
 ### Example
 
 ```YAML
-# What's this data  identification?(Rephrase)
-datasetDomain: url
-quantumName: url quantum
-userConsumptionMode: Analytical (Is this always analytical? What exactly does that mean?)
-version: 1.0.0
+# URL MASTER
+domain: url
+quantumName: **<tbd>** quantum
+usagePurpose: Inventory; Analytical
+version: 0.0.1
 status: current
-uuid: (Are we using uuid as a unique identifier?)
+id: (Are we using uuid as a unique identifier?)
 
-# more information
+# Contract Description
 description:
   purpose: Tables and attributes related to URLs.(Is there more to purpose than just containing information?)
   limitations: null(limitations on what?)
