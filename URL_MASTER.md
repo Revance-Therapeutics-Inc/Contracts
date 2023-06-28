@@ -134,7 +134,7 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: true
+        partitionStatus: false
         clusterStatus: null
         criticalDataElementStatus: null
         tags: null
@@ -152,7 +152,7 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: true
+        partitionStatus: false
         clusterStatus: null
         criticalDataElementStatus: null
         tags: null
@@ -170,7 +170,7 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: true
+        partitionStatus: false
         clusterStatus: null
         criticalDataElementStatus: null
         tags: null
@@ -188,7 +188,7 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: method used to attain the url ex: webscrape, linkedin, etc.
-        partitionStatus: true
+        partitionStatus: false
         clusterStatus: null
         criticalDataElementStatus: null
         tags: null
@@ -206,7 +206,7 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: ???
-        partitionStatus: true
+        partitionStatus: false
         clusterStatus: null
         criticalDataElementStatus: null
         tags: null
@@ -224,7 +224,7 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: true
+        partitionStatus: false
         clusterStatus: null
         criticalDataElementStatus: null
         tags: null
@@ -242,7 +242,7 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: true
         description: date the url was modified(if not modified, set to null)
-        partitionStatus: true
+        partitionStatus: false
         clusterStatus: null
         criticalDataElementStatus: null
         tags: null
