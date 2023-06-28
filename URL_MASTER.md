@@ -26,7 +26,7 @@ quantumName: **<tbd>** quantum
 usagePurpose: Inventory; Analytical
 version: 0.0.1
 status: current
-id: (Are we using uuid as a unique identifier?)
+Unique Contract ID: (fka uuid) For lineage/traceability purposes of this contract
 
 # Contract Description
 description:
@@ -36,9 +36,12 @@ description:
 tenant: revance
 
 # Getting support(Do we need this? We have a section in the introduction where we provide an outlet for support)
-productDl: null
-productSlackChannel: null
-productFeedbackUrl: null
+pointOfContactName1:Senthil Selvaraj
+relatedEmail: senthil.selvaraj@revance.com
+pointofContactName2:Parker Hanna
+relatedEmail: parker.hanna@revance.com
+pointOfContactName3: Jordan Hasulube
+relatedEmail: jordan.hasulube@revance.com
 
 # Physical parts Snowflake specific
 sourcePlatform: snowflake
