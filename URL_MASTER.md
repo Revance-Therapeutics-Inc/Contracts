@@ -116,7 +116,7 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: true(Is any of our master tables partitioned? are all of them partitioned?)
+        partitionStatus: fasle(Is any of our master tables partitioned? are all of them partitioned?)
         clusterStatus: null (How will this look specifically in our database?)
         criticalDataElementStatus: null
         tags: null
