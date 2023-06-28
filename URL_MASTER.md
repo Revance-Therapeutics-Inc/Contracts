@@ -3,16 +3,16 @@
 ## Executive summary
 This document describes the keys and values expected in the URL data contract. It is divided in multiple sections: [demographics](#Demographics), [dataset & schema](#Dataset-&-schema), [stakeholders](#Stakeholders), and [roles](#Roles). Each section starts with at least an example followed by definition of each field/key.
 
-## Table of content
+## Table of contents
 * [Demographics](#Demographics)
 * [Dataset & schema](#Dataset-&-schema)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
 
 ## Notes
-* This contract is containing example values, we reviewed very carefully the consistency of those values, but we cannot guarantee that there are no errors. If you spot one, please raise an [issue](https://github.com/paypal/data-contract-template/issues).
+* This contract is containing example values, we reviewed very carefully the consistency of those values, but we cannot guarantee that there are no errors. If you spot one, please contact ---
 * Some fields have `null` value: even if it is equivalent to not having the field in the contract, we wanted to have the field for illustration purpose.
-* This contract leverages BigQuery but should be **platform agnostic**. If you think it is not the case, please raise an [issue](https://github.com/paypal/data-contract-template/issues).
+* This contract leverages Snowflake but should be **platform agnostic**. If you think it is not the case, please contact ---
 
 ## Demographics(Meta-Data?)
 This section contains general information about the contract.
@@ -20,22 +20,22 @@ This section contains general information about the contract.
 ### Example
 
 ```YAML
-# What's this data  identification?
+# What's this data  identification?(Rephrase)
 datasetDomain: url
 quantumName: url quantum
-userConsumptionMode: Analytical 
+userConsumptionMode: Analytical (Is this always analytical? What exactly does that mean?)
 version: 1.0.0
 status: current
-uuid: 53581432-6c55-4ba2-a65f-72344a91553a #
+uuid: (Are we using uuid as a unique identifier?)
 
-# Lots of information
+# more information
 description:
-  purpose: Tables and attributes related to URLs.
-  limitations: null
+  purpose: Tables and attributes related to URLs.(Is there more to purpose than just containing information?)
+  limitations: null(limitations on what?)
   usage: null
 tenant: revance
 
-# Getting support
+# Getting support(Do we need this? We have a section in the introduction where we provide an outlet for support)
 productDl: null
 productSlackChannel: null
 productFeedbackUrl: null
@@ -43,13 +43,13 @@ productFeedbackUrl: null
 # Physical parts Snowflake specific
 sourcePlatform: snowflake
 sourceSystem: snowflake
-datasetProject: staging_test # snowflake database
-datasetName: cdp # snowflake schema
+datasetProject: staging_test # snowflake database (Can we shange the key from dataSetProject to snowflakeDatabase or something similar?)
+datasetName: cdp # snowflake schema (Same question as above)
 
 kind: virtualDataset
 type: tables
 
-# Physical access
+# Physical access(Do we need to include driver information?)
 driver: null
 driverVersion: null
 server: null
@@ -59,7 +59,7 @@ password: '${env.password}'
 schedulerAppName: name_coming_from_scheduler # NEW 2.1.0 Required if you want to schedule stuff, comes from DataALM.
 
 # Data Quality
-quality: null # See more information below
+quality: null # Do we need a section on Data Quality? George seemed to think so
 
 # Tags
 tags: null
@@ -101,7 +101,7 @@ This section describes the dataset and the schema of the data contract. It is th
 ### Example
 
 ```YAML
-dataset:
+dataset: 
   - table: url master
     physicalName: URL_MASTER # default value is table name + version separated by underscores, as table_1_2_0
     priorTableName: null # if needed
@@ -117,13 +117,13 @@ dataset:
         isNullable: false
         description: null
         partitionStatus: true
-        clusterStatus: null
+        clusterStatus: null (How will this look specifically in our database?)
         criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
+        encryptedColumnName: null (What is this again?)
+        transformSourceTables: null (Is this the same information I am recording in Data Dictionaries?)
         transformLogic: null
         transformDescription: null
         sampleValues: null
