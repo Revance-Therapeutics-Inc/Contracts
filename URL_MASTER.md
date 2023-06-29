@@ -118,12 +118,10 @@ dataset:
         isNullable: false
         description: null
         partitionStatus: fasle(Is any of our master tables partitioned? are all of them partitioned?)
-        clusterStatus: null (How will this look specifically in our database?)
-        criticalDataElementStatus: null
+        clusterStatus: null (How will this look specifically in our database?) Not needed
+        criticalDataElementStatus: null #is this column critical for the table
         tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null (What is this again?)
+        classification: null #ask dave
         transformSourceTables: null (Is this the same information I am recording in Data Dictionaries?)
         transformLogic: null
         transformDescription: null
@@ -285,9 +283,9 @@ This section lists stakeholders and the history of their relation with this data
 
 ### Example
 ```YAML
-stakeholders:
-  - username: null
-    role: Data Scientist
+contractStakeholders: 
+  - username: David Austin
+    role: Data Innovation Manager
     dateIn: 2022-08-02
     dateOut: null
     replacedByUsername: null
