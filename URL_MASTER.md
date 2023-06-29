@@ -313,6 +313,10 @@ This section lists the roles that a consumer may need to access the dataset depe
     access: read
     firstLevelApprovers: IT
     secondLevelApprovers: null
+- role: datagov_rw
+    access: read and write
+    firstLevelApprovers: Senthil and Parker
+    secondLevelApprovers: null
 ```
 
 ### Definitions
