@@ -53,10 +53,8 @@ kind: virtualDataset
 type: tables
 
 # Physical access(Do we need to include driver information?)
-driver: null
-driverVersion: null
-server: null
-database: pypl-edw.pp_access_views
+#DRIVER INFORMATION REMOVED. NOT APPLICABLE FOR REVANCE
+database: staging
 username: '${env.username}'
 password: '${env.password}'
 schedulerAppName: name_coming_from_scheduler # NEW 2.1.0 Required if you want to schedule stuff, comes from DataALM.
