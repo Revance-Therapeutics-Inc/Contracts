@@ -26,7 +26,7 @@ quantumName: **<tbd>** quantum
 usagePurpose: Inventory; Analytical
 version: 0.0.1
 status: current
-Unique Contract ID: (fka uuid) For lineage/traceability purposes of this contract
+uniqueContractId: (fka uuid) For lineage/traceability purposes of this contract
 
 # Contract Description
 description:
