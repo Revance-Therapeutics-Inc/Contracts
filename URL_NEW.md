@@ -5,7 +5,7 @@ Status: Proposed
 
 ## Summary
 
-### What do we mean when we say _a data contract_?
+### What is _a data contract_?
 * A data contract is a formal agreement between two parties (data product provider and data product consumer).
 It specifies the guarantees about a provided data set and expectations concerning data product access.
 
