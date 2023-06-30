@@ -90,7 +90,9 @@ tags: null
 |Key|Required|Description|
 | --- | --- | --- |
 | version|Yes|Current version of the data contract.|
-| uuid|Yes| A unique identifier used to reduce the risk of dataset name collisions; initially the UUID will be created using a UUID generator tool ([example](https://www.uuidgenerator.net/)). However, we may want to develop a method that accepts a seed value using a combination of fields–such as name, kind and source–to create a repeatable value.|
+| partitionedOn | No | The column of the master table that its rows were partitioned on.|
+|domainOwner| Yes | The owner of the current domain. Person responsible for the accuracy and continuity of the contract|
+| uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; currently we do not have a way to generate the unique ID|
 |username|Yes|User credentials for connecting to the dataset; how the credentials will be stored/passed is outside of the scope of the contract.|
 |userConsumptionMode|No|List of data modes for which the dataset may be used.  Expected sample values might be Analytical or Operational. <br/>Note: in the future, this will probably be replaced by ports.|
 |type|Yes|Identifies the types of objects in the dataset.  For BigQuery the expected value would be tables.
