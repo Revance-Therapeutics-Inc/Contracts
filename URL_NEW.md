@@ -1,4 +1,4 @@
-# Data Contract
+# URL Data Contract
 
 Category: Definitions
 Status: Proposed
