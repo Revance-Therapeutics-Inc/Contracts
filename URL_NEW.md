@@ -6,31 +6,10 @@
 * Summary
 * Metadata
 * Dataset-&-Schema
+* Roles
+* Contract-Duration
 
 ## Summary
-
-### What is _a data contract_?
-* A data contract is a formal agreement between two parties (data product provider and data product consumer).
-It specifies the guarantees about a provided data set and expectations concerning data product access.
-
-### This Contract
-* This contract describes the keys and values expected in the URL data contract. It is divided in multiple sections. Each section contains a [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) file followed by definitions for its keys.
-
-## Metadata
-
-* Domain name
-* Domain owner
-* Data product consumer
-  * Responsible consumer contact details
-* Purpose
-* Output port
-  * Technology (files, tables, topics)
-  * Format (Parquet, Delta, JSON, ...)
-  * Global address
-* Schema
-  * Field names and types
-  * Primary and foreign keys
-  * Partitions
 * Service-level objectives
   * Interval of change
   * Latency
@@ -42,17 +21,75 @@ It specifies the guarantees about a provided data set and expectations concernin
 * Terms
   * Allowed usage and access patterns
   * Query frequency
-* Security
+* Roles
   * The IAM role definition to grant
-* Costs and Billing
 * Contract duration
   * Start date
   * Notice period and end date
   * Next reassessment date
- 
-  ```YAML
+
+### What is _a data contract_?
+* A data contract is a formal agreement between two parties (data product provider and data product consumer).
+It specifies the guarantees about a provided data set and expectations concerning data product access.
+
+### This Contract
+* This contract describes the keys and values expected in the URL data contract. It is divided in multiple sections. Each section contains a [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) file followed by definitions for its keys.
+
+## Metadata
+This section contains general information about this Data Contract.
+
+```YAML
+# URL MASTER
+domain: url
+partionedOn: URL
+domainOwner: Senthil Selvaraj
+quantumName: **<tbd>** quantum
+usagePurpose: Inventory; Analytical
+version: 0.0.2
+status: current
+uniqueContractId: (fka uuid) For lineage/traceability purposes of this contract
+
+# Contract Description
+description:
+  purpose: Tables and attributes related to URLs.(Is there more to purpose than just containing information?)
+  limitations: null(limitations on what?)
+  usage: null
+tenant: revance
+
+# Getting support(Do we need this? We have a section in the introduction where we provide an outlet for support)
+pointOfContactName1:Senthil Selvaraj
+relatedEmail: senthil.selvaraj@revance.com
+pointofContactName2:Parker Hanna
+relatedEmail: parker.hanna@revance.com
+pointOfContactName3: Jordan Hasulube #To be removed after termination of internship
+relatedEmail: jordan.hasulube@revance.com
+
+# Physical parts Snowflake specific
+sourcePlatform: snowflake
+sourceSystem: snowflake
+datasetProject: staging_test # snowflake database (Can we shange the key from dataSetProject to snowflakeDatabase or something similar?)
+datasetName: cdp # snowflake schema (Same question as above)
+
+kind: virtualDataset
+type: tables
+
+# Physical access
+#DRIVER INFORMATION REMOVED. NOT APPLICABLE FOR REVANCE
+database: staging
+username: '${env.username}'
+password: '${env.password}'
+schedulerAppName: name_coming_from_scheduler # NEW 2.1.0 Required if you want to schedule stuff, comes from DataALM.
+
+# Data Quality
+quality: null # Do we need a section on Data Quality? George seemed to think so
+
+# Tags
+tags: null
+```
+
+ ```YAML
 field: value
-  ```
+ ```
 
 **Example**
 
