@@ -3,6 +3,11 @@
 Category: Definitions
 Status: Proposed
 
+## Table of Contents
+* Summary
+* Metadata
+* Dataset-&-Schema
+
 ## Summary
 
 ### What is _a data contract_?
