@@ -50,6 +50,8 @@ usagePurpose: Inventory; Analytical
 version: 0.0.2
 status: current
 uniqueContractId: (fka uuid) For lineage/traceability purposes of this contract
+startDate: ???
+nextReassessmentDate: ???
 
 # Contract Description
 description:
@@ -159,8 +161,6 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: fasle(Is any of our master tables partitioned? are all of them partitioned?)
-        clusterStatus: null (How will this look specifically in our database?) Not needed
         criticalDataElementStatus: null #is this column critical for the table
         tags: null
         classification: null #ask dave
@@ -175,13 +175,10 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: false
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -193,13 +190,10 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: false
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -211,13 +205,10 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: false
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -229,13 +220,10 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: method used to attain the url ex: webscrape, linkedin, etc.
-        partitionStatus: false
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -247,13 +235,10 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: ???
-        partitionStatus: false
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -265,13 +250,10 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: false
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -283,13 +265,10 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: true
         description: date the url was modified(if not modified, set to null)
-        partitionStatus: false
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -300,25 +279,25 @@ dataset:
 
 |Key|Required|Description|
 | --- | --- | --- | 
-dataset|Yes|Array. A list of tables within the dataset to be cataloged
-dataset.table|Yes|Name of the table being cataloged; the value should only contain the table name. Do not include the project or dataset name in the value.
-dataset.physicalName|No|Physical name of the table, default value is table name + version separated by underscores, as `table_1_2_0`.|
-dataset.priorTableName|Yes|Name of the previous version of the dataset.|
-dataset.dataGranularity|No|Granular level of the data in the table. Example would be `pmt_txn_id`.|
-dataset.columns||Yes|Array. A list of columns in the table.|
-dataset.columns.column|Yes|the name of the column.|
 dataset.columns.isPrimaryKey|No|Boolean value specifying whether the column is primary or not. Default is false.|
 dataset.columns.businessName|Yes|A more conversational name for the column. Think about it as changing from  'Data Speak' to 'English'.|
 dataset.columns.logicalType|Yes|The logical data type of the column For example, 'varchar' would fit under the type of 'string'.|
 dataset.columns.physicalType|Yes|The actual physical column data type. |
 dataset.columns.isNullable|Yes|indicates if the column may contain Null values; possible values are true and false.|
-dataset.columns.partitionStatus|Yes|indicates if the column is partitioned; possible values are true and false.|
-dataset.columns.clusterStatus|Yes|indicates of the column is clustered; possible values are true and false.|
-dataset.columns.classification|Yes|the PayPal data classification indicating the class of data in the column; expected values are 1, 2, 3, 4, or 5.|
-|dataset.columns.authoritativeDefinitions|No|list of links to sources that provide more detail on column logic or values; examples would be URL to a GitHub repo, Collibra, on another tool.|
-dataset.columns.encryptedColumnName|Yes|The column name within the table that contains the encrypted column value. For example, unencrypted column `email_address` might have an encryptedColumnName of `email_address_encrypt`.
+dataset.columns.description| Yes| description of the column. Null if the column name is self-explanatory |
 dataset.columns.criticalDataElementStatus|No|True or false indicator; If element is considered a critical data element (CDE) then true else false.|
 dataset.columns.tags|No|A list of tags that may be assigned to the dataset, table or column; the tags keyword may appear at any level.|
+dataset.columns.classification|Yes|the PayPal data classification indicating the class of data in the column; expected values are 1, 2, 3, 4, or 5.|
+|dataset.columns.authoritativeDefinitions|No|list of links to sources that provide more detail on column logic or values; examples would be URL to a GitHub repo, Collibra, on another tool.|
+dataset|Yes|Array. A list of tables within the dataset to be cataloged
+dataset.columns.transformSourceTables| No | |
+dataset.columns.transformLogic| No | |
+dataset.columns.transformDescription| No | |
+dataset.columns.sampleValues| No | |
+dataset.table|Yes|Name of the table being cataloged; the value should only contain the table name. Do not include the project or dataset name in the value.
+dataset.physicalName|No|Physical name of the table, default value is table name + version separated by underscores, as `table_1_2_0`.|
+dataset.columns||Yes|Array. A list of columns in the table.|
+dataset.columns.column|Yes|the name of the column.|
 
 ## Stakeholders
 This section lists stakeholders and the history of their relation with this data contract.
