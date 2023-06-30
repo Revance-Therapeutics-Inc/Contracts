@@ -1,6 +1,6 @@
 # Data Contract
 
-Category: Definitions  
+Category: Definitions
 Status: Proposed
 
 ## Context
@@ -9,7 +9,7 @@ What do we mean when we say _a data contract_?
 
 ## Decision
 
-A data contract is a formal agreement between two parties (data product provider and data product consumer). 
+A data contract is a formal agreement between two parties (data product provider and data product consumer).
 It specifies the guarantees about a provided data set and expectations concerning data product access.
 
 It covers:
@@ -46,6 +46,10 @@ It covers:
   * Start date
   * Notice period and end date
   * Next reassessment date
+ 
+  ```YAML
+
+  ```
 
 **Example**
 
