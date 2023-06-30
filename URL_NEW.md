@@ -1,7 +1,8 @@
 # URL Data Contract
-
 Category: Definitions
 Status: Proposed
+### Last Edited (dd/mm/yyyy)
+    06/30/2023
 
 ## Table of Contents
 * Summary
@@ -17,12 +18,10 @@ It specifies the guarantees about a provided data set and expectations concernin
 ### This Contract
 * This contract describes the keys and values expected in the URL data contract. It is divided in multiple sections. Each section contains a [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) file followed by definitions for its keys.
 
+## Metadata
 
-It covers:
-
-* Data product name
-* Data product provider
-  * Data product owner contact details
+* Domain name
+* Domain owner
 * Data product consumer
   * Responsible consumer contact details
 * Purpose
