@@ -1,6 +1,6 @@
 # URL Data Contract
 ### Last Edited (dd/mm/yyyy):  06/30/2023
-### By: Jordan Hasulube - Data Decisioning Intern
+### By: [Jordan Hasulube](https://www.linkedin.com/in/jordan-hasulube-426814236) - Data Decisioning Intern
 
 ## Table of Contents
 * Summary
