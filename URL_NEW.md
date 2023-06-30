@@ -1,8 +1,7 @@
 # URL Data Contract
 Category: Definitions
 Status: Proposed
-### Last Edited (dd/mm/yyyy)
-    06/30/2023
+### Last Edited (dd/mm/yyyy):  06/30/2023
 
 ## Table of Contents
 * Summary
