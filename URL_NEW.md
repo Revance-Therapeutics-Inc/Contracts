@@ -87,6 +87,35 @@ quality: null # Do we need a section on Data Quality? George seemed to think so
 tags: null
 ```
 
+|Key|UX label|Required|Description|
+| --- | --- | --- | --- |
+| version|Version|Yes|Current version of the data contract.|
+| uuid|Identifier|Yes| A unique identifier used to reduce the risk of dataset name collisions; initially the UUID will be created using a UUID generator tool ([example](https://www.uuidgenerator.net/)). However, we may want to develop a method that accepts a seed value using a combination of fields–such as name, kind and source–to create a repeatable value.|
+|username|Username|Yes|User credentials for connecting to the dataset; how the credentials will be stored/passed is outside of the scope of the contract.|
+|userConsumptionMode|Consumption mode|No|List of data modes for which the dataset may be used.  Expected sample values might be Analytical or Operational. <br/>Note: in the future, this will probably be replaced by ports.|
+|type|Type|Yes|Identifies the types of objects in the dataset.  For BigQuery the expected value would be tables.
+tenant|Tenant|No|Indicates the property the data is primarily associated with. Value is case insensitive. For PayPal, the expected sample values might be PayPal, Venmo, PPWC, etc.|
+tags|Tags|No|a list of tags that may be assigned to the dataset, table or column; the `tags` keyword may appear at any level.
+status|Status|Yes|Current status of the dataset.
+sourceSystem|Source system|Yes|The system where the dataset resides.  Expected value is bigQuery
+sourcePlatform|Source platform|Yes|The platform where the dataset resides. Expected value is googleCloudPlatform
+server|Server|Yes|The server where the dataset resides.|
+quantumName|Quantum name|Yes|The name of the data quantum or data product.
+productSlackChannel|Support Slack channel|No|Slack channel of the team responsible for maintaining the dataset.
+productFeedbackUrl|Feedback URL|No|The URL for submitting feedback to the team responsible for maintaining the dataset.|
+productDl|E-mail distribution list|No|The email distribution list (DL) of the persons or team responsible for maintaining the dataset.
+password|Password|Yes|User credentials for connecting to the dataset; how the credentials will be stored/passed is out of the scope of this contract.
+kind|Kind|Yes|The kind of Rosewall dataset being cataloged; Expected values are `virtualDataset` or `managedDataset`.
+driverVersion|Driver version|Yes|The version of the connection driver to be used to connect to the dataset.|
+driver|Driver|Yes|The connection driver required to connect to the dataset.|
+description.usage|Usage|No|intended usage of the dataset, table, or column (depending on the level); the key may appear at the dataset, table, or column level.|
+description.purpose|Purpose|No|Purpose of the dataset, table or column (depending on the level); the key may appear at the dataset, table, or column level.|
+description.limitations|Limitations|No|Limitations of the dataset, table or column (depending on the level); the key may appear at the dataset, table, or column level.|
+description|N/A|No|Object.|
+datasetProject|GCP project|Yes|GCP BigQuery dataset project name.|
+datasetName|BigQuery dataset name|Yes|GCP BigQuery dataset name.|
+|datasetDomain|Domain dataset|No|Name of the logical domain dataset the contract describes. This field is only required for output data contracts. Examples: `imdb_ds_aggregate`, `receiver_profile_out`,  `transaction_profile_out`.|
+database|Database|Yes|The database where the dataset resides.|
  ```YAML
 field: value
  ```
