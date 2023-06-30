@@ -7,7 +7,8 @@
 * Metadata
 * Dataset-&-Schema
 * Roles
-* Contract-Duration
+* Consequences
+* Automation
 
 ## Summary
 * Service-level objectives
@@ -41,8 +42,8 @@ This section contains general information about this Data Contract.
 ```YAML
 # URL MASTER
 domain: url
-partionedOn: URL
 domainOwner: Senthil Selvaraj
+partionedOn: URL
 quantumName: **<tbd>** quantum
 usagePurpose: Inventory; Analytical
 version: 0.0.2
@@ -90,8 +91,10 @@ tags: null
 |Key|Required|Description|
 | --- | --- | --- |
 | version|Yes|Current version of the data contract.|
-| partitionedOn | No | The column of the master table that its rows were partitioned on.|
+|domain| Yes | The domain that the current contract is responsible for describing|
 |domainOwner| Yes | The owner of the current domain. Person responsible for the accuracy and continuity of the contract|
+| partitionedOn | No | The column of the master table that its rows were partitioned on.|
+| quantumName | No | ??? |
 | uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; currently we do not have a way to generate the unique ID|
 |username|Yes|User credentials for connecting to the dataset; how the credentials will be stored/passed is outside of the scope of the contract.|
 |userConsumptionMode|No|List of data modes for which the dataset may be used.  Expected sample values might be Analytical or Operational. <br/>Note: in the future, this will probably be replaced by ports.|
@@ -135,6 +138,211 @@ database|Yes|The database where the dataset resides.|
 | **End date**                 |                                                                                                                                                                                                                                                                                                                                                          |
 | **Notice Period**            | 3 months                                                                                                                                                                                                                                                                                                                                                 |
 | **Next reassessment date**   | 2024-04-01                                                                                                                                                                                                                                                                                                                                               | 
+
+## Dataset & Schema
+This section describes the dataset and the schema of the data contract.
+
+```YAML
+dataset: 
+  - table: url master
+    physicalName: URL_MASTER # default value is table name + version separated by underscores, as table_1_2_0
+    priorTableName: null # if needed (When and why was this used?)
+    description: Master dimension of all practices 
+    tags: null
+    dataGranularity: One row per practice
+    columns:
+      - column: url_key
+        isPrimary: true # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: url primary identifier
+        logicalType: string
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: fasle(Is any of our master tables partitioned? are all of them partitioned?)
+        clusterStatus: null (How will this look specifically in our database?) Not needed
+        criticalDataElementStatus: null #is this column critical for the table
+        tags: null
+        classification: null #ask dave
+        transformSourceTables: null (Is this the same information I am recording in Data Dictionaries?)
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: url
+        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: url
+        logicalType: string
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: false
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
+        authoritativeDefinitions: null
+        encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+        - column: domain
+        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: url domain name
+        logicalType: string
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: false
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
+        authoritativeDefinitions: null
+        encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+        - column: hp_score
+        isPrimary: false 
+        businessName: url business score
+        logicalType: string
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: false
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
+        authoritativeDefinitions: null
+        encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+        - column: source
+        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: url source
+        logicalType: string
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: method used to attain the url ex: webscrape, linkedin, etc.
+        partitionStatus: false
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
+        authoritativeDefinitions: null
+        encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+        - column: url_status
+        isPrimary: false 
+        businessName: ???
+        logicalType: string
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: ???
+        partitionStatus: false
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
+        authoritativeDefinitions: null
+        encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+        - column: load_date
+        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: date added
+        logicalType: string
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: false
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
+        authoritativeDefinitions: null
+        encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+        - column: modified_date
+        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: modified date
+        logicalType: string
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: date the url was modified(if not modified, set to null)
+        partitionStatus: false
+        clusterStatus: null
+        criticalDataElementStatus: null
+        tags: null
+        classification: null
+        authoritativeDefinitions: null
+        encryptedColumnName: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+```
+
+### Definitions
+
+|Key|Required|Description|
+| --- | --- | --- | 
+dataset|Yes|Array. A list of tables within the dataset to be cataloged
+dataset.table|Yes|Name of the table being cataloged; the value should only contain the table name. Do not include the project or dataset name in the value.
+dataset.physicalName|No|Physical name of the table, default value is table name + version separated by underscores, as `table_1_2_0`.|
+dataset.priorTableName|Yes|Name of the previous version of the dataset.|
+dataset.dataGranularity|No|Granular level of the data in the table. Example would be `pmt_txn_id`.|
+dataset.columns||Yes|Array. A list of columns in the table.|
+dataset.columns.column|Yes|the name of the column.|
+dataset.columns.isPrimaryKey|No|Boolean value specifying whether the column is primary or not. Default is false.|
+dataset.columns.businessName|Yes|A more conversational name for the column. Think about it as changing from  'Data Speak' to 'English'.|
+dataset.columns.logicalType|Yes|The logical data type of the column For example, 'varchar' would fit under the type of 'string'.|
+dataset.columns.physicalType|Yes|The actual physical column data type. |
+dataset.columns.isNullable|Yes|indicates if the column may contain Null values; possible values are true and false.|
+dataset.columns.partitionStatus|Yes|indicates if the column is partitioned; possible values are true and false.|
+dataset.columns.clusterStatus|Yes|indicates of the column is clustered; possible values are true and false.|
+dataset.columns.classification|Yes|the PayPal data classification indicating the class of data in the column; expected values are 1, 2, 3, 4, or 5.|
+|dataset.columns.authoritativeDefinitions|No|list of links to sources that provide more detail on column logic or values; examples would be URL to a GitHub repo, Collibra, on another tool.|
+dataset.columns.encryptedColumnName|Yes|The column name within the table that contains the encrypted column value. For example, unencrypted column `email_address` might have an encryptedColumnName of `email_address_encrypt`.
+dataset.columns.criticalDataElementStatus|No|True or false indicator; If element is considered a critical data element (CDE) then true else false.|
+dataset.columns.tags|No|A list of tags that may be assigned to the dataset, table or column; the tags keyword may appear at any level.|
+
+## Roles 
+
+This section lists the roles that a consumer may need to access the dataset depending on the type of access they require.
+
+```YAML
+- role: datagov_r
+    access: read
+    firstLevelApprovers: IT
+    secondLevelApprovers: null
+- role: datagov_rw
+    access: read and write
+    firstLevelApprovers: Senthil and Parker
+    secondLevelApprovers: null
+```
+
+### Definitions
+
+|Key|Required|Description|
+| --- | --- | --- |
+roles|Yes|Array. A list of roles that will provide user access to the dataset.|
+roles.role|Yes|name of the IAM role that provides access to the dataset; the value will generally come directly from the "BQ dataset to IAM roles mapping" document.|
+roles.access|Yes|the type of access provided by the IAM role; the value will generally come directly from the "BQ dataset to IAM roles mapping" document.|
+roles.firstLevelApprovers|No|the name(s) of the first level approver(s) of the role; the value will generally come directly from the "BQ dataset to IAM roles mapping" document.|
+roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the role; the value will generally come directly from the "BQ dataset to IAM roles mapping" document.|
 
 
 ## Consequences
