@@ -6,6 +6,7 @@
 * Summary
 * Metadata
 * Dataset-&-Schema
+* Stakeholders
 * Roles
 * Consequences
 * Automation
@@ -318,6 +319,30 @@ dataset.columns.classification|Yes|the PayPal data classification indicating the
 dataset.columns.encryptedColumnName|Yes|The column name within the table that contains the encrypted column value. For example, unencrypted column `email_address` might have an encryptedColumnName of `email_address_encrypt`.
 dataset.columns.criticalDataElementStatus|No|True or false indicator; If element is considered a critical data element (CDE) then true else false.|
 dataset.columns.tags|No|A list of tags that may be assigned to the dataset, table or column; the tags keyword may appear at any level.|
+
+## Stakeholders
+This section lists stakeholders and the history of their relation with this data contract.
+
+```YAML
+contractStakeholders: 
+  - username: David Austin
+    role: Data Innovation Manager
+    dateIn: 2022-08-02
+    dateOut: null
+    replacedByUsername: null
+```
+
+### Definitions
+The UX label is the label used in the UI and other user experiences. It is not limited to BlueRacket.
+
+|Key|UX label|Required|Description|
+| --- | --- | --- | --- |
+stakeholders||No|Array
+stakeholders.username||No|The stakeholder's username or email.|
+stakeholders.role||No|The stakeholder's job role; Examples might be owner, data steward. There is no limit on the role.|
+stakeholders.dateIn||No|The date when the user became a stakeholder.|
+stakeholders.dateOut||No|The date when the user ceased to be a stakeholder|
+stakeholders.replacedByUsername||No|The username of the user who replaced the stakeholder|
 
 ## Roles 
 
