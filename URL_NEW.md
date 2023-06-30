@@ -1,6 +1,4 @@
 # URL Data Contract
-Category: Definitions
-Status: Proposed
 ### Last Edited (dd/mm/yyyy):  06/30/2023
 ### By: Jordan Hasulube - Data Decisioning Intern
 
