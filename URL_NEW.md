@@ -9,7 +9,7 @@ Status: Proposed
 * A data contract is a formal agreement between two parties (data product provider and data product consumer).
 It specifies the guarantees about a provided data set and expectations concerning data product access.
 
-* This document describes the keys and values expected in the URL data contract. It is divided in multiple sections. Each sectiomnontains a [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) file followed by definitions for its keys
+* This document describes the keys and values expected in the URL data contract. It is divided in multiple sections. Each section contains a [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) file followed by definitions for its keys
 
 
 It covers:
