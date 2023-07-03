@@ -39,7 +39,7 @@ nextReassessmentDate: ???
 
 # Contract Description
 description:
-  purpose: Tables and attributes related to URLs.
+  purpose: Tables and attributes related to URLs. Talk to Senthil about expanding on this
   limitations: Financial Reporting
 tenant: revance
 
