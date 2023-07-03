@@ -28,13 +28,13 @@ This section contains general information about this Data Contract.
 domain: url
 domainOwner: Senthil Selvaraj
 partionedOn: URL
-quantumName: **<tbd>** quantum
+quantumName: url quantum
 usagePurpose: Inventory; Analytical
 version: 0.0.2
 status: current
 uniqueContractId: (fka uuid) For lineage/traceability purposes of this contract
-startDate: ???
-nextReassessmentDate: ???
+activeDate: null
+nextReassessmentDate: null
 
 # Contract Description
 description:
@@ -80,6 +80,8 @@ tags: null
 | partitionedOn | No | The column of the master table that its rows were partitioned on.|
 | quantumName | No | Name given to the quantum by George Earl |
 | uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; currently we do not have a way to generate the unique ID|
+|activeDate| Yes | The date that this contract becomes active|
+| nextReassessmentDate | No | The next date that the contract will be reassessed|
 |username|Yes|User credentials for connecting to the dataset; how the credentials will be stored/passed is outside of the scope of the contract.|
 |type|Yes|Identifies the types of objects in the dataset.  For Snowflake the expected value would be tables.
 tenant|No|Indicates the property the data is primarily associated with. Value is case insensitive.|
