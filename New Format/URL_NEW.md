@@ -8,8 +8,7 @@
 * [Dataset and Schema](#Dataset-and-Schema)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
-* [Consequences](#Consequences)
-* [Automation](#Automation)
+* [Service Level Agreements]()
 
 ## Summary
 
