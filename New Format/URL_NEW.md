@@ -302,12 +302,14 @@ This section lists the roles that a consumer may need to access the dataset depe
 ```YAML
 - role: datagov_r
     access: read only
-    firstLevelApprovers: IT
-    secondLevelApprovers: null
+    approvers:
+      - name: IT
+        approvalLevel: 1
 - role: datagov_rw
     access: read and write
-    firstLevelApprovers: Senthil and Parker
-    secondLevelApprovers: null
+    approvers:
+      - name: Senthil Salvaraj; Parker Hanna
+        approvalLevel: 1
 ```
 
 ### Definitions
