@@ -123,7 +123,7 @@ datasetProject|Yes|Database in which the target table resides.|
 datasetName|Yes|The schema in Snowflake where the dataSet takes place.|
 database|Yes|The database where the dataset resides.|
 
-## Dataset & Schema
+## Dataset_&_Schema
 This section describes the dataset and the schema of the data contract.
 
 ```YAML
