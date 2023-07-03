@@ -207,11 +207,8 @@ roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the
 ### Service Level Agreements
 
 ```YAML
-serviceLevelAgreements:
-  - value:
-    frequency:
-    unit:
-  - value:
-    frequency:
-    unit:
+slaProperties:
+  - property: 
+    value: 
+    unit: 
 ```
