@@ -5,7 +5,7 @@
 ## Table of Contents
 * [Summary](#Summary)
 * [Metadata](#Metadata)
-* [Dataset-&-Schema](#Dataset\t&\tSchema)
+* [Dataset and Schema](#Dataset-and-Schema)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
 * [Consequences](#Consequences)
@@ -123,7 +123,7 @@ datasetProject|Yes|Database in which the target table resides.|
 datasetName|Yes|The schema in Snowflake where the dataSet takes place.|
 database|Yes|The database where the dataset resides.|
 
-## Dataset\t&\tSchema
+## Dataset and Schema
 This section describes the dataset and the schema of the data contract.
 
 ```YAML
