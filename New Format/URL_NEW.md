@@ -8,7 +8,7 @@
 * [Dataset and Schema](#Dataset-and-Schema)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
-* [Service Level Agreements]()
+* [Service Level Agreements](#Service-Level-Agreements)
 
 ## Summary
 
@@ -324,6 +324,17 @@ roles.access|Yes|the type of access provided by the IAM role; the value will gen
 roles.firstLevelApprovers|No|the name(s) of the first level approver(s) of the role.|
 roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the role.|
 
+### Service Level Agreements
+
+```YAML
+serviceLevelAgreements:
+  - value:
+    frequency:
+    unit:
+  - value:
+    frequency:
+    unit:
+```
 
 ### Do we need to cover these bullet points??
 * Service-level objectives
