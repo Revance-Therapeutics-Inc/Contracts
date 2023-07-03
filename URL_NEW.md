@@ -3,13 +3,13 @@
 ### By: [Jordan Hasulube](https://www.linkedin.com/in/jordan-hasulube-426814236) - Data Decisioning Intern
 
 ## Table of Contents
-* Summary
-* Metadata
-* Dataset-&-Schema
-* Stakeholders
-* Roles
-* Consequences
-* Automation
+* [Summary](#Summary)
+* [Metadata](#Metadata)
+* [Dataset-&-Schema](#Dataset-&-Schema)
+* [Stakeholders](#Stakeholders)
+* [Roles](#Roles)
+* [Consequences](#Consequences)
+* [Automation](#Automation)
 
 ## Summary
 ### Do we need to cover these bullet points??
