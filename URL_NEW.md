@@ -12,6 +12,7 @@
 * Automation
 
 ## Summary
+### Do we need to cover these bullet points??
 * Service-level objectives
   * Interval of change
   * Latency
