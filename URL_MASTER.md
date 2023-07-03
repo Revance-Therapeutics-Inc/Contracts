@@ -5,7 +5,7 @@ This document describes the keys and values expected in the URL data contract. I
 
 ## Table of contents
 * [Demographics](#Demographics)
-* [Dataset & schema](#Dataset-&-schema)
+* [Dataset and Schema](#Dataset-and-Schema)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
 
@@ -96,7 +96,7 @@ datasetName|BigQuery dataset name|Yes|GCP BigQuery dataset name.|
 |datasetDomain|Domain dataset|No|Name of the logical domain dataset the contract describes. This field is only required for output data contracts. Examples: `imdb_ds_aggregate`, `receiver_profile_out`,  `transaction_profile_out`.|
 database|Database|Yes|The database where the dataset resides.|
 
-## Dataset & schema
+## Dataset and Schema
 This section describes the dataset and the schema of the data contract. It is the support for data quality, which is detailed in the next section.
 
 ### Example
