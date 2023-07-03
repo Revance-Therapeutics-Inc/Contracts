@@ -44,31 +44,30 @@ description:
 tenant: revance
 
 # Getting support (Should probably use an email DL instead of this system)
-pointOfContactName1:Senthil Selvaraj
+teamSupportDl: dl.dd@revance.com
+teamSupportSlackChannel: null
+pointOfContact:
+  - name: Senthil Selvaraj
+    email:
+  - name: Parker Hanna
+    email:
+
 relatedEmail: senthil.selvaraj@revance.com
 pointofContactName2:Parker Hanna
 relatedEmail: parker.hanna@revance.com
-pointOfContactName3: Jordan Hasulube #To be removed after termination of internship
-relatedEmail: jordan.hasulube@revance.com
 
 # Physical parts
 sourcePlatform: snowflake
 sourceSystem: snowflake
-datasetProject: staging_test # snowflake database (Can we shange the key from dataSetProject to snowflakeDatabase or something similar?)
-datasetName: cdp # snowflake schema (Same question as above)
 
 kind: virtualDataset
 type: tables
 
 # Physical access
 #DRIVER INFORMATION REMOVED. NOT APPLICABLE FOR REVANCE
-database: staging
-username: '${env.username}'
-password: '${env.password}'
-schedulerAppName: name_coming_from_scheduler # NEW 2.1.0 Required if you want to schedule stuff, comes from DataALM.
-
-# Data Quality
-quality: null # Do we need a section on Data Quality? George seemed to think so
+database: staging_test
+schema: cdp
+schedulerAppName: null #IE Data Bricks, Airflow, Data ALM, etc.
 
 # Tags
 tags: null
@@ -80,7 +79,7 @@ tags: null
 |domain| Yes | The domain that the current contract is responsible for describing|
 |domainOwner| Yes | The owner of the current domain. Person responsible for the accuracy and continuity of the contract|
 | partitionedOn | No | The column of the master table that its rows were partitioned on.|
-| quantumName | No | ??? |
+| quantumName | No | Name given to the quantum by George Earl |
 | uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; currently we do not have a way to generate the unique ID|
 |username|Yes|User credentials for connecting to the dataset; how the credentials will be stored/passed is outside of the scope of the contract.|
 |type|Yes|Identifies the types of objects in the dataset.  For Snowflake the expected value would be tables.
@@ -280,7 +279,7 @@ contractStakeholders:
   - name: David Austin
     email: david.austin@revance.com
     role: Data Innovation Manager
-    dateIn: 2022-08-02
+    dateIn: 2023-04-10
     dateOut: null
     replacedByUsername: null
 ```
@@ -305,11 +304,11 @@ This section lists the roles that a consumer may need to access the dataset depe
 - role: datagov_r
     access: read only
     firstLevelApprovers: IT
-    secondLevelApprovers: ???
+    secondLevelApprovers: null
 - role: datagov_rw
     access: read and write
     firstLevelApprovers: Senthil and Parker
-    secondLevelApprovers: ???
+    secondLevelApprovers: null
 ```
 
 ### Definitions
@@ -321,23 +320,6 @@ roles.role|Yes|name of the IAM role that provides access to the dataset.|
 roles.access|Yes|the type of access provided by the IAM role; the value will generally come directly from the "BQ dataset to IAM roles mapping" document.|
 roles.firstLevelApprovers|No|the name(s) of the first level approver(s) of the role.|
 roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the role.|
-
-
-## Consequences
-
-- A data contract gives clear expectations and requirements for building the  data product
-- The contract must be fulfilled, but the internal implementation can change
-- The data product can be extended as long as it is backward compatible with the contract
-- A defined purpose is a motivation for the domain team to share the data with others in the first place
-- Agreed service levels can be monitored, with an alerting system in place
-- A contract can be canceled 
-
-
-## Automation
-
-- Data contracts can be provided to all potential customers by the data product developers and accepted through the data product consumer as a self-service. 
-- Data platform automates the creation and revocation of IAM identities, roles, and access policies
-- Reassessment reminder notification
 
 
 ### Do we need to cover these bullet points??
@@ -352,9 +334,3 @@ roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the
 * Terms
   * Allowed usage and access patterns
   * Query frequency
-* Roles
-  * The IAM role definition to grant
-* Contract duration
-  * Start date
-  * Notice period and end date
-  * Next reassessment date
