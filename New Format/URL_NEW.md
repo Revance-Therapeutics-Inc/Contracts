@@ -40,7 +40,7 @@ nextReassessmentDate: ???
 # Contract Description
 description:
   purpose: Tables and attributes related to URLs.
-  limitations: null(limitations on what?)
+  limitations: Financial Reporting
   usage: null
 tenant: revance
 
