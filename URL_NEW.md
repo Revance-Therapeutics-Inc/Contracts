@@ -5,7 +5,7 @@
 ## Table of Contents
 * [Summary](#Summary)
 * [Metadata](#Metadata)
-* [Dataset-&-Schema](#Dataset_&_Schema)
+* [Dataset-&-Schema](#Dataset\t&\tSchema)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
 * [Consequences](#Consequences)
