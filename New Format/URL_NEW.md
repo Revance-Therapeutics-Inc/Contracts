@@ -41,7 +41,6 @@ nextReassessmentDate: ???
 description:
   purpose: Tables and attributes related to URLs.
   limitations: Financial Reporting
-  usage: null
 tenant: revance
 
 # Getting support (Should probably use an email DL instead of this system)
