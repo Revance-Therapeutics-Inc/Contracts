@@ -12,24 +12,7 @@
 * [Automation](#Automation)
 
 ## Summary
-### Do we need to cover these bullet points??
-* Service-level objectives
-  * Interval of change
-  * Latency
-  * Completeness
-  * Freshness
-  * Availability
-  * Performance
-  * Data volume
-* Terms
-  * Allowed usage and access patterns
-  * Query frequency
-* Roles
-  * The IAM role definition to grant
-* Contract duration
-  * Start date
-  * Notice period and end date
-  * Next reassessment date
+
 
 ### What is _a data contract_?
 * A data contract is a formal agreement between two parties (data product provider and data product consumer).
@@ -356,3 +339,23 @@ roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the
 - Data contracts can be provided to all potential customers by the data product developers and accepted through the data product consumer as a self-service. 
 - Data platform automates the creation and revocation of IAM identities, roles, and access policies
 - Reassessment reminder notification
+
+
+### Do we need to cover these bullet points??
+* Service-level objectives
+  * Interval of change
+  * Latency
+  * Completeness
+  * Freshness
+  * Availability
+  * Performance
+  * Data volume
+* Terms
+  * Allowed usage and access patterns
+  * Query frequency
+* Roles
+  * The IAM role definition to grant
+* Contract duration
+  * Start date
+  * Notice period and end date
+  * Next reassessment date
