@@ -21,7 +21,7 @@ It specifies the guarantees about a provided data set and expectations concernin
 * This contract describes the keys and values expected in the Address data contract. It is divided in multiple sections: Metadata, Dataset & Schema, Stakeholders, Roles, Concequences, and Automation. Each section contains a [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) file followed by definitions for its keys.
 
 ## Metadata
-[Table of Contents](#Table-of-Contents)
+* [Table of Contents](#Table-of-Contents)
 This section contains general information about this Data Contract.
 
 ```YAML
