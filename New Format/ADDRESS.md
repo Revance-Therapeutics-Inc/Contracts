@@ -23,7 +23,9 @@ It specifies the guarantees about a provided data set and expectations concernin
 ## Metadata
 * [Table of Contents](#Table-of-Contents)
 * This section contains general information about this Data Contract.
-
+<details>
+  <summary>YAML File</summary>
+  
 ```YAML
 # ADDRESS MASTER
 domain: address
@@ -67,6 +69,7 @@ schedulerAppName: null #IE Data Bricks, Airflow, Data ALM, etc.
 # Tags
 tags: null
 ```
+</details>
 
 |Key|Required|Description|
 | --- | --- | --- |
