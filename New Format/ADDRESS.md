@@ -119,13 +119,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: ???
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -137,13 +133,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: foreign key relating to customer_master table
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -155,13 +147,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -173,13 +161,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -191,13 +175,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: true
         description: suite or unit for practice
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -209,13 +189,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -227,13 +203,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -245,13 +217,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: 5 digit postal code(for areas in the USA)
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -263,13 +231,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: concatenation of street, suite, city, state, country, and postal_code
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -281,13 +245,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: ???
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -299,13 +259,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: url domain name
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -317,13 +273,9 @@ dataset:
         physicalType: NUMBER(1,0)
         isNullable: false
         description: null
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -335,13 +287,9 @@ dataset:
         physicalType: NUMBER(1,0)
         isNullable: false
         description: null
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -353,13 +301,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: a summary of orders done shipped to current address???
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -371,13 +315,9 @@ dataset:
         physicalType: NUMBER(1,0)
         isNullable: false
         description: null
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -389,13 +329,9 @@ dataset:
         physicalType: NUMBER(1,0)
         isNullable: false
         description: null
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -407,13 +343,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: summary of sample product quantity orders for address
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -425,13 +357,9 @@ dataset:
         physicalType: NUMBER(1,0)
         isNullable: false
         description: null
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -443,13 +371,9 @@ dataset:
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        partitionStatus: null
-        clusterStatus: null
         criticalDataElementStatus: null
         tags: null
         classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
