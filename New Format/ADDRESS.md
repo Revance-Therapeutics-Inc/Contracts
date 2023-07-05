@@ -21,6 +21,7 @@ It specifies the guarantees about a provided data set and expectations concernin
 * This contract describes the keys and values expected in the Address data contract. It is divided in multiple sections: Metadata, Dataset & Schema, Stakeholders, Roles, Concequences, and Automation. Each section contains a [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) file followed by definitions for its keys.
 
 ## Metadata
+[Table of Contents](#Table-of-Contents)
 This section contains general information about this Data Contract.
 
 ```YAML
@@ -101,6 +102,7 @@ datasetName|Yes|The schema in Snowflake where the dataSet takes place.|
 database|Yes|The database where the dataset resides.|
 
 ## Dataset and Schema
+[Table of Contents](#Table-of-Contents)
 This section describes the dataset and the schema of the data contract.
 
 ```YAML
@@ -481,6 +483,7 @@ dataset.columns||Yes|Array. A list of columns in the table.|
 dataset.columns.column|Yes|the name of the column.|
 
 ## Stakeholders
+[Table of Contents](#Table-of-Contents)
 This section lists stakeholders and the history of their relation with this data contract.
 
 ```YAML
@@ -506,7 +509,7 @@ contractStakeholders.dateOut|No|The date when the user ceased to be a stakeholde
 contractStakeholders.replacedByUsername|No|The username of the user who replaced the stakeholder|
 
 ## Roles 
-
+[Table of Contents](#Table-of-Contents)
 This section lists the roles that a consumer may need to access the dataset depending on the type of access they require.
 
 ```YAML
@@ -532,8 +535,8 @@ roles.access|Yes|the type of access provided by the IAM role.|
 roles.firstLevelApprovers|No|the name(s) of the first level approver(s) of the role.|
 roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the role.|
 
-### Service Level Agreements
-
+## Service Level Agreements
+[Table of Contents](#Table-of-Contents)
 ```YAML
 serviceLevelAgreements:
   - property:
