@@ -22,7 +22,7 @@ It specifies the guarantees about a provided data set and expectations concernin
 
 ## Metadata
 * [Table of Contents](#Table-of-Contents)
-This section contains general information about this Data Contract.
+* This section contains general information about this Data Contract.
 
 ```YAML
 # ADDRESS MASTER
