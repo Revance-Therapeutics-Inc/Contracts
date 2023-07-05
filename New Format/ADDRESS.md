@@ -1,5 +1,5 @@
 # Address Data Contract
-### Last Edited (dd/mm/yyyy): 07/05/2023
+### Last Edited (dd/mm/yyyy): 
 ### By: [Jordan Hasulube](https://www.linkedin.com/in/jordan-hasulube-426814236) - Data Decisioning Intern
 
 ## Table of Contents
@@ -21,11 +21,8 @@ It specifies the guarantees about a provided data set and expectations concernin
 * This contract describes the keys and values expected in the Address data contract. It is divided in multiple sections: Metadata, Dataset & Schema, Stakeholders, Roles, Concequences, and Automation. Each section contains a [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) file followed by definitions for its keys.
 
 ## Metadata
-* [Table of Contents](#Table-of-Contents)
-* This section contains general information about this Data Contract.
-<details>
-  <summary>YAML File</summary>
-  
+This section contains general information about this Data Contract.
+
 ```YAML
 # ADDRESS MASTER
 domain: address
@@ -69,7 +66,6 @@ schedulerAppName: null #IE Data Bricks, Airflow, Data ALM, etc.
 # Tags
 tags: null
 ```
-</details>
 
 |Key|Required|Description|
 | --- | --- | --- |
@@ -105,356 +101,27 @@ datasetName|Yes|The schema in Snowflake where the dataSet takes place.|
 database|Yes|The database where the dataset resides.|
 
 ## Dataset and Schema
-[Table of Contents](#Table-of-Contents)
 This section describes the dataset and the schema of the data contract.
 
 ```YAML
-dataset:
-  - table: address master
-    physicalName: address_master # default value is table name + version separated by underscores, as table_1_2_0
-    priorTableName: null # if needed
-    description: Master dimension of all addresses 
+dataset: 
+  - table: url master
+    physicalName: URL_MASTER # default value is table name + version separated by underscores, as table_1_2_0
+    priorTableName: null # if needed (When and why was this used?)
+    description: Master dimension of all practices 
     tags: null
-    dataGranularity: One row per address
+    dataGranularity: null
     columns:
-      - column: oce_salesforce_id
-        isPrimary: maybe 
-        businessName: ???
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: ???
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: customer_number
-        isPrimary: maybe 
-        businessName: customer primary identification key
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: foreign key relating to customer_master table
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: practice_name
-        isPrimary: false
-        businessName: practice name
-        logicalType: string
-        physicalType: VARCHAR(16777216)
+      - column: null
+        isPrimary: null # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        businessName: null
+        logicalType: null
+        physicalType: null
         isNullable: false
         description: null
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
+        criticalDataElementStatus: null #is this column critical for the table
         tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: street
-        isPrimary: false
-        businessName: address line 1
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: null
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: suite
-        isPrimary: false
-        businessName: address line 2
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: true
-        description: suite or unit for practice
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: city
-        isPrimary: false 
-        businessName: city
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: null
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: state
-        isPrimary: false 
-        businessName: state
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: null
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: postal_code
-        isPrimary: maybe 
-        businessName: postal or zip code
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: 5 digit postal code(for areas in the USA)
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: fulladdress
-        isPrimary: false
-        businessName: full address
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: concatenation of street, suite, city, state, country, and postal_code
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: url
-        isPrimary: false
-        businessName: url 
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: ???
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: domain
-        isPrimary: false
-        businessName: url domain name
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: url domain name
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: is_primary_address
-        isPrimary: false
-        businessName: is primary address?
-        logicalType: boolean
-        physicalType: NUMBER(1,0)
-        isNullable: false
-        description: null
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: is_ship_to
-        isPrimary: false
-        businessName: is ship to?
-        logicalType: boolean
-        physicalType: NUMBER(1,0)
-        isNullable: false
-        description: null
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: ship_product_quantity_orders
-        isPrimary: false
-        businessName: ship product quantity orders
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: a summary of orders done shipped to current address???
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: is_daxi_unlocked
-        isPrimary: false
-        businessName: is daxxify unlocked
-        logicalType: boolean
-        physicalType: NUMBER(1,0)
-        isNullable: false
-        description: null
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: is_sample_sent_to
-        isPrimary: false
-        businessName: is sample sent to
-        logicalType: boolean
-        physicalType: NUMBER(1,0)
-        isNullable: false
-        description: null
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: sample_product_quantity_orders
-        isPrimary: false
-        businessName: sample product qantity orders
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: summary of sample product quantity orders for address
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: incomplete
-        isPrimary: false 
-        businessName: is incomplete
-        logicalType: boolean
-        physicalType: NUMBER(1,0)
-        isNullable: false
-        description: null
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-        - column: addresstoken
-        isPrimary: false
-        businessName: address token
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        isNullable: false
-        description: null
-        partitionStatus: null
-        clusterStatus: null
-        criticalDataElementStatus: null
-        tags: null
-        classification: null
-        authoritativeDefinitions: null
-        encryptedColumnName: null
+        classification: null #ask dave
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -486,7 +153,6 @@ dataset.columns||Yes|Array. A list of columns in the table.|
 dataset.columns.column|Yes|the name of the column.|
 
 ## Stakeholders
-[Table of Contents](#Table-of-Contents)
 This section lists stakeholders and the history of their relation with this data contract.
 
 ```YAML
@@ -512,7 +178,7 @@ contractStakeholders.dateOut|No|The date when the user ceased to be a stakeholde
 contractStakeholders.replacedByUsername|No|The username of the user who replaced the stakeholder|
 
 ## Roles 
-[Table of Contents](#Table-of-Contents)
+
 This section lists the roles that a consumer may need to access the dataset depending on the type of access they require.
 
 ```YAML
@@ -534,16 +200,18 @@ This section lists the roles that a consumer may need to access the dataset depe
 | --- | --- | --- |
 roles|Yes|Array. A list of roles that will provide user access to the dataset.|
 roles.role|Yes|name of the IAM role that provides access to the dataset.|
-roles.access|Yes|the type of access provided by the IAM role.|
+roles.access|Yes|the type of access provided by the IAM role; the value will generally come directly from the "BQ dataset to IAM roles mapping" document.|
 roles.firstLevelApprovers|No|the name(s) of the first level approver(s) of the role.|
 roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the role.|
 
-## Service Level Agreements
-[Table of Contents](#Table-of-Contents)
+### Service Level Agreements
+
 ```YAML
 serviceLevelAgreements:
-  - property:
-    value:
+  - value:
+    frequency:
+    unit:
+  - value:
+    frequency:
     unit:
 ```
-
