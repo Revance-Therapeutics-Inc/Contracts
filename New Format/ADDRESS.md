@@ -455,15 +455,3 @@ roles.role|Yes|name of the IAM role that provides access to the dataset.|
 roles.access|Yes|the type of access provided by the IAM role; the value will generally come directly from the "BQ dataset to IAM roles mapping" document.|
 roles.firstLevelApprovers|No|the name(s) of the first level approver(s) of the role.|
 roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the role.|
-
-### Service Level Agreements
-
-```YAML
-serviceLevelAgreements:
-  - value:
-    frequency:
-    unit:
-  - value:
-    frequency:
-    unit:
-```
