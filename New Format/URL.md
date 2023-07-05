@@ -126,7 +126,6 @@ dataset:
         description: null
         criticalDataElementStatus: null #is this column critical for the table
         tags: null
-        classification: null #ask dave
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
