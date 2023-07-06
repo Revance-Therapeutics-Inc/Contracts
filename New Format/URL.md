@@ -47,13 +47,9 @@ teamSupportDl: dl.dd@revance.com
 teamSupportSlackChannel: null
 pointOfContact:
   - name: Senthil Selvaraj
-    email:
+    email: senthil.selvaraj@revance.com
   - name: Parker Hanna
-    email:
-
-relatedEmail: senthil.selvaraj@revance.com
-pointofContactName2:Parker Hanna
-relatedEmail: parker.hanna@revance.com
+    email: parker.hanna@revance.com
 
 # Physical parts
 sourcePlatform: snowflake
