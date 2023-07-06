@@ -102,29 +102,29 @@ tags|No|a list of tags that may be assigned to the dataset, table or column; the
 This section describes the dataset and the schema of the data contract.
 
 ```YAML
-dataset: 
+dataset:
   - table: url master
-    physicalName: URL_MASTER # default value is table name + version separated by underscores, as table_1_2_0
-    priorTableName: null # if needed (When and why was this used?)
-    description: Master dimension of all practices 
+    physicalName: URL_MASTER
+    priorTableName: null
+    description: Master dimension of all practices
     tags: null
     dataGranularity: One row per practice
     columns:
       - column: url_key
-        isPrimary: true # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        isPrimary: true
         businessName: url primary identifier
         logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        criticalDataElementStatus: null #is this column critical for the table
+        criticalDataElementStatus: null
         tags: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
       - column: url
-        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+        isPrimary: false
         businessName: url
         logicalType: string
         physicalType: VARCHAR(16777216)
@@ -134,16 +134,12 @@ dataset:
         tags: null
         classification: null
         authoritativeDefinitions: null
-        #Thinking of just making this source tables. Most of these columns aren't transformed, but are just direct pulls from OCE, OPUL, etc.
-        transformSourceTables:
-          -OCE
-          -OPUL
-          -Provider AI
+        transformSourceTables: '-OCE -OPUL -Provider AI'
         transformLogic: null
         transformDescription: Hygiene applied to the sourced websites
         sampleValues: null
-        - column: domain
-        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+      - column: domain
+        isPrimary: false
         businessName: url domain name
         logicalType: string
         physicalType: VARCHAR(16777216)
@@ -153,15 +149,12 @@ dataset:
         tags: null
         classification: null
         authoritativeDefinitions: null
-        transformSourceTables:
-          -OCE
-          -OPUL
-          -Provider AI
+        transformSourceTables: '-OCE -OPUL -Provider AI'
         transformLogic: null
         transformDescription: Hygiene applied to the sourced websites
         sampleValues: null
-        - column: hp_score
-        isPrimary: false 
+      - column: hp_score
+        isPrimary: false
         businessName: url business score
         logicalType: string
         physicalType: VARCHAR(16777216)
@@ -175,31 +168,28 @@ dataset:
         transformLogic: null
         transformDescription: Direct pull from source for the respective URL
         sampleValues: null
-        - column: source
-        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+      - column: source
+        isPrimary: false
         businessName: url source
         logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: method used to attain the url ex: webscrape, linkedin, etc.
+        description: 'method used to attain the url ex webscrape, linkedin, etc.'
         criticalDataElementStatus: null
         tags: null
         classification: null
         authoritativeDefinitions: null
-        transformSourceTables:
-          -OCE
-          -OPUL
-          -Provider AI
+        transformSourceTables: '-OCE -OPUL -Provider AI'
         transformLogic: null
         transformDescription: Source with reference to URL
         sampleValues: null
-        - column: url_status
-        isPrimary: false 
-        businessName: ???
+      - column: url_status
+        isPrimary: false
+        businessName: '???'
         logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
+        description: '???'
         criticalDataElementStatus: null
         tags: null
         classification: null
@@ -208,8 +198,8 @@ dataset:
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: load_date
-        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+      - column: load_date
+        isPrimary: false
         businessName: date added
         logicalType: string
         physicalType: VARCHAR(16777216)
@@ -223,13 +213,13 @@ dataset:
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: modified_date
-        isPrimary: false # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
+      - column: modified_date
+        isPrimary: false
         businessName: modified date
         logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: true
-        description: date the url was modified(if not modified, set to null)
+        description: 'date the url was modified(if not modified, set to null)'
         criticalDataElementStatus: null
         tags: null
         classification: null
@@ -295,17 +285,17 @@ This section lists the roles that a consumer may need to access the dataset depe
 
 ```YAML
 - role: datagov_r
-    access: read only
-    approvers:
-      - name: IT
-        approvalLevel: 1
+  access: read only
+  approvers:
+    - name: IT
+      approvalLevel: 1
 - role: datagov_rw
-    access: read and write
-    approvers:
-      - name: Senthil Salvaraj
-        approvalLevel: 1
-      - name: Parker Hanna
-        approvalLevel: 1
+  access: read and write
+  approvers:
+    - name: Senthil Salvaraj
+      approvalLevel: 1
+    - name: Parker Hanna
+      approvalLevel: 1
 ```
 
 ### Definitions
