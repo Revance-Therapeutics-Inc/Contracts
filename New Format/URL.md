@@ -74,36 +74,33 @@ tags: null
 
 |Key|Required|Description|
 | --- | --- | --- |
-| version|Yes|Current version of the data contract.|
-|domain| Yes | The domain that the current contract is responsible for describing|
-|domainOwner| Yes | The owner of the current domain. Person responsible for the accuracy and continuity of the contract|
+|domain| Yes | The domain that the current contract is responsible for describing.|
+|domainOwner| Yes | The owner of the current domain. Person responsible for the accuracy and continuity of the contract.|
 | partitionedOn | No | The column of the master table that its rows were partitioned on.|
-| quantumName | No | Name given to the quantum by George Earl |
-| uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; currently we do not have a way to generate the unique ID|
-|activeDate| Yes | The date that this contract becomes active|
-| nextReassessmentDate | No | The next date that the contract will be reassessed|
-|username|Yes|User credentials for connecting to the dataset; how the credentials will be stored/passed is outside of the scope of the contract.|
-|type|Yes|Identifies the types of objects in the dataset.  For Snowflake the expected value would be tables.
-tenant|No|Indicates the property the data is primarily associated with. Value is case insensitive.|
-tags|No|a list of tags that may be assigned to the dataset, table or column; the `tags` keyword may appear at any level.
-status|Yes|Current status of the dataset. Example values would be current, 
-sourceSystem|Yes|The system where the dataset resides.  Expected value is Snowflake
-sourcePlatform|Yes|The platform where the dataset resides.
-quantumName|Yes|The name of the data quantum or data product.
-pointOfContactName|No|Name of employee to reach in order to inquire about the contract
-pointOfContactEmail| Yes | Email related to the employee whos name occupies the pointOfContactName field
-productDl|No|The email distribution list (DL) of the persons or team responsible for maintaining the dataset. Should we use this instead of how I have it set up?
-password|Yes|User credentials for connecting to the dataset; how the credentials will be stored/passed is out of the scope of this contract.
-kind|Yes|The kind of Rosewall dataset being cataloged; Expected values are `virtualDataset` or `managedDataset`.
-driverVersion|Yes|The version of the connection driver to be used to connect to the dataset.|
-driver|Yes|The connection driver required to connect to the dataset.|
-description.usage|No|intended usage of the dataset, table, or column (depending on the level); the key may appear at the dataset, table, or column level.|
+| quantumName | No | Name given to the quantum by George Earl. |
+| usagePurpose | No | Description of what kind of tasks this domain may be used for. |
+| version|Yes|Current version of the data contract.|
+status|Yes|Current status of the dataset. Example value would be current. |
+| uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; currently we do not have a way to generate the unique ID.|
+|activeDate| Yes | The date that this contract becomes active.|
+| nextReassessmentDate | No | The next date that the contract will be reassessed.|
 description.purpose|No|Purpose of the dataset, table or column (depending on the level); the key may appear at the dataset, table, or column level.|
 description.limitations|No|Limitations of the dataset, table or column (depending on the level); the key may appear at the dataset, table, or column level.|
 description|No|Object.|
-datasetProject|Yes|Database in which the target table resides.|
-datasetName|Yes|The schema in Snowflake where the dataSet takes place.|
-database|Yes|The database where the dataset resides.|
+tenant|No|Indicates the property the data is primarily associated with. Value is case insensitive.|
+|teamSypportDl | No | Email Distribution List where you can request for support. |
+|teamSupportSlackChannel | No | Slack channel where you can reach out to for support. Not set up as of July 2023. |
+pointOfContact| Yes | an array containing points of contact using name and email. |
+pointOfContact.name|No|Name of employee to reach in order to inquire about the contract.
+pointOfContact.email| Yes | Email related to the employee whos name occupies the pointOfContactName field.
+sourcePlatform|Yes|The platform where the dataset resides.
+sourceSystem|Yes|The system where the dataset resides.  Example values are Snowflake and BigQuery|
+kind|Yes|The kind of Rosewall dataset being cataloged; Expected values are `virtualDataset` or `managedDataset`.
+|type|Yes|Identifies the types of objects in the dataset.  For Snowflake the expected value would be tables.
+database|Yes|Database in which the target table resides.|
+schema|Yes|The schema in Snowflake where the dataSet takes place.|
+schedulerAppName| No | scheduler application used for this database |
+tags|No|a list of tags that may be assigned to the dataset, table or column; the `tags` keyword may appear at any level.
 
 ## Dataset and Schema
 This section describes the dataset and the schema of the data contract.
