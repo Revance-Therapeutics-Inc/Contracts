@@ -102,28 +102,27 @@ This section describes the dataset and the schema of the data contract.
 ```YAML
 dataset:
   - table: address master
-    physicalName: address_master # default value is table name + version separated by underscores, as table_1_2_0
-    priorTableName: null # if needed
-    description: Master dimension of all addresses 
+    physicalName: address_master
+    priorTableName: null
+    description: Master dimension of all addresses
     tags: null
     dataGranularity: One row per address
     columns:
       - column: oce_salesforce_id
-        isPrimary: maybe 
-        businessName: ???
+        isPrimary: maybe
+        businessName: '???'
         logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
+        description: '???'
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: customer_number
-        isPrimary: maybe 
+      - column: customer_number
+        isPrimary: maybe
         businessName: customer primary identification key
         logicalType: string
         physicalType: VARCHAR(16777216)
@@ -131,12 +130,11 @@ dataset:
         description: foreign key relating to customer_master table
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: practice_name
+      - column: practice_name
         isPrimary: false
         businessName: practice name
         logicalType: string
@@ -145,12 +143,11 @@ dataset:
         description: null
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: street
+      - column: street
         isPrimary: false
         businessName: address line 1
         logicalType: string
@@ -159,12 +156,11 @@ dataset:
         description: null
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: suite
+      - column: suite
         isPrimary: false
         businessName: address line 2
         logicalType: string
@@ -173,13 +169,12 @@ dataset:
         description: suite or unit for practice
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: city
-        isPrimary: false 
+      - column: city
+        isPrimary: false
         businessName: city
         logicalType: string
         physicalType: VARCHAR(16777216)
@@ -187,13 +182,12 @@ dataset:
         description: null
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: state
-        isPrimary: false 
+      - column: state
+        isPrimary: false
         businessName: state
         logicalType: string
         physicalType: VARCHAR(16777216)
@@ -201,13 +195,12 @@ dataset:
         description: null
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: postal_code
-        isPrimary: maybe 
+      - column: postal_code
+        isPrimary: maybe
         businessName: postal or zip code
         logicalType: string
         physicalType: VARCHAR(16777216)
@@ -215,40 +208,37 @@ dataset:
         description: 5 digit postal code(for areas in the USA)
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: fulladdress
+      - column: fulladdress
         isPrimary: false
         businessName: full address
         logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: concatenation of street, suite, city, state, country, and postal_code
+        description: 'concatenation of street, suite, city, state, country, and postal_code'
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: url
+      - column: url
         isPrimary: false
-        businessName: url 
+        businessName: url
         logicalType: string
         physicalType: VARCHAR(16777216)
         isNullable: false
-        description: ???
+        description: '???'
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: domain
+      - column: domain
         isPrimary: false
         businessName: url domain name
         logicalType: string
@@ -257,40 +247,37 @@ dataset:
         description: url domain name
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: is_primary_address
+      - column: is_primary_address
         isPrimary: false
         businessName: is primary address?
         logicalType: boolean
-        physicalType: NUMBER(1,0)
+        physicalType: 'NUMBER(1,0)'
         isNullable: false
         description: null
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: is_ship_to
+      - column: is_ship_to
         isPrimary: false
         businessName: is ship to?
         logicalType: boolean
-        physicalType: NUMBER(1,0)
+        physicalType: 'NUMBER(1,0)'
         isNullable: false
         description: null
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: ship_product_quantity_orders
+      - column: ship_product_quantity_orders
         isPrimary: false
         businessName: ship product quantity orders
         logicalType: string
@@ -299,40 +286,37 @@ dataset:
         description: a summary of orders done shipped to current address???
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: is_daxi_unlocked
+      - column: is_daxi_unlocked
         isPrimary: false
         businessName: is daxxify unlocked
         logicalType: boolean
-        physicalType: NUMBER(1,0)
+        physicalType: 'NUMBER(1,0)'
         isNullable: false
         description: null
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: is_sample_sent_to
+      - column: is_sample_sent_to
         isPrimary: false
         businessName: is sample sent to
         logicalType: boolean
-        physicalType: NUMBER(1,0)
+        physicalType: 'NUMBER(1,0)'
         isNullable: false
         description: null
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: sample_product_quantity_orders
+      - column: sample_product_quantity_orders
         isPrimary: false
         businessName: sample product qantity orders
         logicalType: string
@@ -341,26 +325,24 @@ dataset:
         description: summary of sample product quantity orders for address
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: incomplete
-        isPrimary: false 
+      - column: incomplete
+        isPrimary: false
         businessName: is incomplete
         logicalType: boolean
-        physicalType: NUMBER(1,0)
+        physicalType: 'NUMBER(1,0)'
         isNullable: false
         description: null
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-        - column: addresstoken
+      - column: addresstoken
         isPrimary: false
         businessName: address token
         logicalType: string
@@ -369,7 +351,6 @@ dataset:
         description: null
         criticalDataElementStatus: null
         tags: null
-        classification: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
@@ -431,15 +412,15 @@ This section lists the roles that a consumer may need to access the dataset depe
 
 ```YAML
 - role: datagov_r
-    access: read only
-    approvers:
-      - name: IT
-        approvalLevel: 1
+  access: read only
+  approvers:
+    - name: IT
+      approvalLevel: 1
 - role: datagov_rw
-    access: read and write
-    approvers:
-      - name: Senthil Salvaraj; Parker Hanna
-        approvalLevel: 1
+  access: read and write
+  approvers:
+    - name: Senthil Salvaraj; Parker Hanna
+      approvalLevel: 1
 ```
 
 ### Definitions
