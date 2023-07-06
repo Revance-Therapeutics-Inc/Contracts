@@ -302,7 +302,9 @@ This section lists the roles that a consumer may need to access the dataset depe
 - role: datagov_rw
     access: read and write
     approvers:
-      - name: Senthil Salvaraj; Parker Hanna
+      - name: Senthil Salvaraj
+        approvalLevel: 1
+      - name: Parker Hanna
         approvalLevel: 1
 ```
 
