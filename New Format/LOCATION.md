@@ -1,5 +1,5 @@
 # Data Contract
-### Last Edited (dd/mm/yyyy): 
+### Last Edited (dd/mm/yyyy): 7/11/2023
 ### By: [Jordan Hasulube](https://www.linkedin.com/in/jordan-hasulube-426814236) - Data Decisioning Intern
 
 ## Table of Contents
@@ -18,19 +18,19 @@
 It specifies the guarantees about a provided data set and expectations concerning data product access.
 
 ### This Contract
-* This contract describes the keys and values expected in the ___ data contract. It is divided in multiple sections: Metadata, Dataset & Schema, Stakeholders, Roles, Concequences, and Automation. Each section contains a [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) file followed by definitions for its keys.
+* This contract describes the keys and values expected in the location data contract. It is divided in multiple sections: Metadata, Dataset & Schema, Stakeholders, Roles, Concequences, and Automation. Each section contains a [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) file followed by definitions for its keys.
 
 ## Metadata
 This section contains general information about this Data Contract.
 
 ```YAML
-# ___ MASTER
-domain: ___
-domainOwner: ____
+# LOCATION MASTER
+domain: location
+domainOwner: Parker Hanna?
 partionedOn: ____
-quantumName: ____ quantum
-usagePurpose: ____
-version: 0.0.0
+quantumName: location quantum
+usagePurpose: ???
+version: 1.0.0
 status: current
 uniqueContractId: (fka uuid) For lineage/traceability purposes of this contract
 activeDate: null
@@ -38,7 +38,7 @@ nextReassessmentDate: null
 
 # Contract Description
 description:
-  purpose: Tables and attributes related to ____s.
+  purpose: Tables and attributes related to locations.
   limitations: ____
 tenant: revance
 
@@ -46,10 +46,10 @@ tenant: revance
 teamSupportDl: dl.dd@revance.com
 teamSupportSlackChannel: null
 pointOfContact:
-  - name: Senthil Selvaraj
-    email: senthil.salvaraj@revance.com
   - name: Parker Hanna
     email: parker.hanna@revance.com
+  - name: Senthil Selvaraj
+    email: senthil.salvaraj@revance.com
 
 # Physical parts
 sourcePlatform: snowflake
@@ -101,28 +101,211 @@ tags|No|a list of tags that may be assigned to the dataset, table or column; the
 This section describes the dataset and the schema of the data contract.
 
 ```YAML
-dataset: 
-  - table: url master
-    physicalName: URL_MASTER # default value is table name + version separated by underscores, as table_1_2_0
-    priorTableName: null # if needed (When and why was this used?)
-    description: Master dimension of all practices 
+dataset:
+  - table: location master
+    physicalName: location_master # default value is table name + version separated by underscores, as table_1_2_0
+    priorTableName: null # if needed
+    description: Master dimension of all locations and relevant information
     tags: null
-    dataGranularity: null
+    dataGranularity: One row per location
     columns:
-      - column: null
-        isPrimary: null # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: null
-        logicalType: null
-        physicalType: null
+      - column: addr_key
+        isPrimary: true
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
         isNullable: false
         description: null
-        criticalDataElementStatus: null #is this column critical for the table
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
         tags: null
-        classification: null #ask dave
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
+        classification: null
+        encryptedColumnName: null
+        - column: oce_salesforce_id
+        isPrimary: false 
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: customer_number
+        isPrimary: false 
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: practice_name
+        isPrimary: false
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: street
+        isPrimary: false 
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: suite
+        isPrimary: false 
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: city
+        isPrimary: false 
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: state
+        isPrimary: false 
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: postal_code
+        isPrimary: false 
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: fulladdress
+        isPrimary: false
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: url
+        isPrimary: false 
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: domain
+        isPrimary: false 
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: incomplete
+        isPrimary: false 
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: NUMBER(1, 0)
+        isNullable: false
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: addresstoken
+        isPrimary: false 
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: true
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        - column: practice_source
+        isPrimary: false 
+        businessName: transaction reference date
+        logicalType: ???
+        physicalType: VARCHAR(16777216)
+        isNullable: false
+        description: null
+        partitionStatus: ???
+        clusterStatus: ???
+        criticalDataElementStatus: false
+        tags: null
+        classification: null
+        encryptedColumnName: null
+        
+        
 ```
 
 ### Definitions
