@@ -1,5 +1,5 @@
 # URL Data Contract
-### Last Edited (dd/mm/yyyy):  06/30/2023
+### Last Edited (dd/mm/yyyy):  7/11/2023
 ### By: [Jordan Hasulube](https://www.linkedin.com/in/jordan-hasulube-426814236) - Data Decisioning Intern
 
 ## Table of Contents
@@ -32,7 +32,7 @@ quantumName: url quantum
 usagePurpose: Inventory; Analytical
 version: 0.0.2
 status: current
-uniqueContractId: (fka uuid) For lineage/traceability purposes of this contract
+uniqueContractId: 7e47d4aa-2023-11ee-be56-0242ac120002
 activeDate: null
 nextReassessmentDate: null
 
@@ -75,16 +75,16 @@ tags: null
 | partitionedOn | No | The column of the master table that its rows were partitioned on.|
 | quantumName | No | Name given to the quantum by George Earl. |
 | usagePurpose | No | Description of what kind of tasks this domain may be used for. |
-| version|Yes|Current version of the data contract.|
+| version|Yes|Current version of the data contract. Uses semantic versioning.|
 status|Yes|Current status of the dataset. Example value would be current. |
-| uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; currently we do not have a way to generate the unique ID.|
+| uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; generated from the following [URL](https://www.uuidgenerator.net/version1)|
 |activeDate| Yes | The date that this contract becomes active.|
 | nextReassessmentDate | No | The next date that the contract will be reassessed.|
 description.purpose|No|Purpose of the dataset, table or column (depending on the level); the key may appear at the dataset, table, or column level.|
 description.limitations|No|Limitations of the dataset, table or column (depending on the level); the key may appear at the dataset, table, or column level.|
-description|No|Object.|
+description|No|Object. Holds purpose and limitations attributes for this data contract. |
 tenant|No|Indicates the property the data is primarily associated with. Value is case insensitive.|
-|teamSypportDl | No | Email Distribution List where you can request for support. |
+|teamSypportDl | No | Email Distribution List where you can request for support. Not set up as of July 2023.|
 |teamSupportSlackChannel | No | Slack channel where you can reach out to for support. Not set up as of July 2023. |
 pointOfContact| Yes | an array containing points of contact using name and email. |
 pointOfContact.name|No|Name of employee to reach in order to inquire about the contract.
