@@ -102,10 +102,10 @@ This section describes the dataset and the schema of the data contract.
 
 ```YAML
 dataset: 
-  - table: url master
-    physicalName: URL_MASTER # default value is table name + version separated by underscores, as table_1_2_0
+  - table: ___ master
+    physicalName: ____MASTER # default value is table name + version separated by underscores, as table_1_2_0
     priorTableName: null # if needed (When and why was this used?)
-    description: Master dimension of all practices 
+    description: Master dimension of all ___
     tags: null
     dataGranularity: null
     columns:
