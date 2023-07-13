@@ -40,7 +40,7 @@ nextReassessmentDate: null
 description:
   purpose: Tables and attributes related to locations.
   limitations: ____
-tenant: revance
+tenant: Revance
 
 # Getting support (Should probably use an email DL instead of this system)
 teamSupportDl: dl.dd@revance.com
