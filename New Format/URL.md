@@ -30,7 +30,7 @@ domainOwner: Senthil Selvaraj
 partionedOn: URL
 quantumName: url quantum
 usagePurpose: Inventory; Analytical
-version: 0.0.2
+version: 0.0.1
 status: current
 uniqueContractId: 7e47d4aa-2023-11ee-be56-0242ac120002
 activeDate: null
@@ -40,7 +40,7 @@ nextReassessmentDate: null
 description:
   purpose: Tables and attributes related to URLs. Talk to Senthil about expanding on this
   limitations: Financial Reporting
-tenant: revance
+tenant: Revance
 
 # Getting support (Should probably use an email DL instead of this system)
 teamSupportDl: dl.dd@revance.com
