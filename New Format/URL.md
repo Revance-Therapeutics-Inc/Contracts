@@ -107,9 +107,9 @@ dataset:
   - table: url master
     physicalName: URL_MASTER
     priorTableName: null
-    description: Master dimension of all practices
+    description: Master dimension of all urls
     tags: null
-    dataGranularity: One row per practice
+    dataGranularity: One row per url
     columns:
       - column: url_key
         isPrimary: true
