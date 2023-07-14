@@ -27,6 +27,7 @@ This section contains general information about this Data Contract.
 # ___ MASTER
 domain: ___
 domainOwner: ____
+domainOwnerEmail: ____
 partionedOn: ____
 quantumName: ____ quantum
 usagePurpose: ____
@@ -71,6 +72,7 @@ tags: null
 | --- | --- | --- |
 |domain| Yes | The domain that the current contract is responsible for describing.|
 |domainOwner| Yes | The owner of the current domain. Person responsible for the accuracy and continuity of the contract.|
+|domainOwnerEmail| Yes | The email of the person who owns the domain |
 | partitionedOn | No | The column of the master table that its rows were partitioned on.|
 | quantumName | No | Name given to the quantum by George Earl. |
 | usagePurpose | No | Description of what kind of tasks this domain may be used for. |
