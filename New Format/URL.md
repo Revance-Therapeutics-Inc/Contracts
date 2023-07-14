@@ -116,7 +116,7 @@ dataset:
         businessName: url primary identifier
         logicalType: string
         physicalType: VARCHAR(16777216)
-        maxLen: 
+        maxLen: 11 (fixed)
         isNullable: false
         description: null
         criticalDataElementStatus: null
@@ -130,7 +130,7 @@ dataset:
         businessName: url
         logicalType: string
         physicalType: VARCHAR(16777216)
-        maxLen: 
+        maxLen: 173
         isNullable: false
         description: null
         criticalDataElementStatus: null
@@ -144,7 +144,7 @@ dataset:
         businessName: url domain name
         logicalType: string
         physicalType: VARCHAR(16777216)
-        maxLen: 
+        maxLen: 69
         isNullable: false
         description: null
         criticalDataElementStatus: null
@@ -158,7 +158,7 @@ dataset:
         businessName: url business score
         logicalType: string
         physicalType: VARCHAR(16777216)
-        maxLen: 
+        maxLen: 5
         isNullable: false
         description: null
         criticalDataElementStatus: null
@@ -167,26 +167,12 @@ dataset:
         transformLogic: null
         transformDescription: Direct pull from source for the respective URL
         sampleValues: null
-      - column: source
-        isPrimary: false
-        businessName: url source
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        maxLen: 
-        isNullable: false
-        description: 'method used to attain the url ex webscrape, linkedin, etc.'
-        criticalDataElementStatus: null
-        tags: null
-        transformSourceTables: '-OCE -OPUL -Provider AI'
-        transformLogic: null
-        transformDescription: Source with reference to URL
-        sampleValues: null
       - column: url_status
         isPrimary: false
         businessName: '???'
         logicalType: string
         physicalType: VARCHAR(16777216)
-        maxLen: 
+        maxLen: 2
         isNullable: false
         description: '???'
         criticalDataElementStatus: null
