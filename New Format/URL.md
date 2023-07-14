@@ -38,8 +38,8 @@ nextReassessmentDate: null
 
 # Contract Description
 description:
-  purpose: Tables and attributes related to URLs. Talk to Senthil about expanding on this
-  limitations: Financial Reporting
+  purpose: Tables and attributes related to URLs. Urls are tools for marketing used by only a subset of practices. Some use multiple urls. #this goes over the purpose of urls, not of this contract
+  limitations: Financial Reporting; Any other uses that require  1 on 1 accuracy, since one practice can have many urls.
 tenant: Revance
 
 # Getting support (Should probably use an email DL instead of this system)
