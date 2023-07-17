@@ -27,9 +27,10 @@ This section contains general information about this Data Contract.
 # LOCATION MASTER
 domain: location
 domainOwner: Parker Hanna?
+domainOwnerEmail
 partionedOn: ____
 quantumName: location quantum
-usagePurpose: ???
+usagePurpose: ____
 version: 1.0.0
 status: current
 uniqueContractId: (fka uuid) For lineage/traceability purposes of this contract
@@ -71,12 +72,13 @@ tags: null
 | --- | --- | --- |
 |domain| Yes | The domain that the current contract is responsible for describing.|
 |domainOwner| Yes | The owner of the current domain. Person responsible for the accuracy and continuity of the contract.|
+| domainOwnerEmail | Yes | The email of the person who owns the domain |
 | partitionedOn | No | The column of the master table that its rows were partitioned on.|
 | quantumName | No | Name given to the quantum by George Earl. |
 | usagePurpose | No | Description of what kind of tasks this domain may be used for. |
 | version|Yes|Current version of the data contract. Uses semantic versioning.|
 status|Yes|Current status of the dataset. Example value would be current. |
-| uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; generated from the following [URL](https://www.uuidgenerator.net/version1)|
+| uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; generated from [this URL](https://www.uuidgenerator.net/version1)|
 |activeDate| Yes | The date that this contract becomes active.|
 | nextReassessmentDate | No | The next date that the contract will be reassessed.|
 description.purpose|No|Purpose of the dataset, table or column (depending on the level); the key may appear at the dataset, table, or column level.|
