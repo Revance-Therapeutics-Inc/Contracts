@@ -26,8 +26,8 @@ This section contains general information about this Data Contract.
 ```YAML
 # LOCATION MASTER
 domain: location
-domainOwner: Parker Hanna?
-domainOwnerEmail
+domainOwner: Senthil Selvaraj
+domainOwnerEmail: senthil selvaraj@revance.com
 partionedOn: ____
 quantumName: location quantum
 usagePurpose: ____
