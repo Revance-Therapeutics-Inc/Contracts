@@ -92,24 +92,864 @@ dataset.columns.column|Yes|the name of the column.|
 This section describes the dataset and the schema of the data contract.
 
 ```YAML
-dataset: 
-  - table: url master
-    physicalName: URL_MASTER # default value is table name + version separated by underscores, as table_1_2_0
-    priorTableName: null # if needed (When and why was this used?)
-    description: Master dimension of all practices 
+dataset:
+  - table: practice master 
+    physicalName: PRACTICE_MASTER
+    priorTableName: null
+    description: master dimension of all practices
     tags: null
-    dataGranularity: null
+    dataGranularity: One row per practice
     columns:
-      - column: null
-        isPrimary: null # NEW in v2.1.0, Optional, default value is false, indicates whether the column is primary key in the table.
-        businessName: null
-        logicalType: null
-        physicalType: null
+      - column: practice_key
+        isPrimary: true
+        businessName: practice primary identifier 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
         isNullable: false
         description: null
-        criticalDataElementStatus: null #is this column critical for the table
+        criticalDataElementStatus: null
         tags: null
-        classification: null #ask dave
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: provider_key
+        isPrimary: false
+        businessName: provider key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: url_key
+        isPrimary: false
+        businessName: url key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: location_key
+        isPrimary: false
+        businessName: location key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: practice_name
+        isPrimary: false
+        businessName: practice name 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: derived_practice_name
+        isPrimary: false
+        businessName: derived practice name 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: customer_number
+        isPrimary: false
+        businessName: customer number 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: derived_customer_number
+        isPrimary: false
+        businessName: derived customer number 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: oce_salesforce_id
+        isPrimary: false
+        businessName: oce salesforce id 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: oce_account_type
+        isPrimary: false
+        businessName: oce account type 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: oce_account_status
+        isPrimary: false
+        businessName: oce account status 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: opul_platform_number
+        isPrimary: false
+        businessName: opul platform number 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: opul_salesforce_id
+        isPrimary: false
+        businessName: opul salesforce id 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: opul_organization_id
+        isPrimary: false
+        businessName: opul organization id 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: opul_gx_provider_id
+        isPrimary: false
+        businessName: opul gx provider id 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: opul_merchant_id
+        isPrimary: false
+        businessName: opul merchant id 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: opul_account_type
+        isPrimary: false
+        businessName: opul account type 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: categories
+        isPrimary: false
+        businessName: categories 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: specialty
+        isPrimary: false
+        businessName: specialty 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: street
+        isPrimary: false
+        businessName: street 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: city
+        isPrimary: false
+        businessName: city 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: state
+        isPrimary: false
+        businessName: state 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: postal_code
+        isPrimary: false
+        businessName: postal code 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: fulladdress
+        isPrimary: false
+        businessName: fulladdress 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: territory
+        isPrimary: false
+        businessName: territory 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: region
+        isPrimary: false
+        businessName: region 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: zone
+        isPrimary: false
+        businessName: zone 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: rha_customer
+        isPrimary: false
+        businessName: rha customer 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: daxi_customer
+        isPrimary: false
+        businessName: daxi customer 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: multi_locations
+        isPrimary: false
+        businessName: multi locations 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: phone
+        isPrimary: false
+        businessName: phone 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: email
+        isPrimary: false
+        businessName: email 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: oce_email
+        isPrimary: false
+        businessName: oce email 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: billing_contact_email
+        isPrimary: false
+        businessName: billing contact email 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: medically_responsible_contact_id
+        isPrimary: false
+        businessName: medically responsible contact id 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: medically_responsible_contact_email
+        isPrimary: false
+        businessName: medically responsible contact email 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: medically_responsible_person
+        isPrimary: false
+        businessName: medically responsible person 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: medically_responsible_person_email
+        isPrimary: false
+        businessName: medically responsible person email 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: financially_responsible_person
+        isPrimary: false
+        businessName: financially responsible person 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: financially_responsible_contact_email
+        isPrimary: false
+        businessName: financially responsible contact email 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: url
+        isPrimary: false
+        businessName: url 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: domain
+        isPrimary: false
+        businessName: domain 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_national_account
+        isPrimary: false
+        businessName: is national account 
+        logicalType: boolean
+        physicalType: NUMBER(1,0)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: parent_salesforce_id
+        isPrimary: false
+        businessName: parent salesforce id 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: oce_parent_account_number
+        isPrimary: false
+        businessName: oce parent account number 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: oce_parent_account_name
+        isPrimary: false
+        businessName: oce parent account name 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: keyword
+        isPrimary: false
+        businessName: keyword 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: new_hpscore
+        isPrimary: false
+        businessName: new hpscore 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: pai_practice_status
+        isPrimary: false
+        businessName: pai practice status 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: in_oce
+        isPrimary: false
+        businessName: in oce 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: in_sfdc
+        isPrimary: false
+        businessName: in sfdc 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: cdp_status
+        isPrimary: false
+        businessName: cdp status 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: account_name
+        isPrimary: false
+        businessName: account name 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: dent_suspects
+        isPrimary: false
+        businessName: dent suspects 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: vet_suspects
+        isPrimary: false
+        businessName: vet suspects 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: foot_suspects
+        isPrimary: false
+        businessName: foot suspects 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: practice_source
+        isPrimary: false
+        businessName: practice source 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: addresstoken
+        isPrimary: false
+        businessName: addresstoken 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: addresstoken2
+        isPrimary: false
+        businessName: addresstoken2 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: practicetoken
+        isPrimary: false
+        businessName: practicetoken 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: urltoken
+        isPrimary: false
+        businessName: urltoken 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        tags: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
