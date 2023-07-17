@@ -64,7 +64,7 @@ schema: cdp
 schedulerAppName: null #IE Data Bricks, Airflow, Data ALM, etc.
 
 # Tags
-tags: null
+tags: location, place, site, venue, position
 ```
 
 |Key|Required|Description|
