@@ -418,13 +418,11 @@ dataset.columns.isPrimary|No|Boolean value specifying whether the column is prim
 dataset.columns.businessName|Yes|A more conversational name for the column. Think about it as changing from  'Data Speak' to 'English'.|
 dataset.columns.logicalType|Yes|The logical data type of the column For example, 'varchar' would fit under the type of 'string'.|
 dataset.columns.physicalType|Yes|The actual physical column data type. |
-dataset.columns.maxLen | No | The maximum length observed in the column at the time of filling out the field. A '(fixed)' after the max length means that the maximum length observed is always the length of the string in that column, never more and never less.
+dataset.columns.maxLen | No | The max length occuring in the column at the time the field was filled out. A "(fixed)" next to the value means that the length of the string in this column never drops below or exeeds the maxLen value.
 dataset.columns.isNullable|Yes|indicates if the column may contain Null values; possible values are true and false.|
 dataset.columns.description| Yes| description of the column. Null if the column name is self-explanatory |
 dataset.columns.criticalDataElementStatus|No|True or false indicator; If element is considered a critical data element (CDE) then true else false.|
 dataset.columns.tags|No|A list of tags that may be assigned to the dataset, table or column; the tags keyword may appear at any level.|
-dataset.columns.classification|Yes|the PayPal data classification indicating the class of data in the column; expected values are 1, 2, 3, 4, or 5.|
-|dataset.columns.authoritativeDefinitions|No|list of links to sources that provide more detail on column logic or values; examples would be URL to a GitHub repo, Collibra, on another tool.|
 dataset|Yes|Array. A list of tables within the dataset to be cataloged
 dataset.columns.transformSourceTables| No | Source table(s) for the data in this column. Common sources would be OCE and OPUL |
 dataset.columns.transformLogic| No | Exact SQL statements performed to get the data in its current state |
