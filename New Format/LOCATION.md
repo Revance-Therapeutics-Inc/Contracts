@@ -1,4 +1,4 @@
-# Data Contract
+# Location Data Contract
 ### Last Edited (dd/mm/yyyy): 7/11/2023
 ### By: [Jordan Hasulube](https://www.linkedin.com/in/jordan-hasulube-426814236) - Data Decisioning Intern
 
