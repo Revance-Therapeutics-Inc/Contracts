@@ -1,6 +1,5 @@
 # Address Data Contract
-### Last Edited (dd/mm/yyyy): 07/11/2023
-### By: [Jordan Hasulube](https://www.linkedin.com/in/jordan-hasulube-426814236) - Data Decisioning Intern
+### Last Edited By: [Jordan Hasulube](https://www.linkedin.com/in/jordan-hasulube-426814236) - Data Decisioning Intern
 
 ## Table of Contents
 * [Summary](#Summary)
@@ -26,7 +25,8 @@ This section contains general information about this Data Contract.
 ```YAML
 # ADDRESS MASTER
 domain: address
-domainOwner: Parker Hanna
+domainOwner: Senthil Selvaraj
+domainOwnerEmail: senthil.selvaraj@revance.com
 partionedOn: null
 quantumName: Address quantum
 usagePurpose: ____
@@ -71,6 +71,7 @@ tags: null
 | --- | --- | --- |
 |domain| Yes | The domain that the current contract is responsible for describing.|
 |domainOwner| Yes | The owner of the current domain. Person responsible for the accuracy and continuity of the contract.|
+| domainOwnerEmail | Yes | The email of the person who owns the domain |
 | partitionedOn | No | The column of the master table that its rows were partitioned on.|
 | quantumName | No | Name given to the quantum by George Earl. |
 | usagePurpose | No | Description of what kind of tasks this domain may be used for. |
