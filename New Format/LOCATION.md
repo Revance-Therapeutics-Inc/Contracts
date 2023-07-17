@@ -116,7 +116,7 @@ dataset:
         businessName: location key 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 11(fixed)
         isNullable: false
         description: null
         criticalDataElementStatus: null
@@ -130,7 +130,7 @@ dataset:
         businessName: url key 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 11(fixed)
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -418,6 +418,7 @@ dataset.columns.isPrimary|No|Boolean value specifying whether the column is prim
 dataset.columns.businessName|Yes|A more conversational name for the column. Think about it as changing from  'Data Speak' to 'English'.|
 dataset.columns.logicalType|Yes|The logical data type of the column For example, 'varchar' would fit under the type of 'string'.|
 dataset.columns.physicalType|Yes|The actual physical column data type. |
+dataset.columns.maxLen | No | The maximum length observed in the column at the time of filling out the field. A '(fixed)' after the max length means that the maximum length observed is always the length of the string in that column, never more and never less.
 dataset.columns.isNullable|Yes|indicates if the column may contain Null values; possible values are true and false.|
 dataset.columns.description| Yes| description of the column. Null if the column name is self-explanatory |
 dataset.columns.criticalDataElementStatus|No|True or false indicator; If element is considered a critical data element (CDE) then true else false.|
