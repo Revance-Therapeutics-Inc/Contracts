@@ -29,7 +29,7 @@ domainOwner: Senthil Selvaraj
 domainOwnerEmail: senthil.selvaraj@revance.com
 partionedOn: null
 quantumName: Address quantum
-usagePurpose: ____
+usagePurpose: Analytical; 
 version: 1.0.0
 status: current
 uniqueContractId: (fka uuid) For lineage/traceability purposes of this contract
