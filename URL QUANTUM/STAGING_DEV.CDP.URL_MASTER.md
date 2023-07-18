@@ -95,7 +95,27 @@ This section describes the dataset and the schema of the data contract.
 ```YAML
 dataset:
   - table: url master
-    physicalName: URL_MASTER
+    physicalName:   1.  STAGING_DEV.CDP.URL_MASTER
+                    2.  STITCH_DEV.CDPSTAGE.URL_MASTER_STG
+                    3.  STITCH_DEV.CDPRAW.URL_MASTER_RAW
+                    4.  STAGING_DEV.SALES.VW_ACCOUNT
+                    5.  STAGING_DEV.OPUL_CRM.ACCOUNT
+                    6.  STITCH_DEV.CDPRAW.PAI_GOOGLEMAPS_RAW
+                    7.  STITCH_DEV.CDPRAW.PAI_YELP_RAW
+                    8.  STITCH_DEV.CDPRAW.PAI_CARECREDIT_RAW
+                    9.  STITCH_DEV.CDPRAW.PAI_REALSELF_RAW
+                   10. STITCH_DEV.CDPRAW.FINDURL_CARECREDIT
+                   11. STITCH_DEV.CDPRAW.PAI_NO_URLS_FACEBOOK
+                   12. STITCH_DEV.CDPRAW.FINDURL_NPI_APRIL
+                   13. STITCH_DEV.CDPRAW.FINDURL_YELP
+                   14. STITCH_DEV.CDPRAW.PAI_LINKEDIN_CO_SEARCH_RAW
+                   15. STITCH_DEV.CDPRAW.PAI_LINKEDIN_CO_WEB_RAW
+                   16. STITCH_DEV.CDPRAW.PAI_LINKEDIN_CO_WKEXP_RAW
+                   17. STITCH_DEV.CDPRAW.PAI_INSTAGRAM_RAW
+                   18. STITCH_DEV.CDPRAW.PAI_WEBPAGE_RAW
+                   19. STITCH_DEV.CDPRAW.PAI_WEBSCRAPING_RAW
+                   20. STITCH_DEV.CDPRAW.PAI_AESTHETICSOCIETY_RAW
+ 
     priorTableName: null
     description: Master dimension of all urls
     tags: null
@@ -125,7 +145,7 @@ dataset:
         description: null
         criticalDataElementStatus: null
         tags: null
-        transformSourceTables: '-OCE -OPUL -Provider AI'
+        transformSourceTables:
         transformLogic: null
         transformDescription: Hygiene applied to the sourced websites
         sampleValues: null
