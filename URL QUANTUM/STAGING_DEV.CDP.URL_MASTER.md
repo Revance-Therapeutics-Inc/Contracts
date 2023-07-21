@@ -187,7 +187,7 @@ dataset:
         maxLen: 5
         isNullable: false
         description: business score to identify how reliable the website to refer to as a practice.
-        criticalDataElementStatus: based of the score the url is identified if it is a practice or not
+        criticalDataElementStatus: true
         tags: null
         transformSourceTables: sourced from all of the raw tables mentioned in the table list
         transformLogic: derived based of score distribution as of current iteration any score greater than equal to 20 is defined as a practice                        
@@ -240,6 +240,55 @@ dataset:
         transformLogic: null
         transformDescription: when a url value is modified the column gets updated
         sampleValues: 2023-08-11 08:58:09.627
+  - table: STAGING_DEV.CDP.VW_URL_MASTER
+    sourceTables:
+    physicalName:
+    description:
+    tags:
+    dataGranularity:
+    columns:
+      - column: url
+        isPrimary: false
+        businessName: business url
+        logicalType: string
+        physicalType: VARCHAR(16777216)
+        maxLen: 
+        isNullable: false
+        description: null
+        criticalDataElementStatus: true
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: domain
+        isPrimary: false
+        businessName: url domain name
+        logicalType: string
+        physicalType: VARCHAR(16777216)
+        maxLen: 
+        isNullable: false
+        description: the url without the web extention on the end
+        criticalDataElementStatus: false
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: hp_score
+        isPrimary: false
+        businessName: url score
+        logicalType: string
+        physicalType: VARCHAR(16777216)
+        maxLen: 
+        isNullable: false
+        description: business score to identify how reliable the website to refer to as a practice.
+        criticalDataElementStatus: true
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
 ```
 
 ### Definitions
