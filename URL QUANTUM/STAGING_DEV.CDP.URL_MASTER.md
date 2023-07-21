@@ -104,7 +104,7 @@ This section describes the dataset and the schema of the data contract.
 
 ```YAML
 dataset:
-  - table: STAGING_DEV.CDP.URL_MASTER
+  - table: url master
     sourceTables:
       - STITCH_DEV.CDPSTAGE.URL_MASTER_STG
       - STITCH_DEV.CDPRAW.URL_MASTER_RAW
@@ -240,12 +240,12 @@ dataset:
         transformLogic: null
         transformDescription: when a url value is modified the column gets updated
         sampleValues: 2023-08-11 08:58:09.627
-  - table: STAGING_DEV.CDP.VW_URL_MASTER
-    sourceTables:
-    physicalName:
-    description:
+  - table: view url master
+    sourceTables: STAGING_DEV.CDP.URL_MASTER
+    physicalName: STAGING_DEV.CDP.VW_URL_MASTER
+    description: view for url master containing url, domain, and hp_score
     tags:
-    dataGranularity:
+    dataGranularity: one row per URL
     columns:
       - column: url
         isPrimary: false
