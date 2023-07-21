@@ -78,7 +78,7 @@ tags: link, website, web address, web page, page, hyperlink
 | usagePurpose | No | Description of what kind of tasks this domain may be used for. |
 | version|Yes|Current version of the data contract. Uses semantic versioning.|
 status|Yes|Current status of the dataset. Example value would be current. |
-| uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; generated from [this URL](https://www.uuidgenerator.net/version1)|
+| uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; version 4 uuid generated from [this URL](https://www.uuidgenerator.net/version1)|
 |activeDate| Yes | The date that this contract becomes active.|
 | nextReassessmentDate | No | The next date that the contract will be reassessed.|
 description.purpose|No|Purpose of the dataset, table or column (depending on the level); the key may appear at the dataset, table, or column level.|
