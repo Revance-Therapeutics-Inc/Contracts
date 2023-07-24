@@ -240,11 +240,11 @@ dataset:
         transformLogic: null
         transformDescription: when a url value is modified the column gets updated
         sampleValues: 2023-08-11 08:58:09.627
-  - table: view url master
+  - table: url master view
     sourceTables: STAGING_DEV.CDP.URL_MASTER
     physicalName: STAGING_DEV.CDP.VW_URL_MASTER
     description: view for url master containing url, domain, and hp_score
-    tags:
+    tags: view
     dataGranularity: one row per URL
     columns:
       - column: url
@@ -283,6 +283,27 @@ dataset:
         maxLen: 
         isNullable: false
         description: business score to identify how reliable the website to refer to as a practice.
+        criticalDataElementStatus: true
+        tags: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+  - table: 
+    sourceTables: 
+    physicalName: 
+    description: 
+    tags: 
+    dataGranularity: 
+    columns:
+      - column: url
+        isPrimary: false
+        businessName: business url
+        logicalType: string
+        physicalType: VARCHAR(16777216)
+        maxLen: 
+        isNullable: false
+        description: null
         criticalDataElementStatus: true
         tags: null
         transformSourceTables: null
