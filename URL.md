@@ -321,7 +321,7 @@ dataset:
 |dataset.description | Yes | Description of the current table.|
 |dataset.tags| No | Words related to the current table and it's main applications.|
 |dataset.dataGranularity| Yes | Whether the row has one or many rows per primarily identified object. |
-dataset.columns||Yes|Array. A list of columns in the table.|
+dataset.columns|Yes|Array. A list of columns in the table.|
 dataset.columns.isPrimary|No|Boolean value specifying whether the column is primary or not. Default is false.|
 dataset.columns.businessName|Yes|A more conversational name for the column. Think about it as changing from  'Data Speak' to 'English'.|
 dataset.columns.logicalType|Yes|The logical data type of the column For example, 'varchar' would fit under the type of 'string'.|
