@@ -8,7 +8,6 @@
 * [Dataset and Schema](#Dataset-and-Schema)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
-* [Service Level Agreements](#Service-Level-Agreements)
 
 ## Summary
 
@@ -414,11 +413,18 @@ dataset:
 
 |Key|Required|Description|
 | --- | --- | --- | 
+|dataset.table|Yes|Name of the table being cataloged; the value should only contain the table name. Do not include the project or dataset name in the value.|
+|dataset.sourceTables| Yes | A list of all source tables for the current table.|
+|dataset.physicalName|No|Physical name of the table, default value is table name + version separated by underscores, as `table_1_2_0`.|
+|dataset.description | Yes | Description of the current table.|
+|dataset.tags| No | Words related to the current table and it's main applications.|
+|dataset.dataGranularity| Yes | Whether the row has one or many rows per primarily identified object. |
+dataset.columns|Yes|Array. A list of columns in the table.|
 dataset.columns.isPrimary|No|Boolean value specifying whether the column is primary or not. Default is false.|
 dataset.columns.businessName|Yes|A more conversational name for the column. Think about it as changing from  'Data Speak' to 'English'.|
 dataset.columns.logicalType|Yes|The logical data type of the column For example, 'varchar' would fit under the type of 'string'.|
 dataset.columns.physicalType|Yes|The actual physical column data type. |
-dataset.columns.maxLen | No | The max length occuring in the column at the time the field was filled out. A "(fixed)" next to the value means that the length of the string in this column never drops below or exeeds the maxLen value.
+dataset.columns.maxLen | No | The max length occuring in the column, or that would be expected to occur in the column under normal conditions
 dataset.columns.isNullable|Yes|indicates if the column may contain Null values; possible values are true and false.|
 dataset.columns.description| Yes| description of the column. Null if the column name is self-explanatory |
 dataset.columns.criticalDataElementStatus|No|True or false indicator; If element is considered a critical data element (CDE) then true else false.|
@@ -428,9 +434,6 @@ dataset.columns.transformSourceTables| No | Source table(s) for the data in this
 dataset.columns.transformLogic| No | Exact SQL statements performed to get the data in its current state |
 dataset.columns.transformDescription| No | Informal Description of Transformation Logic in a more understandable way |
 dataset.columns.sampleValues| No | Sample values for the column to help the viewer understand exaclty what it is |
-dataset.table|Yes|Name of the table being cataloged; the value should only contain the table name. Do not include the project or dataset name in the value.
-dataset.physicalName|No|Physical name of the table, default value is table name + version separated by underscores, as `table_1_2_0`.|
-dataset.columns||Yes|Array. A list of columns in the table.|
 dataset.columns.column|Yes|the name of the column.|
 
 ## Stakeholders
