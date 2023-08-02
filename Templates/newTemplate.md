@@ -8,7 +8,6 @@
 * [Dataset and Schema](#Dataset-and-Schema)
 * [Stakeholders](#Stakeholders)
 * [Roles](#Roles)
-* [Service Level Agreements](#Service-Level-Agreements)
 
 ## Summary
 
@@ -131,24 +130,27 @@ dataset:
 
 |Key|Required|Description|
 | --- | --- | --- | 
+|dataset.table|Yes|Name of the table being cataloged; the value should only contain the table name. Do not include the project or dataset name in the value.|
+|dataset.sourceTables| Yes | A list of all source tables for the current table.|
+|dataset.physicalName|No|Physical name of the table, default value is table name + version separated by underscores, as `table_1_2_0`.|
+|dataset.description | Yes | Description of the current table.|
+|dataset.tags| No | Words related to the current table and it's main applications.|
+|dataset.dataGranularity| Yes | Whether the row has one or many rows per primarily identified object. |
+dataset.columns|Yes|Array. A list of columns in the table.|
 dataset.columns.isPrimary|No|Boolean value specifying whether the column is primary or not. Default is false.|
 dataset.columns.businessName|Yes|A more conversational name for the column. Think about it as changing from  'Data Speak' to 'English'.|
 dataset.columns.logicalType|Yes|The logical data type of the column For example, 'varchar' would fit under the type of 'string'.|
 dataset.columns.physicalType|Yes|The actual physical column data type. |
+dataset.columns.maxLen | No | The max length occuring in the column, or that would be expected to occur in the column under normal conditions
 dataset.columns.isNullable|Yes|indicates if the column may contain Null values; possible values are true and false.|
 dataset.columns.description| Yes| description of the column. Null if the column name is self-explanatory |
 dataset.columns.criticalDataElementStatus|No|True or false indicator; If element is considered a critical data element (CDE) then true else false.|
 dataset.columns.tags|No|A list of tags that may be assigned to the dataset, table or column; the tags keyword may appear at any level.|
-dataset.columns.classification|Yes|the PayPal data classification indicating the class of data in the column; expected values are 1, 2, 3, 4, or 5.|
-|dataset.columns.authoritativeDefinitions|No|list of links to sources that provide more detail on column logic or values; examples would be URL to a GitHub repo, Collibra, on another tool.|
 dataset|Yes|Array. A list of tables within the dataset to be cataloged
 dataset.columns.transformSourceTables| No | Source table(s) for the data in this column. Common sources would be OCE and OPUL |
 dataset.columns.transformLogic| No | Exact SQL statements performed to get the data in its current state |
 dataset.columns.transformDescription| No | Informal Description of Transformation Logic in a more understandable way |
 dataset.columns.sampleValues| No | Sample values for the column to help the viewer understand exaclty what it is |
-dataset.table|Yes|Name of the table being cataloged; the value should only contain the table name. Do not include the project or dataset name in the value.
-dataset.physicalName|No|Physical name of the table, default value is table name + version separated by underscores, as `table_1_2_0`.|
-dataset.columns||Yes|Array. A list of columns in the table.|
 dataset.columns.column|Yes|the name of the column.|
 
 ## Stakeholders
@@ -201,13 +203,4 @@ roles|Yes|Array. A list of roles that will provide user access to the dataset.|
 roles.role|Yes|name of the IAM role that provides access to the dataset.|
 roles.access|Yes|the type of access provided by the IAM role; the value will generally come directly from the "BQ dataset to IAM roles mapping" document.|
 roles.firstLevelApprovers|No|the name(s) of the first level approver(s) of the role.|
-roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the role.|
-
-### Service Level Agreements
-
-```YAML
-slaProperties:
-  - property: 
-    value: 
-    unit: 
-```
+roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the role.
