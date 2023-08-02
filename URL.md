@@ -288,27 +288,6 @@ dataset:
         transformLogic: null
         transformDescription: null
         sampleValues: null
-  - table: 
-    sourceTables: 
-    physicalName: 
-    description: 
-    tags: 
-    dataGranularity: 
-    columns:
-      - column: url
-        isPrimary: false
-        businessName: business url
-        logicalType: string
-        physicalType: VARCHAR(16777216)
-        maxLen: 
-        isNullable: false
-        description: null
-        criticalDataElementStatus: true
-        tags: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
 ```
 
 ### Definitions
