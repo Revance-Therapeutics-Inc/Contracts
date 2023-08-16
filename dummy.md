@@ -1,4 +1,4 @@
-# PRACTICE Data Contract
+# LOCATION Data Contract
 ### By: [Jordan Hasulube](https://www.linkedin.com/in/jordan-hasulube-426814236) - Data Decisioning Intern
 
 ## Table of Contents
@@ -15,28 +15,28 @@
 It specifies the guarantees about a provided data set and expectations concerning data product access.
 
 ### This Contract
-* This contract describes the keys and values expected in the PRACTICE data contract. It is divided in multiple sections: Metadata, Dataset & Schema, Stakeholders, Roles, Concequences, and Automation. Each section contains a [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) file followed by definitions for its keys.
+* This contract describes the keys and values expected in the LOCATION data contract. It is divided in multiple sections: Metadata, Dataset & Schema, Stakeholders, Roles, Concequences, and Automation. Each section contains a [YAML](https://www.redhat.com/en/topics/automation/what-is-yaml) file followed by definitions for its keys.
 
 ## Metadata
 This section contains general information about this Data Contract.
 
 ```YAML
-# PRACTICE MASTER
-domain: PRACTICE
+# LOCATION MASTER
+domain: LOCATION
 domainOwner: Senthil Selvaraj
 domainOwnerEmail: senthil.selvaraj@revance.com
-partitionedOn: null
-quantumName: practice quantum
+partitionedOn: LOCATION_KEY
+quantumName: location quantum
 usagePurpose: null
 version: 0.0.1
 status: current
-uniqueContractID: 203ba0d9-c399-4a30-8234-e2841ea49c37
+uniqueContractID: a28ed25a-aeb3-429a-9155-4e3ea90be229
 activeDate: null
 nextReassessmentDate: null
 
 # Contract Description
 description:
-  purpose: tables and attributes related to practices
+  purpose: tables and attributes related to locations
   limitations: null
 tenant: Revance
 
@@ -52,7 +52,7 @@ kind: virtualDataset
 type: tables
 
 # Physical access
-database: STAGING_DEV
+database: STAGING_TEST
 schema: CDP
 schedulerAppName: null #IE Data Bricks, Airflow, Data ALM, etc.
 
@@ -84,9 +84,9 @@ pointOfContact| Yes | an array containing points of contact using name and email
 pointOfContact.name|No|Name of employee to reach in order to inquire about the contract.
 pointOfContact.email| Yes | Email related to the employee whos name occupies the pointOfContactName field.
 sourcePlatform|Yes|The platform where the dataset resides.
-sourceSystem|Yes|The system where the dataset resides. �Example values are Snowflake and BigQuery|
-kind|Yes|The kind of Rosewall dataset being cataloged; Expected values are�`virtualDataset`�or�`managedDataset`.
-|type|Yes|Identifies the types of objects in the dataset. �For Snowflake the expected value would be�tables.
+sourceSystem|Yes|The system where the dataset resides. Example values are Snowflake and BigQuery|
+kind|Yes|The kind of Rosewall dataset being cataloged; Expected values are`virtualDataset`or`managedDataset`.
+|type|Yes|Identifies the types of objects in the dataset. For Snowflake the expected value would betables.
 database|Yes|Database in which the target table resides.|
 schema|Yes|The schema in Snowflake where the dataSet takes place.|
 schedulerAppName| No | scheduler application used for this database |
@@ -96,6 +96,568 @@ tags|No|a list of tags that may be assigned to the dataset, table or column; the
 This section describes the dataset and the schema of the data contract.
 
 ```YAML
+  - table: location master 
+    sourceTables: null
+    physicalName: STAGING_TEST.CDP.LOCATION_MASTER
+    priorTableName: null
+    description: master dimension of all locations
+    tags: null
+    dataGranularity: One row per location
+    columns:
+      - column: location_key
+        isPrimary: true
+        businessName: location key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: false
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: provider_key
+        isPrimary: false
+        businessName: provider key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: url_key
+        isPrimary: false
+        businessName: url key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: oce_salesforce_id
+        isPrimary: false
+        businessName: oce salesforce id 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: customer_number
+        isPrimary: false
+        businessName: customer number 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: derived_customer_number
+        isPrimary: false
+        businessName: derived customer number 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: practice_name
+        isPrimary: false
+        businessName: practice name 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: derived_practice_name
+        isPrimary: false
+        businessName: derived practice name 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: street
+        isPrimary: false
+        businessName: street 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: suite
+        isPrimary: false
+        businessName: suite 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: city
+        isPrimary: false
+        businessName: city 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: state
+        isPrimary: false
+        businessName: state 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: postal_code
+        isPrimary: false
+        businessName: postal code 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: fulladdress
+        isPrimary: false
+        businessName: fulladdress 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: url
+        isPrimary: false
+        businessName: url 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: domain
+        isPrimary: false
+        businessName: domain 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_primary_address
+        isPrimary: false
+        businessName: is primary address 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_ship_to
+        isPrimary: false
+        businessName: is ship to 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_daxi_unlocked
+        isPrimary: false
+        businessName: is daxi unlocked 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: addresstoken
+        isPrimary: false
+        businessName: addresstoken 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: addresstoken2
+        isPrimary: false
+        businessName: addresstoken2 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+  - table: location master 
+    sourceTables: null
+    physicalName: STAGING_TEST.CDP.LOCATION_MASTER
+    priorTableName: null
+    description: master dimension of all locations
+    tags: null
+    dataGranularity: One row per location
+    columns:
+      - column: location_key
+        isPrimary: true
+        businessName: location key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: false
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: provider_key
+        isPrimary: false
+        businessName: provider key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: url_key
+        isPrimary: false
+        businessName: url key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: oce_salesforce_id
+        isPrimary: false
+        businessName: oce salesforce id 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: customer_number
+        isPrimary: false
+        businessName: customer number 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: derived_customer_number
+        isPrimary: false
+        businessName: derived customer number 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: practice_name
+        isPrimary: false
+        businessName: practice name 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: derived_practice_name
+        isPrimary: false
+        businessName: derived practice name 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: street
+        isPrimary: false
+        businessName: street 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: suite
+        isPrimary: false
+        businessName: suite 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: city
+        isPrimary: false
+        businessName: city 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: state
+        isPrimary: false
+        businessName: state 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: postal_code
+        isPrimary: false
+        businessName: postal code 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: fulladdress
+        isPrimary: false
+        businessName: fulladdress 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: url
+        isPrimary: false
+        businessName: url 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: domain
+        isPrimary: false
+        businessName: domain 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_primary_address
+        isPrimary: false
+        businessName: is primary address 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_ship_to
+        isPrimary: false
+        businessName: is ship to 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_daxi_unlocked
+        isPrimary: false
+        businessName: is daxi unlocked 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: addresstoken
+        isPrimary: false
+        businessName: addresstoken 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: addresstoken2
+        isPrimary: false
+        businessName: addresstoken2 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
   - table: practice master 
     sourceTables: null
     physicalName: STAGING_DEV.CDP.PRACTICE_MASTER
@@ -897,118 +1459,6 @@ This section describes the dataset and the schema of the data contract.
         transformLogic: null
         transformDescription: null
         sampleValues: null
-  - table: url master 
-    sourceTables: null
-    physicalName: STAGING_TEST.CDP.URL_MASTER
-    priorTableName: null
-    description: master dimension of all urls
-    tags: null
-    dataGranularity: One row per url
-    columns:
-      - column: url_key
-        isPrimary: true
-        businessName: url key 
-        logicalType: text
-        physicalType: VARCHAR(16777216)
-        maxLen: null
-        isNullable: false
-        description: null
-        criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-      - column: url
-        isPrimary: false
-        businessName: url 
-        logicalType: text
-        physicalType: VARCHAR(16777216)
-        maxLen: null
-        isNullable: true
-        description: null
-        criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-      - column: domain
-        isPrimary: false
-        businessName: domain 
-        logicalType: text
-        physicalType: VARCHAR(16777216)
-        maxLen: null
-        isNullable: true
-        description: null
-        criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-      - column: hp_score
-        isPrimary: false
-        businessName: hp score 
-        logicalType: text
-        physicalType: VARCHAR(16777216)
-        maxLen: null
-        isNullable: true
-        description: null
-        criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-      - column: url_status
-        isPrimary: false
-        businessName: url status 
-        logicalType: text
-        physicalType: VARCHAR(16777216)
-        maxLen: null
-        isNullable: true
-        description: null
-        criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-      - column: source
-        isPrimary: false
-        businessName: source 
-        logicalType: text
-        physicalType: VARCHAR(16777216)
-        maxLen: null
-        isNullable: true
-        description: null
-        criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-      - column: load_date
-        isPrimary: false
-        businessName: load date 
-        logicalType: text
-        physicalType: VARCHAR(16777216)
-        maxLen: null
-        isNullable: true
-        description: null
-        criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-      - column: modified_date
-        isPrimary: false
-        businessName: modified date 
-        logicalType: text
-        physicalType: VARCHAR(16777216)
-        maxLen: null
-        isNullable: true
-        description: null
-        criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
 ```
 
 ### Definitions
@@ -1045,7 +1495,7 @@ This section lists stakeholders and the history of their relation with this data
 contractStakeholders: 
   - name: David Austin
     email: david.austin@revance.com
-    role: Data Manager
+    role: Data Innovations Manager
     dateIn: null
     dateOut: null
 ```
