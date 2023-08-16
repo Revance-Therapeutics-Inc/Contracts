@@ -1,5 +1,4 @@
 # Data Contract
-### Last Edited (dd/mm/yyyy): 
 ### By: [Jordan Hasulube](https://www.linkedin.com/in/jordan-hasulube-426814236) - Data Decisioning Intern
 
 ## Table of Contents
