@@ -29,8 +29,8 @@ domainOwnerEmail: senthil.salvaraj@revance.com
 partionedOn: URL
 quantumName: url quantum
 usagePurpose: Inventory; Analytical
-description:
-limitations:
+description: Tables and attributes related to URLs. Urls are tools for marketing used by only a subset of practices. Some use multiple urls.
+limitations: Financial Reporting; Any other uses that require  1 on 1 accuracy, since one practice can have many urls.
 version: 0.0.1
 status: current
 uniqueContractId: 25da803a-9bad-4caf-bd28-1318d57af812
@@ -50,10 +50,8 @@ kind: virtualDataset
 type: tables
 
 # Physical access
-#DRIVER INFORMATION REMOVED. NOT APPLICABLE FOR REVANCE
 database: staging_test
 schema: cdp
-schedulerAppName: null #IE Data Bricks, Airflow, Data ALM, etc.
 
 # Tags
 tags: link, website, web address, web page, page, hyperlink
@@ -67,14 +65,13 @@ tags: link, website, web address, web page, page, hyperlink
 | partitionedOn | No | The column of the master table that its rows were partitioned on.|
 | quantumName | No | Name given to the quantum by George Earl. |
 | usagePurpose | No | Description of what kind of tasks this domain may be used for. |
+| description | Yes | Description of the domain and the nature of the data it holds|
+| limitations | Yes| Description of areas that the data from this quantum cannot be used in |
 | version|Yes|Current version of the data contract. Uses semantic versioning.|
 status|Yes|Current status of the dataset. Example value would be current. |
 | uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; version 4 uuid generated from [this URL](https://www.uuidgenerator.net/version1)|
 |activeDate| Yes | The date that this contract becomes active.|
 | nextReassessmentDate | No | The next date that the contract will be reassessed.|
-description.purpose|No|Purpose of the dataset, table or column (depending on the level); the key may appear at the dataset, table, or column level.|
-description.limitations|No|Limitations of the dataset, table or column (depending on the level); the key may appear at the dataset, table, or column level.|
-description|No|Object. Holds purpose and limitations attributes for this data contract. |
 tenant|No|Indicates the property the data is primarily associated with. Value is case insensitive.|
 |teamSypportDl | No | Email Distribution List where you can request for support. Not set up as of July 2023.|
 |teamSupportSlackChannel | No | Slack channel where you can reach out to for support. Not set up as of July 2023. |
