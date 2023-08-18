@@ -113,7 +113,7 @@ dataset:
       - STITCH_DEV.CDPRAW.PAI_WEBPAGE_RAW
       - STITCH_DEV.CDPRAW.PAI_WEBSCRAPING_RAW
       - STITCH_DEV.CDPRAW.PAI_AESTHETICSOCIETY_RAW
-    physicalName: STAGING_DEV.CDP.URL_MASTER 
+    physicalName: STAGING_DEV.CDP.URL_MASTER
     description: Master dimension of all urls
     tags: null
     dataGranularity: One row per url
@@ -205,7 +205,7 @@ dataset:
         businessName: load date when the url is populated into the table
         logicalType: string
         physicalType: VARCHAR(16777216)
-        maxLen: 
+        maxLen: 23 (fixed)
         isNullable: false
         description: identifies when the url is populated into the final table STAGING_DEV.CDP.URL_MASTER
         criticalDataElementStatus: identifies when the url load process got completed successfully
@@ -219,7 +219,7 @@ dataset:
         businessName: modified date
         logicalType: string
         physicalType: VARCHAR(16777216)
-        maxLen: 
+        maxLen: 0
         isNullable: true
         description: 'date the url was modified(if not modified, default to null)'
         criticalDataElementStatus: null
@@ -240,7 +240,7 @@ dataset:
         businessName: business url
         logicalType: string
         physicalType: VARCHAR(16777216)
-        maxLen: 
+        maxLen: 68
         isNullable: false
         description: null
         criticalDataElementStatus: true
@@ -254,7 +254,7 @@ dataset:
         businessName: url domain name
         logicalType: string
         physicalType: VARCHAR(16777216)
-        maxLen: 
+        maxLen: 65
         isNullable: false
         description: the url without the web extention on the end
         criticalDataElementStatus: false
@@ -268,7 +268,7 @@ dataset:
         businessName: url score
         logicalType: string
         physicalType: VARCHAR(16777216)
-        maxLen: 
+        maxLen: 5 (fixed)
         isNullable: false
         description: business score to identify how reliable the website to refer to as a practice.
         criticalDataElementStatus: true
@@ -294,7 +294,7 @@ dataset.columns.isPrimary|No|Boolean value specifying whether the column is prim
 dataset.columns.businessName|Yes|A more conversational name for the column. Think about it as changing from  'Data Speak' to 'English'.|
 dataset.columns.logicalType|Yes|The logical data type of the column For example, 'varchar' would fit under the type of 'string'.|
 dataset.columns.physicalType|Yes|The actual physical column data type. |
-dataset.columns.maxLen | No | The max length occuring in the column, or that would be expected to occur in the column under normal conditions
+dataset.columns.maxLen | No | The max length occuring in the column, or that would be expected to occur in the column under normal conditions. If a value has (fixed) after it, that means the length of that column never deviates from the stated length.
 dataset.columns.isNullable|Yes|indicates if the column may contain Null values; possible values are true and false.|
 dataset.columns.description| Yes| description of the column. Null if the column name is self-explanatory |
 dataset.columns.criticalDataElementStatus|No|True or false indicator; If element is considered a critical data element (CDE) then true else false.|
