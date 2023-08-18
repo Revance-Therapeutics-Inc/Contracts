@@ -105,7 +105,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: false
-        description: null
+        description: identifies each location, each one having a distinct location_key. 
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -144,7 +144,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: Unique number that identifies each custmer registered in OCE. Its part of the OCE URL and useful when extra identification is needed.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -157,7 +157,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: Unique number asigned to each account in OCE.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -170,7 +170,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: Business name of the practice.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -183,7 +183,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: Street name and number of where the practice is located.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -196,7 +196,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: suite number of the practice.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -209,7 +209,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: city where the practice is located.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -222,7 +222,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: state where the practice is located.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -235,7 +235,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: postal code of where the practice is located. 
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -248,7 +248,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: web url of the practice.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -261,7 +261,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: web domain of the practice.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -274,7 +274,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: NUMBER(1,0)
         maxLen: null
         isNullable: true
-        description: null
+        description: OCE field that indicates which address was registered first.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -287,7 +287,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: NUMBER(1,0)
         maxLen: null
         isNullable: true
-        description: null
+        description:  OCE field that indicates if there has been a shippment to the address.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -300,7 +300,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: NUMBER(1,0)
         maxLen: null
         isNullable: true
-        description: null
+        description:  OCE field that indicates if the address can recieve Daxxi. 
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
