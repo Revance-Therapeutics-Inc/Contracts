@@ -27,7 +27,7 @@ domainOwner: Senthil Selvaraj
 domainOwnerEmail: senthil.selvaraj@revance.com
 partitionedOn: null
 quantumName: address quantum
-usagePurpose: null
+usagePurpose: Analytical
 description: Addresses for practices. One practice may have many addresses.
 limitations: Anything that requires 1 on 1 accuracy, as there is not necessarily only one address for each practice.
 version: 0.0.1
@@ -99,12 +99,12 @@ This section describes the dataset and the schema of the data contract.
     dataGranularity: One row per address
     columns:
       - column: oce_salesforce_id
-        isPrimary: true
+        isPrimary: false
         businessName: oce salesforce id 
         logicalType: text
         physicalType: VARCHAR(16777216)
         maxLen: null
-        isNullable: false
+        isNullable: true
         description: null
         criticalDataElementStatus: null
         transformSourceTables: null
