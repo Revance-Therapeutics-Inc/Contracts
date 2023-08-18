@@ -73,7 +73,7 @@ status|Yes|Current status of the dataset. Example value would be current. |
 |activeDate| Yes | The date that this contract becomes active.|
 | nextReassessmentDate | No | The next date that the contract will be reassessed.|
 tenant|No|Indicates the property the data is primarily associated with. Value is case insensitive.|
-|teamSypportDl | No | Email Distribution List where you can request for support. Not set up as of July 2023.|
+|teamSypportDl | No | Email Distribution List where you can request for support.|
 |teamSupportSlackChannel | No | Slack channel where you can reach out to for support. Not set up as of July 2023. |
 pointOfContact| Yes | an array containing points of contact using name and email. |
 pointOfContact.name|No|Name of employee to reach in order to inquire about the contract.
