@@ -92,7 +92,7 @@ This section describes the dataset and the schema of the data contract.
 
 ```YAML
 dataset:
-  - table: url master, tables organized top down
+  - table: url master
     sourceTables:
       - STITCH_DEV.CDPSTAGE.URL_MASTER_STG
       - STITCH_DEV.CDPRAW.URL_MASTER_RAW
