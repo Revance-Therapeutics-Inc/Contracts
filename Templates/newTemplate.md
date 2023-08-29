@@ -83,8 +83,8 @@ description.purpose|No|Purpose of the dataset, table or column (depending on the
 description.limitations|No|Limitations of the dataset, table or column (depending on the level); the key may appear at the dataset, table, or column level.|
 description|No|Object. Holds purpose and limitations attributes for this data contract. |
 tenant|No|Indicates the property the data is primarily associated with. Value is case insensitive.|
-|teamSypportDl | No | Email Distribution List where you can request for support. Not set up as of July 2023.|
-|teamSupportSlackChannel | No | Slack channel where you can reach out to for support. Not set up as of July 2023. |
+|teamSypportDl | No | Email Distribution List where you can request for support.|
+|teamSupportSlackChannel | No | Slack channel where you can reach out to for support. Not set up as of Sept. 2023. |
 pointOfContact| Yes | an array containing points of contact using name and email. |
 pointOfContact.name|No|Name of employee to reach in order to inquire about the contract.
 pointOfContact.email| Yes | Email related to the employee whos name occupies the pointOfContactName field.
