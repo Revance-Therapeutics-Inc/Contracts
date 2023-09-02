@@ -53,7 +53,7 @@ database: STAGING_DEV
 schema: CDP
 
 # Tags
-tags: null
+tags: location, place, site, venue, position
 ```
 
 |Key|Required|Description|
@@ -113,12 +113,12 @@ This section describes the dataset and the schema of the data contract.
         sampleValues: null
       - column: customer_number
         isPrimary: false
-        businessName: customer number 
+        businessName: customer primary identification key
         logicalType: text
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: foreign key relating to customer_master table
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -196,7 +196,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: 5 digit postal code(for areas in the USA)
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -209,7 +209,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: concatenation of street, suite, city, state, country, and postal_code
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -313,7 +313,7 @@ This section describes the dataset and the schema of the data contract.
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: summary of sample product quantity orders for address
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
