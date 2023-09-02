@@ -53,7 +53,7 @@ database: STAGING_DEV
 schema: CDP
 
 # Tags
-tags: null
+tags: address, street, venue, position, site, place
 ```
 
 |Key|Required|Description|
@@ -103,7 +103,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: location key 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 11(fixed)
         isNullable: false
         description: identifies each location, each one having a distinct location_key. 
         criticalDataElementStatus: null
@@ -116,7 +116,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: url key 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 11(fixed)
         isNullable: true
         description: null
         criticalDataElementStatus: null
