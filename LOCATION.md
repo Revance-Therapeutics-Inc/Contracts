@@ -129,7 +129,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: practice key 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 0
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -142,7 +142,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: oce salesforce id 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 18(fixed)
         isNullable: true
         description: Unique number that identifies each custmer registered in OCE. Its part of the OCE URL and useful when extra identification is needed.
         criticalDataElementStatus: null
@@ -155,7 +155,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: customer number 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 8(fixed)
         isNullable: true
         description: Unique number asigned to each account in OCE.
         criticalDataElementStatus: null
@@ -168,7 +168,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: practice name 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 125
         isNullable: true
         description: Business name of the practice.
         criticalDataElementStatus: null
@@ -181,7 +181,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: street 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 99
         isNullable: true
         description: Street name and number of where the practice is located.
         criticalDataElementStatus: null
@@ -194,7 +194,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: suite 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 92
         isNullable: true
         description: suite number of the practice.
         criticalDataElementStatus: null
@@ -207,7 +207,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: city 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 35
         isNullable: true
         description: city where the practice is located.
         criticalDataElementStatus: null
@@ -220,7 +220,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: state 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 4
         isNullable: true
         description: state where the practice is located.
         criticalDataElementStatus: null
@@ -233,7 +233,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: postal code 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 10
         isNullable: true
         description: postal code of where the practice is located. 
         criticalDataElementStatus: null
@@ -246,7 +246,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: url 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 62
         isNullable: true
         description: web url of the practice.
         criticalDataElementStatus: null
@@ -259,7 +259,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: domain 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 48
         isNullable: true
         description: web domain of the practice.
         criticalDataElementStatus: null
@@ -272,7 +272,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: is primary address 
         logicalType: number
         physicalType: NUMBER(1,0)
-        maxLen: null
+        maxLen: 1(fixed)
         isNullable: true
         description: OCE field that indicates which address was registered first.
         criticalDataElementStatus: null
@@ -285,7 +285,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: is ship to 
         logicalType: number
         physicalType: NUMBER(1,0)
-        maxLen: null
+        maxLen: 1(fixed)
         isNullable: true
         description:  OCE field that indicates if there has been a shippment to the address.
         criticalDataElementStatus: null
@@ -298,7 +298,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: is daxi unlocked 
         logicalType: number
         physicalType: NUMBER(1,0)
-        maxLen: null
+        maxLen: 1(fixed)
         isNullable: true
         description:  OCE field that indicates if the address can recieve Daxxi. 
         criticalDataElementStatus: null
@@ -311,7 +311,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: address with multi url 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 132
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -324,7 +324,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: addresstoken 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 52
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -337,7 +337,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: addresstoken2 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 52
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -350,7 +350,7 @@ This section describes the dataset and the schema of the data contract.
         businessName: practice source 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 3
         isNullable: true
         description: null
         criticalDataElementStatus: null
