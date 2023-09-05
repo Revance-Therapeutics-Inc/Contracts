@@ -1,0 +1,322 @@
+# LOCATION MASTER
+domain: LOCATION
+domainOwner: Senthil Selvaraj
+domainOwnerEmail: senthil.selvaraj@revance.com
+partitionedOn: LOCATION_KEY
+quantumName: location quantum
+usagePurpose: null
+description: null
+limitations: null
+version: 0.0.1
+status: current
+uniqueContractID: 8d8a336f-2ee5-4aab-86be-bd966825a238
+activeDate: null
+nextReassessmentDate: null
+tenant: Revance
+
+# Getting support
+teamSupportDl: dl.dd@revance.com
+teamSupportSlackChannel: null
+
+# Physical parts
+sourcePlatform: snowflake
+sourceSystem: snowflake
+
+kind: virtualDataset
+type: tables
+
+# Physical access
+database: STAGING_DEV
+schema: CDP
+
+# Tags
+tags: address, street, venue, position, site, place
+
+  - table: location master 
+    sourceTables: null
+    physicalName: STAGING_DEV.CDP.LOCATION_MASTER
+    priorTableName: null
+    description: master dimension of all locations
+    tags: null
+    dataGranularity: One row per location
+    columns:
+      - column: location_key
+        isPrimary: true
+        businessName: location key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 11(fixed)
+        isNullable: false
+        description: identifies each location, each one having a distinct location_key. 
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: url_key
+        isPrimary: false
+        businessName: url key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 11(fixed)
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: practice_key
+        isPrimary: false
+        businessName: practice key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 0
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: oce_salesforce_id
+        isPrimary: false
+        businessName: oce salesforce id 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 18(fixed)
+        isNullable: true
+        description: Unique number that identifies each custmer registered in OCE. Its part of the OCE URL and useful when extra identification is needed.
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: customer_number
+        isPrimary: false
+        businessName: customer number 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 8(fixed)
+        isNullable: true
+        description: Unique number asigned to each account in OCE.
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: practice_name
+        isPrimary: false
+        businessName: practice name 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 125
+        isNullable: true
+        description: Business name of the practice.
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: street
+        isPrimary: false
+        businessName: street 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 99
+        isNullable: true
+        description: Street name and number of where the practice is located.
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: suite
+        isPrimary: false
+        businessName: suite 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 92
+        isNullable: true
+        description: suite number of the practice.
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: city
+        isPrimary: false
+        businessName: city 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 35
+        isNullable: true
+        description: city where the practice is located.
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: state
+        isPrimary: false
+        businessName: state 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 4
+        isNullable: true
+        description: state where the practice is located.
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: postal_code
+        isPrimary: false
+        businessName: postal code 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 10
+        isNullable: true
+        description: postal code of where the practice is located. 
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: url
+        isPrimary: false
+        businessName: url 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 62
+        isNullable: true
+        description: web url of the practice.
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: domain
+        isPrimary: false
+        businessName: domain 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 48
+        isNullable: true
+        description: web domain of the practice.
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_primary_address
+        isPrimary: false
+        businessName: is primary address 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: 1(fixed)
+        isNullable: true
+        description: OCE field that indicates which address was registered first.
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_ship_to
+        isPrimary: false
+        businessName: is ship to 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: 1(fixed)
+        isNullable: true
+        description:  OCE field that indicates if there has been a shippment to the address.
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_daxi_unlocked
+        isPrimary: false
+        businessName: is daxi unlocked 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: 1(fixed)
+        isNullable: true
+        description:  OCE field that indicates if the address can recieve Daxxi. 
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: address_with_multi_url
+        isPrimary: false
+        businessName: address with multi url 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 132
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: addresstoken
+        isPrimary: false
+        businessName: addresstoken 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 52
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: addresstoken2
+        isPrimary: false
+        businessName: addresstoken2 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 52
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: practice_source
+        isPrimary: false
+        businessName: practice source 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 3
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+
+contractStakeholders: 
+  - name: David Austin
+    email: david.austin@revance.com
+    role: Data Innovation Manager
+    dateIn: 2023-04-10
+    dateOut: null
+
+- role: datagov_r
+  access: read only
+  approvers:
+    - name: IT
+      approvalLevel: 1
+- role: datagov_rw
+  access: read and write
+  approvers:
+    - name: Senthil Salvaraj
+      approvalLevel: 1
+    - name: Parker Hanna
+      approvalLevel: 1
