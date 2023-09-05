@@ -1,1 +1,309 @@
+# ADDRESS MASTER
+domain: ADDRESS
+domainOwner: Senthil Selvaraj
+domainOwnerEmail: senthil.selvaraj@revance.com
+partitionedOn: null
+quantumName: address quantum
+usagePurpose: Analytical
+description: Addresses for practices. One practice may have many addresses.
+limitations: Anything that requires 1 on 1 accuracy, as there is not necessarily only one address for each practice.
+version: 0.0.1
+status: current
+uniqueContractID: c0197a01-9553-45e1-919c-f0746468ea4f
+activeDate: null
+nextReassessmentDate: null
+tenant: Revance
 
+# Getting support
+teamSupportDl: dl.dd@revance.com
+teamSupportSlackChannel: null
+
+# Physical parts
+sourcePlatform: snowflake
+sourceSystem: snowflake
+
+kind: virtualDataset
+type: tables
+
+# Physical access
+database: STAGING_DEV
+schema: CDP
+
+# Tags
+tags: location, place, site, venue, position
+
+  - table: address master 
+    sourceTables: null
+    physicalName: STAGING_DEV.CDP.ADDRESS_MASTER
+    priorTableName: null
+    description: master dimension of all addresss
+    tags: null
+    dataGranularity: One row per address
+    columns:
+      - column: oce_salesforce_id
+        isPrimary: false
+        businessName: oce salesforce id 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: customer_number
+        isPrimary: false
+        businessName: customer primary identification key
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: foreign key relating to customer_master table
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: practice_name
+        isPrimary: false
+        businessName: practice name 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: street
+        isPrimary: false
+        businessName: street 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: suite
+        isPrimary: false
+        businessName: suite 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: city
+        isPrimary: false
+        businessName: city 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: state
+        isPrimary: false
+        businessName: state 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: postal_code
+        isPrimary: false
+        businessName: postal code 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: 5 digit postal code(for areas in the USA)
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: fulladdress
+        isPrimary: false
+        businessName: fulladdress 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: concatenation of street, suite, city, state, country, and postal_code
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: url
+        isPrimary: false
+        businessName: url 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: domain
+        isPrimary: false
+        businessName: domain 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_primary_address
+        isPrimary: false
+        businessName: is primary address 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_ship_to
+        isPrimary: false
+        businessName: is ship to 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: ship_product_quantity_orders
+        isPrimary: false
+        businessName: ship product quantity orders 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_daxi_unlocked
+        isPrimary: false
+        businessName: is daxi unlocked 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: is_sample_sent_to
+        isPrimary: false
+        businessName: is sample sent to 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: sample_product_quantity_orders
+        isPrimary: false
+        businessName: sample product quantity orders 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: summary of sample product quantity orders for address
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: incomplete
+        isPrimary: false
+        businessName: incomplete 
+        logicalType: number
+        physicalType: NUMBER(1,0)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: addresstoken
+        isPrimary: false
+        businessName: addresstoken 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: null
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+
+contractStakeholders: 
+  - name: David Austin
+    email: david.austin@revance.com
+    role: Data Innovation Manager
+    dateIn: 2023-04-10
+    dateOut: null
+  
+- role: datagov_r
+  access: read only
+  approvers:
+    - name: IT
+      approvalLevel: 1
+- role: datagov_rw
+  access: read and write
+  approvers:
+    - name: Senthil Salvaraj
+      approvalLevel: 1
+    - name: Parker Hanna
+      approvalLevel: 1
