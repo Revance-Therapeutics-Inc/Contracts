@@ -48,7 +48,7 @@ dataset:
         businessName: practice key 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 10(fixed)
         isNullable: false
         description: primary key for practice
         criticalDataElementStatus: null
@@ -61,7 +61,7 @@ dataset:
         businessName: url key 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 11(fixed)
         isNullable: true
         description: url foreign key for practice
         criticalDataElementStatus: null
@@ -74,7 +74,7 @@ dataset:
         businessName: location key 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 11(fixed)
         isNullable: true
         description: location foreign key for practice
         criticalDataElementStatus: null
