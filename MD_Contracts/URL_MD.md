@@ -68,24 +68,24 @@ tags: link, website, web address, web page, page, hyperlink
 | description | Yes | Description of the domain and the nature of the data it holds|
 | limitations | Yes| Description of areas that the data from this quantum cannot be used in |
 | version|Yes|Current version of the data contract. Uses semantic versioning.|
-status|Yes|Current status of the dataset. Example value would be current. |
+|status|Yes|Current status of the dataset. Example value would be current. |
 | uniqueContractId |Yes| A unique identifier used to reduce the risk of dataset name collisions; version 4 uuid generated from [this URL](https://www.uuidgenerator.net/version1)|
 |activeDate| Yes | The date that this contract becomes active.|
 | nextReassessmentDate | No | The next date that the contract will be reassessed.|
-tenant|No|Indicates the property the data is primarily associated with. Value is case insensitive.|
+|tenant|No|Indicates the property the data is primarily associated with. Value is case insensitive.|
 |teamSypportDl | No | Email Distribution List where you can request for support.|
 |teamSupportSlackChannel | No | Slack channel where you can reach out to for support. Not set up as of July 2023. |
-pointOfContact| Yes | an array containing points of contact using name and email. |
-pointOfContact.name|No|Name of employee to reach in order to inquire about the contract.
-pointOfContact.email| Yes | Email related to the employee whos name occupies the pointOfContactName field.
-sourcePlatform|Yes|The platform where the dataset resides.
-sourceSystem|Yes|The system where the dataset resides.  Example values are Snowflake and BigQuery|
-kind|Yes|The kind of Rosewall dataset being cataloged; Expected values are `virtualDataset` or `managedDataset`.
-|type|Yes|Identifies the types of objects in the dataset.  For Snowflake the expected value would be tables.
-database|Yes|Database in which the target table resides.|
-schema|Yes|The schema in Snowflake where the dataSet takes place.|
-schedulerAppName| No | scheduler application used for this database |
-tags|No|a list of tags that may be assigned to the dataset, table or column; the `tags` keyword may appear at any level.
+|pointOfContact| Yes | an array containing points of contact using name and email. |
+|pointOfContact.name|No|Name of employee to reach in order to inquire about the contract.|
+|pointOfContact.email| Yes | Email related to the employee whos name occupies the pointOfContactName field.|
+|sourcePlatform|Yes|The platform where the dataset resides.|
+|sourceSystem|Yes|The system where the dataset resides.  Example values are Snowflake and BigQuery|
+|kind|Yes|The kind of Rosewall dataset being cataloged; Expected values are `virtualDataset` or `managedDataset`.|
+|type|Yes|Identifies the types of objects in the dataset.  For Snowflake the expected value would be tables.|
+|database|Yes|Database in which the target table resides.|
+|schema|Yes|The schema in Snowflake where the dataSet takes place.|
+|schedulerAppName| No | scheduler application used for this database |
+|tags|No|a list of tags that may be assigned to the dataset, table or column; the `tags` keyword may appear at any level.|
 
 ## Dataset and Schema
 This section describes the dataset and the schema of the data contract.
@@ -289,22 +289,22 @@ dataset:
 |dataset.description | Yes | Description of the current table.|
 |dataset.tags| No | Words related to the current table and it's main applications.|
 |dataset.dataGranularity| Yes | Whether the row has one or many rows per primarily identified object. |
-dataset.columns|Yes|Array. A list of columns in the table.|
-dataset.columns.isPrimary|No|Boolean value specifying whether the column is primary or not. Default is false.|
-dataset.columns.businessName|Yes|A more conversational name for the column. Think about it as changing from  'Data Speak' to 'English'.|
-dataset.columns.logicalType|Yes|The logical data type of the column For example, 'varchar' would fit under the type of 'string'.|
-dataset.columns.physicalType|Yes|The actual physical column data type. |
-dataset.columns.maxLen | No | The max length occuring in the column, or that would be expected to occur in the column under normal conditions. If a value has (fixed) after it, that means the length of that column never deviates from the stated length.
-dataset.columns.isNullable|Yes|indicates if the column may contain Null values; possible values are true and false.|
-dataset.columns.description| Yes| description of the column. Null if the column name is self-explanatory |
-dataset.columns.criticalDataElementStatus|No|True or false indicator; If element is considered a critical data element (CDE) then true else false.|
-dataset.columns.tags|No|A list of tags that may be assigned to the dataset, table or column; the tags keyword may appear at any level.|
-dataset|Yes|Array. A list of tables within the dataset to be cataloged
-dataset.columns.transformSourceTables| No | Source table(s) for the data in this column. Common sources would be OCE and OPUL |
-dataset.columns.transformLogic| No | Exact SQL statements performed to get the data in its current state |
-dataset.columns.transformDescription| No | Informal Description of Transformation Logic in a more understandable way |
-dataset.columns.sampleValues| No | Sample values for the column to help the viewer understand exaclty what it is |
-dataset.columns.column|Yes|the name of the column.|
+|dataset.columns|Yes|Array. A list of columns in the table.|
+|dataset.columns.isPrimary|No|Boolean value specifying whether the column is primary or not. Default is false.|
+|dataset.columns.businessName|Yes|A more conversational name for the column. Think about it as changing from  'Data Speak' to 'English'.|
+|dataset.columns.logicalType|Yes|The logical data type of the column For example, 'varchar' would fit under the type of 'string'.|
+|dataset.columns.physicalType|Yes|The actual physical column data type. |
+|dataset.columns.maxLen | No | The max length occuring in the column, or that would be expected to occur in the column under normal conditions. If a value has (fixed) after it, that means the length of that column never deviates from the stated length.|
+|dataset.columns.isNullable|Yes|indicates if the column may contain Null values; possible values are true and false.|
+|dataset.columns.description| Yes| description of the column. Null if the column name is self-explanatory |
+|dataset.columns.criticalDataElementStatus|No|True or false indicator; If element is considered a critical data element (CDE) then true else false.|
+|dataset.columns.tags|No|A list of tags that may be assigned to the dataset, table or column; the tags keyword may appear at any level.|
+|dataset|Yes|Array. A list of tables within the dataset to be cataloged|
+|dataset.columns.transformSourceTables| No | Source table(s) for the data in this column. Common sources would be OCE and OPUL |
+|dataset.columns.transformLogic| No | Exact SQL statements performed to get the data in its current state |
+|dataset.columns.transformDescription| No | Informal Description of Transformation Logic in a more understandable way |
+|dataset.columns.sampleValues| No | Sample values for the column to help the viewer understand exaclty what it is |
+|dataset.columns.column|Yes|the name of the column.|
 
 ## Stakeholders
 This section lists stakeholders and the history of their relation with this data contract.
@@ -323,13 +323,13 @@ contractStakeholders:
 
 |Key|Required|Description|
 | --- | --- | --- |
-contractStakeholders|No|Array
-contractStakeholders.name|Yes|The stakeholder's first and last name|
-contractStakeholders.email|No| The stakeholder's work email|
-contractStakeholders.role|No|The stakeholder's job role; Examples might be owner, data steward. There is no limit on the role.|
-contractStakeholders.dateIn|No|The date when the user became a stakeholder.|
-contractStakeholders.dateOut|No|The date when the user ceased to be a stakeholder|
-contractStakeholders.replacedByUsername|No|The username of the user who replaced the stakeholder|
+|contractStakeholders|No|Array
+|contractStakeholders.name|Yes|The stakeholder's first and last name|
+|contractStakeholders.email|No| The stakeholder's work email|
+|contractStakeholders.role|No|The stakeholder's job role; Examples might be owner, data steward. There is no limit on the role.|
+|contractStakeholders.dateIn|No|The date when the user became a stakeholder.|
+|contractStakeholders.dateOut|No|The date when the user ceased to be a stakeholder|
+|contractStakeholders.replacedByUsername|No|The username of the user who replaced the stakeholder|
 
 ## Roles 
 
@@ -354,8 +354,8 @@ This section lists the roles that a consumer may need to access the dataset depe
 
 |Key|Required|Description|
 | --- | --- | --- |
-roles|Yes|Array. A list of roles that will provide user access to the dataset.|
-roles.role|Yes|name of the IAM role that provides access to the dataset.|
-roles.access|Yes|the type of access provided by the IAM role; the value will generally come directly from the "BQ dataset to IAM roles mapping" document.|
-roles.firstLevelApprovers|No|the name(s) of the first level approver(s) of the role.|
-roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the role.|
+|roles|Yes|Array. A list of roles that will provide user access to the dataset.|
+|roles.role|Yes|name of the IAM role that provides access to the dataset.|
+|roles.access|Yes|the type of access provided by the IAM role; the value will generally come directly from the "BQ dataset to IAM |roles mapping" document.|
+|roles.firstLevelApprovers|No|the name(s) of the first level approver(s) of the role.|
+|roles.secondLevelApprovers|No|the name(s) of the second level approver(s) of the role.|
