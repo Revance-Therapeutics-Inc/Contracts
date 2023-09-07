@@ -86,7 +86,7 @@ tags: location, place, site, venue, position
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: street for address
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -99,7 +99,7 @@ tags: location, place, site, venue, position
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: suite number if applicable
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -112,7 +112,7 @@ tags: location, place, site, venue, position
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: city in which practice resides
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -125,7 +125,7 @@ tags: location, place, site, venue, position
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: state in which practice resides
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -164,7 +164,7 @@ tags: location, place, site, venue, position
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: website for practice
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -177,7 +177,7 @@ tags: location, place, site, venue, position
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: domain name for url
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -188,9 +188,9 @@ tags: location, place, site, venue, position
         businessName: is primary address 
         logicalType: number
         physicalType: NUMBER(1,0)
-        maxLen: null
+        maxLen: 1(fixed)
         isNullable: true
-        description: null
+        description: 1 or 0, if address is the primary address for the current practice
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
