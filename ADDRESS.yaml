@@ -32,6 +32,10 @@ schema: CDP
 # Tags
 tags: location, place, site, venue, position
 
+# ----------------------------------------------------------
+# Dataset and Schema
+
+dataset:
   - table: address master 
     sourceTables: null
     physicalName: STAGING_DEV.CDP.ADDRESS_MASTER
@@ -288,12 +292,18 @@ tags: location, place, site, venue, position
         transformDescription: null
         sampleValues: null
 
+# ----------------------------------------------------------
+# Stakeholders
+
 contractStakeholders: 
   - name: David Austin
     email: david.austin@revance.com
     role: Data Innovation Manager
     dateIn: 2023-04-10
     dateOut: null
+    
+  # ----------------------------------------------------------
+  # Roles
   
 - role: datagov_r
   access: read only
