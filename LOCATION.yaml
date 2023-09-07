@@ -1,7 +1,7 @@
 # LOCATION MASTER
 domain: LOCATION
-domainOwner: Senthil Selvaraj
-domainOwnerEmail: senthil.selvaraj@revance.com
+domainOwner: Parker Hanna
+domainOwnerEmail: parker.hanna@revance.com
 partitionedOn: LOCATION_KEY
 quantumName: location quantum
 usagePurpose: null
