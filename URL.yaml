@@ -32,6 +32,8 @@ schema: cdp
 # Tags
 tags: link, website, web address, web page, page, hyperlink
 
+# ----------------------------------------------------------
+# Dataset and Schema
 dataset:
   - table: url master
     sourceTables:
@@ -218,6 +220,8 @@ dataset:
         transformLogic: null
         transformDescription: null
         sampleValues: null
+# ----------------------------------------------------------
+# Stakeholders
 
 contractStakeholders: 
   - name: David Austin
@@ -227,6 +231,7 @@ contractStakeholders:
     dateOut: null
     replacedByUsername: null
 
+# Roles
 - role: datagov_r
   access: read only
   approvers:
