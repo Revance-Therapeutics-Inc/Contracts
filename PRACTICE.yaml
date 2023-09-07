@@ -4,8 +4,8 @@ domainOwner: Senthil Selvaraj
 domainOwnerEmail: senthil.selvaraj@revance.com
 partitionedOn: null
 quantumName: practice quantum
-usagePurpose: null
-description: null
+usagePurpose: Used to keep track of potential customers, as well as current customer practices.
+description: Practices and their associated data(location, url, source, etc.)
 limitations: null
 version: 0.0.1
 status: current
