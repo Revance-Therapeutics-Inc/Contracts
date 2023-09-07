@@ -231,6 +231,7 @@ contractStakeholders:
     dateOut: null
     replacedByUsername: null
 
+# ----------------------------------------------------------
 # Roles
 - role: datagov_r
   access: read only
