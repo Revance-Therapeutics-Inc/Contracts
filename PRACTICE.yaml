@@ -32,6 +32,9 @@ schema: CDP
 # Tags
 tags: null
 
+# ----------------------------------------------------------
+# Dataset and Schema
+dataset:
   - table: practice master 
     sourceTables: null
     physicalName: STAGING_DEV.CDP.PRACTICE_MASTER
@@ -717,6 +720,8 @@ tags: null
         transformDescription: null
         sampleValues: null
 
+# ----------------------------------------------------------
+# Stakeholders
 contractStakeholders: 
   - name: David Austin
     email: david.austin@revance.com
@@ -724,6 +729,8 @@ contractStakeholders:
     dateIn: 2023-04-01
     dateOut: null
 
+# ----------------------------------------------------------
+# Roles
 - role: datagov_r
   access: read only
   approvers:
