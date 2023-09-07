@@ -60,7 +60,7 @@ tags: address, street, venue, position, site, place
         physicalType: VARCHAR(16777216)
         maxLen: 11(fixed)
         isNullable: true
-        description: null
+        description: foreign key for URL
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -73,7 +73,7 @@ tags: address, street, venue, position, site, place
         physicalType: VARCHAR(16777216)
         maxLen: 0
         isNullable: true
-        description: null
+        description: foreign key for practice
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
