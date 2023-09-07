@@ -47,7 +47,7 @@ tags: null
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: false
-        description: null
+        description: primary key for practice
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -60,7 +60,7 @@ tags: null
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: url foreign key for practice
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -73,7 +73,7 @@ tags: null
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: location foreign key for practice
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -86,7 +86,7 @@ tags: null
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: name of the practice
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -99,7 +99,7 @@ tags: null
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: derived practice name using pre defined logic
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -125,7 +125,7 @@ tags: null
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: customer number derived from pre-defined logic
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
