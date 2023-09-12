@@ -14,4 +14,4 @@ This program is very similar to createmarkdowncontract.py, however this one only
 
 ## findmaxlen.py
 
-This program takes a table from the informational schema in snowflake and creates a query to find the maximum lengths for all columns of a specific table. To get the table from the informational schema, you need to run select * from [DATABASE].INFORMATIONAL_SCHEMA.COLUMNS WHERE TABLE_NAME = '[TABLE NAME]' and download results into the same folder as the automation program.
+This program takes a table from the informational schema in snowflake and creates a query to find the maximum lengths for all columns of a specific table. To get the table from the informational schema, you need to run *SELECT* * *FROM* *[DATABASE].INFORMATIONAL_SCHEMA.COLUMNS* *WHERE* *TABLE_NAME* = *'[TABLE NAME]'* and download results into the same folder as the automation program.
