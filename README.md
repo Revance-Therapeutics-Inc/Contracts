@@ -3,7 +3,8 @@ Repo for data contracts
 
 ## Data Contracts
 
-The Data Contracts are stored in the base folder. There is one for Each Domain.
+The Data Contracts each have their own folder. Inside each folder is a .md file and a .yaml file. The .yaml file is the actual Data Contract, and should be kept up to date regularly. The .md file is meant to walk you through the contract if you are unfamiliar with it. 
+### When adding new information to a Contract or updating it, make sure to make those changes to the .yaml file.
 
 ## Automation
 
