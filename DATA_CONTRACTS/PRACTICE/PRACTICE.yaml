@@ -146,7 +146,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: true, false
       - column: opul_platform_number
         isPrimary: false
         businessName: opul platform number 
@@ -154,12 +154,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 87
         isNullable: true
-        description: null
+        description: number identifying the opul platform(s) that the practice uses. Can contain multiple numbers with a verticle bar(|) between them.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: "P01682", "P06046", "P03441 | P03437 | P04026 | P03466 | P04029 | P03442 | P03443"
       - column: opul_salesforce_id
         isPrimary: false
         businessName: opul salesforce id 
@@ -172,7 +172,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 0013s00000zxg7BAAQ, 0016A00000dfP5LQAU, 0018X00003GemXZQAZ
       - column: opul_organization_id
         isPrimary: false
         businessName: opul organization id 
@@ -185,7 +185,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: Organization_160, Organization_1176
       - column: opul_gx_provider_id
         isPrimary: false
         businessName: opul gx provider id 
@@ -193,12 +193,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 26
         isNullable: true
-        description: null
+        description: opul gx provider id of the current practice. If the practice has an "opul gx provider id", it also has a "opul_merchant_id" shown below
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: pro_XMWKFsU1CnL/LaVJ/Ukd7g, pro_9fSp0VgIvX9O8NiRrWognQ
       - column: opul_merchant_id
         isPrimary: false
         businessName: opul merchant id 
@@ -206,12 +206,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 15
         isNullable: true
-        description: null
+        description: opul id of the current practice. Practice can only has a merchant ID if it is a current or former customer
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 700100000003436, 700100000003664
       - column: opul_account_type
         isPrimary: false
         businessName: opul account type 
@@ -219,12 +219,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 16
         isNullable: true
-        description: null
+        description: type of account that the practice is. Sample values recorded below
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: PROSPECT, CURRENT CUSTOMER, FORMER CUSTOMER, NA
       - column: categories
         isPrimary: false
         businessName: categories 
@@ -232,12 +232,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 71
         isNullable: true
-        description: null
+        description: medical categories that the practice fits into. Similar to "specialty" column below.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: "Business management consultant", "Medical spa", "Hair Removal, Medical Spas"
       - column: specialty
         isPrimary: false
         businessName: specialty 
@@ -245,12 +245,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 513
         isNullable: true
-        description: null
+        description: medical specialty of the practice
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: General Dentist, Medical Aesthetics, Cosmetic, Spa
       - column: street
         isPrimary: false
         businessName: street 
@@ -258,12 +258,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 106
         isNullable: true
-        description: null
+        description: street on which the practice's main location resides
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 1171 MEDICAL ST.SUITE 101, 2231 CENTRAL PARK AVE, 514 PARKLAND RD
       - column: city
         isPrimary: false
         businessName: city 
@@ -271,12 +271,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 55
         isNullable: true
-        description: null
+        description: city in which the practice's main location resides
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: MANHATTAN BEACH, MECHANICSVILLE, ORMOND BEACH
       - column: state
         isPrimary: false
         businessName: state 
@@ -284,12 +284,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 20
         isNullable: true
-        description: null
+        description: state in which the practice's main location resides
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: KY, BC, CA
       - column: postal_code
         isPrimary: false
         businessName: postal code 
@@ -297,12 +297,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 20
         isNullable: true
-        description: null
+        description: 5 digit postal code(for areas in the USA)
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 48912, 10019, V3Z 0C6
       - column: fulladdress
         isPrimary: false
         businessName: full address 
@@ -310,20 +310,20 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 136
         isNullable: true
-        description: null
+        description: street, city, state, and postal code concatenated
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: "1568 LAKE LANSING RD, LANSING, MI, 48912", "9225 N 3RD STSTE 300, PHOENIX, AZ, 85020"
       - column: territory
         isPrimary: false
         businessName: territory 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 37
         isNullable: true
-        description: 37
+        description: territory where the practice's main location resides
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -336,12 +336,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 19
         isNullable: true
-        description: null
+        description: region in which the practice's main location resides.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: NYC & LONG ISLAND, GREAT LAKES, SOUTH FLORIDA
       - column: zone
         isPrimary: false
         businessName: zone 
@@ -349,12 +349,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 7
         isNullable: true
-        description: null
+        description: time zone that the practice's main location resides in
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: , CENTRAL, EAST, WEST
       - column: rha_customer
         isPrimary: false
         businessName: rha customer 
@@ -367,7 +367,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 0, 1
       - column: daxi_customer
         isPrimary: false
         businessName: daxi customer 
@@ -380,7 +380,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 0, 1
       - column: national_account
         isPrimary: false
         businessName: national account 
@@ -393,7 +393,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 0, 1
       - column: sample_received
         isPrimary: false
         businessName: sample received 
@@ -406,7 +406,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 0, 1
       - column: trained
         isPrimary: false
         businessName: trained 
@@ -419,7 +419,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 0, 1
       - column: multi_location_count
         isPrimary: false
         businessName: multi location count 
@@ -427,12 +427,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 3
         isNullable: true
-        description: null
+        description: The ammount of locations that the account operates in.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 1, 2, 3, 14, 28
       - column: phone
         isPrimary: false
         businessName: phone 
@@ -445,7 +445,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 19738678388, 19185883663, 14349775160
       - column: email
         isPrimary: false
         businessName: email 
@@ -458,7 +458,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: joel@redstonemd.com, shawna.poston@michaellinmd.com, agambino@rizzieri.com
       - column: url
         isPrimary: false
         businessName: url 
@@ -471,7 +471,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: captureyourcurves.com, valleyplasticsurgery.com.au, aesthetics-by-aurora.ueniweb.com
       - column: domain
         isPrimary: false
         businessName: domain 
@@ -479,12 +479,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 52
         isNullable: true
-        description: domain name of the url
+        description: domain name of the url. See sample values to see the difference
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: captureyourcurves, valleyplasticsurgery, aesthetics-by-aurora
       - column: parent_salesforce_id
         isPrimary: false
         businessName: parent salesforce id 
@@ -531,12 +531,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 19
         isNullable: true
-        description: null
+        description: main keyword identifying this account in the web mining process
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: medspa, aesthetics+practice, plastic+surgery, hydrafacial
       - column: new_hpscore
         isPrimary: false
         businessName: new hpscore 
@@ -544,12 +544,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 5
         isNullable: true
-        description: null
+        description: hp calculated from new scoring algorithm written in summer 2023. Ranges from 0 to 100
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 47.78, 24.56, 67.80
       - column: pai_practice_status
         isPrimary: false
         businessName: pai practice status 
@@ -557,12 +557,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 8
         isNullable: true
-        description: null
+        description: what type of account this is
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: PRACTICE
       - column: in_oce
         isPrimary: false
         businessName: in oce 
@@ -627,7 +627,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 1, 2, 3
       - column: vet_suspects
         isPrimary: false
         businessName: vet suspects 
@@ -640,7 +640,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 1, 2, 3
       - column: foot_suspects
         isPrimary: false
         businessName: foot suspects 
@@ -653,7 +653,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 1, 2, 3
       - column: practice_source
         isPrimary: false
         businessName: practice source 
@@ -661,12 +661,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 8
         isNullable: true
-        description: null
+        description: source of practice info.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: PAI, OCE, ChatGPT
       - column: addresstoken
         isPrimary: false
         businessName: addresstoken 
@@ -674,12 +674,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 60
         isNullable: true
-        description: null
+        description: shortened version of fulladdress
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 5321 BRANDYWINE STE 11 | 19803
       - column: addresstoken2
         isPrimary: false
         businessName: addresstoken2 
@@ -687,38 +687,38 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 60
         isNullable: true
-        description: null
+        description: addresstoken1 without suite info
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 5321 BRANDYWINE | 19803
       - column: load_date
         isPrimary: false
         businessName: load date 
         logicalType: timestamp_ntz
         physicalType: NUMBER(1,0)
-        maxLen: null
+        maxLen: 23
         isNullable: true
-        description: null
+        description: date that this account was loaded into practice_master
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 2023-08-23 09:55:57
       - column: modified_date
         isPrimary: false
         businessName: modified date 
         logicalType: timestamp_ntz
         physicalType: NUMBER(1,0)
-        maxLen: null
+        maxLen: 23
         isNullable: true
-        description: null
+        description: date that this account was last mosdified. Default to null.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: same as load date
 
 # ----------------------------------------------------------
 # Stakeholders
