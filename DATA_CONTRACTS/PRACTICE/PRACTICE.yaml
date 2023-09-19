@@ -48,7 +48,7 @@ dataset:
         businessName: practice key 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 10(fixed)
         isNullable: false
         description: primary key for practice
         criticalDataElementStatus: null
@@ -61,7 +61,7 @@ dataset:
         businessName: url key 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 11(fixed)
         isNullable: true
         description: foreign key for url
         criticalDataElementStatus: null
@@ -74,7 +74,7 @@ dataset:
         businessName: location key 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 11(fixed)
         isNullable: true
         description: foreign key for location
         criticalDataElementStatus: null
@@ -87,7 +87,7 @@ dataset:
         businessName: practice name 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 124
         isNullable: true
         description: name of practice
         criticalDataElementStatus: null
@@ -100,7 +100,7 @@ dataset:
         businessName: customer number 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 8(fixed)
         isNullable: true
         description: foreign key for customer
         criticalDataElementStatus: null
@@ -113,7 +113,7 @@ dataset:
         businessName: oce salesforce id 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 18
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -126,7 +126,7 @@ dataset:
         businessName: oce account type 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 10
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -139,7 +139,7 @@ dataset:
         businessName: oce account status 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 4
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -152,7 +152,7 @@ dataset:
         businessName: opul platform number 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 87
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -165,7 +165,7 @@ dataset:
         businessName: opul salesforce id 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 18
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -178,7 +178,7 @@ dataset:
         businessName: opul organization id 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 17
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -191,7 +191,7 @@ dataset:
         businessName: opul gx provider id 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 26
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -204,7 +204,7 @@ dataset:
         businessName: opul merchant id 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 15
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -217,7 +217,7 @@ dataset:
         businessName: opul account type 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 16
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -230,7 +230,7 @@ dataset:
         businessName: categories 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 71
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -243,7 +243,7 @@ dataset:
         businessName: specialty 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 513
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -256,7 +256,7 @@ dataset:
         businessName: street 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 106
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -269,7 +269,7 @@ dataset:
         businessName: city 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 55
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -282,7 +282,7 @@ dataset:
         businessName: state 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 20
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -295,7 +295,7 @@ dataset:
         businessName: postal code 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 20
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -305,10 +305,10 @@ dataset:
         sampleValues: null
       - column: fulladdress
         isPrimary: false
-        businessName: fulladdress 
+        businessName: full address 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 136
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -323,7 +323,7 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: null
         isNullable: true
-        description: null
+        description: 37
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -334,7 +334,7 @@ dataset:
         businessName: region 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 19
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -347,7 +347,7 @@ dataset:
         businessName: zone 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 7
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -360,9 +360,9 @@ dataset:
         businessName: rha customer 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 1(fixed)
         isNullable: true
-        description: null
+        description: is the account an rha customer
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -373,9 +373,9 @@ dataset:
         businessName: daxi customer 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 1(fixed)
         isNullable: true
-        description: null
+        description: is the account a daxi customer
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -386,9 +386,9 @@ dataset:
         businessName: national account 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 1(fixed)
         isNullable: true
-        description: null
+        description: is the account a national account
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -399,9 +399,9 @@ dataset:
         businessName: sample received 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 1(fixed)
         isNullable: true
-        description: null
+        description: has the account recieved a sample
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -412,9 +412,9 @@ dataset:
         businessName: trained 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 1(fixed)
         isNullable: true
-        description: null
+        description: has the account been trained
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -425,7 +425,7 @@ dataset:
         businessName: multi location count 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 3
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -438,9 +438,9 @@ dataset:
         businessName: phone 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 25
         isNullable: true
-        description: null
+        description: phone number associated with account
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -451,9 +451,9 @@ dataset:
         businessName: email 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 47
         isNullable: true
-        description: null
+        description: email associated with the account
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -464,9 +464,9 @@ dataset:
         businessName: url 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 62
         isNullable: true
-        description: null
+        description: url associated with the account
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -477,9 +477,9 @@ dataset:
         businessName: domain 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 52
         isNullable: true
-        description: null
+        description: domain name of the url
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -490,7 +490,7 @@ dataset:
         businessName: parent salesforce id 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 18
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -503,7 +503,7 @@ dataset:
         businessName: oce parent account number 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 8
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -516,7 +516,7 @@ dataset:
         businessName: oce parent account name 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 58
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -529,7 +529,7 @@ dataset:
         businessName: keyword 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 19
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -542,7 +542,7 @@ dataset:
         businessName: new hpscore 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 5
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -555,7 +555,7 @@ dataset:
         businessName: pai practice status 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 8
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -620,7 +620,7 @@ dataset:
         businessName: dent suspects 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 1
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -633,7 +633,7 @@ dataset:
         businessName: vet suspects 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 1
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -646,7 +646,7 @@ dataset:
         businessName: foot suspects 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 1
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -659,7 +659,7 @@ dataset:
         businessName: practice source 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 8
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -672,7 +672,7 @@ dataset:
         businessName: addresstoken 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 60
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -685,7 +685,7 @@ dataset:
         businessName: addresstoken2 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 60
         isNullable: true
         description: null
         criticalDataElementStatus: null
