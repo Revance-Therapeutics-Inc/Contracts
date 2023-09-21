@@ -35,7 +35,7 @@ tags: null
 # ----------------------------------------------------------
 # Dataset and Schema
 dataset:
-    - table: practice master 
+  - table: practice master 
     sourceTables: null
     physicalName: STAGING_DEV.CDP.PRACTICE_MASTER
     priorTableName: null
