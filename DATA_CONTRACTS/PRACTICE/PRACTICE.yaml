@@ -55,40 +55,40 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: PR10118785
       - column: url_key
         isPrimary: false
         businessName: url key 
         logicalType: text
         physicalType: VARCHAR(16777216)
         maxLen: 11(fixed)
-        isNullable: true
+        isNullable: false
         description: foreign key for url
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: URL15678257
       - column: location_key
         isPrimary: false
         businessName: location key 
         logicalType: text
         physicalType: VARCHAR(16777216)
         maxLen: 11(fixed)
-        isNullable: true
-        description: foreign key for location
+        isNullable: false
+        description: foreign key for location_master. 
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: LOC11975608
       - column: practice_name
         isPrimary: false
         businessName: practice name 
         logicalType: text
         physicalType: VARCHAR(16777216)
         maxLen: 124
-        isNullable: true
+        isNullable: false
         description: name of practice
         criticalDataElementStatus: null
         transformSourceTables: null
@@ -120,7 +120,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 0016g00000aAbRVAA0, 0016g00000aAaphAAC
       - column: oce_account_type
         isPrimary: false
         businessName: oce account type 
@@ -133,7 +133,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: PROSPECT, CUTOMER, CONFIGURED
       - column: oce_account_status
         isPrimary: false
         businessName: oce account status 
