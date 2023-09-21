@@ -104,7 +104,7 @@ dataset:
         description: for populated url, domain value is derived to populate this column
         criticalDataElementStatus: domain value of the respective website is hygiened which will be used as a lookup to related tables
         tags: null
-        transformSourceTables: sourced from all of the raw tables mentioned in the table list   --Does this have to be a list???
+        transformSourceTables: sourced from all of the raw tables mentioned in the table list
         transformLogic:
           - domains derived from unique urls populated into STITCH_DEV.CDPSTAGE.URL_MASTER_STG
           - post url_key value generation populated into the final table STAGING_DEV.CDP.URL_MASTER
@@ -185,13 +185,13 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 68
         isNullable: false
-        description: null
+        description: uniform resource locator sourced from url master table
         criticalDataElementStatus: true
         tags: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: fantybeautywellness.com, aibypolly.com, vivereaesthetics.com
       - column: domain
         isPrimary: false
         businessName: url domain name
@@ -199,13 +199,13 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 65
         isNullable: false
-        description: the url without the web extention on the end
+        description: domain name of the url
         criticalDataElementStatus: false
         tags: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: fantybeautywellness, aibypolly, vivereaesthetics
       - column: hp_score
         isPrimary: false
         businessName: url score
@@ -213,13 +213,13 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 5 (fixed)
         isNullable: false
-        description: business score to identify how reliable the website to refer to as a practice.
+        description: business score to identify how reliable the website to refer to as a practice. Ranges from 0-100
         criticalDataElementStatus: true
         tags: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 34.56, 23.00
 # ----------------------------------------------------------
 # Stakeholders
 
