@@ -26,7 +26,7 @@ kind: virtualDataset
 type: tables
 
 # Physical access
-database: STAGING_DEV
+database: STAGING_TEST
 schema: CDP
 
 # Tags
@@ -38,20 +38,59 @@ tags: location, place, site, venue, position
 dataset:
   - table: address master 
     sourceTables: null
-    physicalName: STAGING_DEV.CDP.ADDRESS_MASTER
+    physicalName: STAGING_TEST.CDP.ADDRESS_MASTER
     priorTableName: null
     description: master dimension of all addresss
     tags: null
     dataGranularity: One row per address
     columns:
+      - column: address_key
+        isPrimary: true
+        businessName: address key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 12(fixed)
+        isNullable: false
+        description: address_master primary key
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: url_key
+        isPrimary: false
+        businessName: url key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 11(fixed)
+        isNullable: true
+        description: foreign key for url master
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: practice_key
+        isPrimary: false
+        businessName: practice key 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 10(fixed)
+        isNullable: true
+        description: foreign key for practice master
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
       - column: oce_salesforce_id
         isPrimary: false
         businessName: oce salesforce id 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 18
         isNullable: true
-        description: null
+        description: id in oce_salesforce
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -59,12 +98,12 @@ dataset:
         sampleValues: null
       - column: customer_number
         isPrimary: false
-        businessName: customer primary identification key
+        businessName: customer number 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 8
         isNullable: true
-        description: foreign key relating to customer_master table
+        description: customer primary identifier
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -75,9 +114,9 @@ dataset:
         businessName: practice name 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 125
         isNullable: true
-        description: null
+        description: name of the practice
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -88,9 +127,9 @@ dataset:
         businessName: street 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
-        isNullable: true
-        description: street for address
+        maxLen: 99
+        isNullable: false
+        description: street on which the practice operates
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -101,9 +140,9 @@ dataset:
         businessName: suite 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 92
         isNullable: true
-        description: suite number if applicable
+        description: suite in which the practice operates
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -114,9 +153,9 @@ dataset:
         businessName: city 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 35
         isNullable: true
-        description: city in which practice resides
+        description: city in which the practice operates
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -127,9 +166,9 @@ dataset:
         businessName: state 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 4
         isNullable: true
-        description: state in which practice resides
+        description: state in which the practice operates
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -140,22 +179,9 @@ dataset:
         businessName: postal code 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 10
         isNullable: true
-        description: 5 digit postal code(for areas in the USA)
-        criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-      - column: fulladdress
-        isPrimary: false
-        businessName: fulladdress 
-        logicalType: text
-        physicalType: VARCHAR(16777216)
-        maxLen: null
-        isNullable: true
-        description: concatenation of street, suite, city, state, country, and postal_code
+        description: 5 digit zip code(For US locations) for the practice location
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -166,9 +192,9 @@ dataset:
         businessName: url 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 60
         isNullable: true
-        description: website for practice
+        description: url for this practice
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -179,9 +205,9 @@ dataset:
         businessName: domain 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 46
         isNullable: true
-        description: domain name for url
+        description: domain name of the practice
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
@@ -192,85 +218,46 @@ dataset:
         businessName: is primary address 
         logicalType: number
         physicalType: NUMBER(1,0)
-        maxLen: 1(fixed)
+        maxLen: null
         isNullable: true
-        description: 1 or 0, if address is the primary address for the current practice
+        description: whether or not this address is the primary address for the current practice
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 0, 1
       - column: is_ship_to
         isPrimary: false
         businessName: is ship to 
         logicalType: number
         physicalType: NUMBER(1,0)
-        maxLen: null
+        maxLen: 1
         isNullable: true
-        description: null
+        description: whether or not we can ship to this location
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
-      - column: ship_product_quantity_orders
-        isPrimary: false
-        businessName: ship product quantity orders 
-        logicalType: text
-        physicalType: VARCHAR(16777216)
-        maxLen: null
-        isNullable: true
-        description: null
-        criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
+        sampleValues: 0, 1
       - column: is_daxi_unlocked
         isPrimary: false
         businessName: is daxi unlocked 
         logicalType: number
         physicalType: NUMBER(1,0)
-        maxLen: null
+        maxLen: 1
         isNullable: true
-        description: null
+        description: whether or not this practice is allowed to buy daxxify
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
         sampleValues: null
-      - column: is_sample_sent_to
+      - column: address_with_multi_url
         isPrimary: false
-        businessName: is sample sent to 
-        logicalType: number
-        physicalType: NUMBER(1,0)
-        maxLen: null
-        isNullable: true
-        description: null
-        criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-      - column: sample_product_quantity_orders
-        isPrimary: false
-        businessName: sample product quantity orders 
+        businessName: address with multi url 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
-        isNullable: true
-        description: summary of sample product quantity orders for address
-        criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
-        sampleValues: null
-      - column: incomplete
-        isPrimary: false
-        businessName: incomplete 
-        logicalType: number
-        physicalType: NUMBER(1,0)
-        maxLen: null
+        maxLen: 132
         isNullable: true
         description: null
         criticalDataElementStatus: null
@@ -283,7 +270,33 @@ dataset:
         businessName: addresstoken 
         logicalType: text
         physicalType: VARCHAR(16777216)
-        maxLen: null
+        maxLen: 49
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: addresstoken2
+        isPrimary: false
+        businessName: addresstoken2 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 49
+        isNullable: true
+        description: null
+        criticalDataElementStatus: null
+        transformSourceTables: null
+        transformLogic: null
+        transformDescription: null
+        sampleValues: null
+      - column: practice_source
+        isPrimary: false
+        businessName: practice source 
+        logicalType: text
+        physicalType: VARCHAR(16777216)
+        maxLen: 3
         isNullable: true
         description: null
         criticalDataElementStatus: null
