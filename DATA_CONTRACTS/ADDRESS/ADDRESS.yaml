@@ -56,7 +56,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: ADDR10033938
       - column: url_key
         isPrimary: false
         businessName: url key 
@@ -69,7 +69,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: URL10395715
       - column: practice_key
         isPrimary: false
         businessName: practice key 
@@ -82,7 +82,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: PR10102169
       - column: oce_salesforce_id
         isPrimary: false
         businessName: oce salesforce id 
@@ -95,7 +95,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 0016g00000aAcjDAAS
       - column: customer_number
         isPrimary: false
         businessName: customer number 
@@ -108,7 +108,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: CN055850
       - column: practice_name
         isPrimary: false
         businessName: practice name 
@@ -121,7 +121,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: GRAND STRAND DERMATOLOGY
       - column: street
         isPrimary: false
         businessName: street 
@@ -134,7 +134,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 933 MEDICAL DR
       - column: suite
         isPrimary: false
         businessName: suite 
@@ -147,7 +147,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: STE 2300
       - column: city
         isPrimary: false
         businessName: city 
@@ -160,7 +160,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: LANSDALE, MYRTLE BEACH, PLYMOUTH
       - column: state
         isPrimary: false
         businessName: state 
@@ -173,7 +173,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: OH, TX, NV
       - column: postal_code
         isPrimary: false
         businessName: postal code 
@@ -186,7 +186,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 77043, 43256
       - column: url
         isPrimary: false
         businessName: url 
@@ -199,7 +199,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: riseandthrivehealthcare.com, youthfulaesthetics-web.com, mystarlooks.com
       - column: domain
         isPrimary: false
         businessName: domain 
@@ -212,7 +212,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: riseandthrivehealthcare, youthfulaesthetics-web, mystarlooks
       - column: is_primary_address
         isPrimary: false
         businessName: is primary address 
@@ -251,7 +251,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 0, 1
       - column: address_with_multi_url
         isPrimary: false
         businessName: address with multi url 
@@ -264,7 +264,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: "store.grahamdermatology.com | grahamdermatology.com", "regenesislife.co | regenesisortho.com"
       - column: addresstoken
         isPrimary: false
         businessName: addresstoken 
@@ -277,7 +277,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: "202 FIELDALE | 27302", "519 KING STE 103 | 78155"
       - column: addresstoken2
         isPrimary: false
         businessName: addresstoken2 
@@ -285,12 +285,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 49
         isNullable: true
-        description: null
+        description: addresstoken 1 wihtout suite information.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: "202 FIELDALE | 27302", "519 KING | 78155"
       - column: practice_source
         isPrimary: false
         businessName: practice source 
