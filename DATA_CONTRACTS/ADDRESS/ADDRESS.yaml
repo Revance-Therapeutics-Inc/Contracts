@@ -298,7 +298,7 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 3
         isNullable: true
-        description: null
+        description: source of data in current address column
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
