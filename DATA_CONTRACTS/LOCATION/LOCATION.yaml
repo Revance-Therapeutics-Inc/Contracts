@@ -259,12 +259,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 132
         isNullable: true
-        description: null
+        description: a list of url's that are associated with the single address. Items in the list are separated with a vertical bar(|)
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: "houstoneye.com | locations.houstoneye.com", "byrdaesthetic.com | thecontourclub.com"
       - column: addresstoken
         isPrimary: false
         businessName: addresstoken 
@@ -272,12 +272,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 52
         isNullable: true
-        description: null
+        description: street, suite, and zip code of address concatenated together
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: "3500 JEFFERSON STE 200 | 78731", "5211 FARM STE 102 | 77388"
       - column: addresstoken2
         isPrimary: false
         businessName: addresstoken2 
@@ -285,12 +285,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 52
         isNullable: true
-        description: null
+        description: addresstoken1 without suite information. If addresstoken1 does not conain a suite number, this will be the same.
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: "3500 JEFFERSON | 78731", "5211 FARM| 77388"
       - column: practice_source
         isPrimary: false
         businessName: practice source 
@@ -298,12 +298,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 3
         isNullable: true
-        description: null
+        description: the source of the location data of the current row of location data. 
         criticalDataElementStatus: null
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: OCE, PAI
 
 # ----------------------------------------------------------
 # Stakeholders
