@@ -37,7 +37,13 @@ tags: address, street, venue, position, site, place
 
 dataset:
   - table: location master 
-    sourceTables: null
+    sourceTables:
+      - STAGING_DEV.SALES.VW_ACCOUNT
+      - STAGING_DEV.SALES.VW_ACCOUNT_ADDRESS
+      - STAGING_DEV.SALES.VW_RSM_SALES
+      - STAGING_DEV.CDP.URL_MASTER
+      - STITCH_DEV.CDPSTAGE.PAI_PRACTICEMASTER_WORK
+      - STITCH_DEV.CDPSTAGE.LOCATION_MASTER_STG
     physicalName: STAGING_DEV.CDP.LOCATION_MASTER
     priorTableName: null
     description: master dimension of all locations
