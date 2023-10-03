@@ -36,7 +36,14 @@ tags: null
 # Dataset and Schema
 dataset:
   - table: practice master 
-    sourceTables: null
+    sourceTables:
+      - STITCH_DEV.CDPRAW.PAI_YELP_RAW
+      - STITCH_DEV.CDPRAW.PAI_GOOGLEMAPS_RAW
+      - STITCH_DEV.CDPRAW.PAI_CARECREDIT_RAW
+      - STITCH_DEV.CDPRAW.PAI_WEBSCRAPING_RAW
+      - STITCH_DEV.CDPRAW.PAI_PRACTICEMASTER_RAW
+      - STITCH_TEST.CDPSTAGE.PAI_PRACTICEMASTER_WORK
+      - STITCH_TEST.CDPSTAGE.PAI_PRACTICE_PER_LOC
     physicalName: STAGING_DEV.CDP.PRACTICE_MASTER
     priorTableName: null
     description: master dimension of all practices
