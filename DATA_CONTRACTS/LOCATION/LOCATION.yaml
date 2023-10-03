@@ -4,8 +4,8 @@ domainOwner: Parker Hanna
 domainOwnerEmail: parker.hanna@revance.com
 partitionedOn: LOCATION_KEY
 quantumName: location quantum
-usagePurpose: null
-description: null
+usagePurpose: used for customer targeting, and analytics related to the location of practices.
+description: holds locations for different practices. One practice can have many locations. 
 limitations: null
 version: 0.0.1
 status: current
