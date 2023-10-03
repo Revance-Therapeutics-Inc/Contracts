@@ -62,7 +62,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: LOC117010389, LOC116976229
       - column: url_key
         isPrimary: false
         businessName: url key 
@@ -75,7 +75,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: URL26792040, URL26698027
       - column: practice_key
         isPrimary: false
         businessName: practice key 
@@ -88,7 +88,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: PR10105542, PR10107712
       - column: oce_salesforce_id
         isPrimary: false
         businessName: oce salesforce id 
@@ -101,7 +101,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 0016g00000aAf5qAAC, 0016g00000aAZWaAAO
       - column: customer_number
         isPrimary: false
         businessName: customer number 
@@ -114,7 +114,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: CN061735, CN041972
       - column: practice_name
         isPrimary: false
         businessName: practice name 
@@ -127,7 +127,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: DR. SCHENDEL PLASTIC SURGERY, SUNSHINE DERMATOLOGY
       - column: street
         isPrimary: false
         businessName: street 
@@ -140,7 +140,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 6249 GRAND RIVER AVE, 9660 E 146TH ST
       - column: suite
         isPrimary: false
         businessName: suite 
@@ -153,7 +153,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: STE 101, STE 100 STUDIOSTE 25, STE 200-B  
       - column: city
         isPrimary: false
         businessName: city 
@@ -166,7 +166,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: BOCA RATON, NEW YORK, OCEAN SPRINGS
       - column: state
         isPrimary: false
         businessName: state 
@@ -179,7 +179,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: CA, MS, IL
       - column: postal_code
         isPrimary: false
         businessName: postal code 
@@ -192,7 +192,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 92649, 49024
       - column: url
         isPrimary: false
         businessName: url 
@@ -205,7 +205,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: skinspecifics.com, desertbloomplasticsurgery.com
       - column: domain
         isPrimary: false
         businessName: domain 
@@ -218,7 +218,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: skinspecifics, desertbloomplasticsurgery
       - column: is_primary_address
         isPrimary: false
         businessName: is primary address 
@@ -231,7 +231,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 1, 0
       - column: is_ship_to
         isPrimary: false
         businessName: is ship to 
@@ -244,7 +244,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 1, 0
       - column: is_daxi_unlocked
         isPrimary: false
         businessName: is daxi unlocked 
@@ -257,7 +257,7 @@ dataset:
         transformSourceTables: null
         transformLogic: null
         transformDescription: null
-        sampleValues: null
+        sampleValues: 1, 0
       - column: address_with_multi_url
         isPrimary: false
         businessName: address with multi url 
