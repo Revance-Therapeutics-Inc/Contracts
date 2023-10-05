@@ -41,6 +41,7 @@ dataset:
       - STITCH_DEV.CDPRAW.PAI_GOOGLEMAPS_RAW
       - STITCH_DEV.CDPRAW.PAI_CARECREDIT_RAW
       - STITCH_DEV.CDPRAW.PAI_WEBSCRAPING_RAW
+      - STITCH_DEV.CDPRAW.PAI_WEBPAGE_RAW
       - STITCH_DEV.CDPRAW.PAI_PRACTICEMASTER_RAW
       - STITCH_TEST.CDPSTAGE.PAI_PRACTICEMASTER_WORK
       - STITCH_TEST.CDPSTAGE.PAI_PRACTICE_PER_LOC
@@ -72,9 +73,17 @@ dataset:
         isNullable: false
         description: foreign key for url
         criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
+        transformSourceTables: 
+          - STITCH_DEV.CDPRAW.PAI_GOOGLEMAPS_RAW
+          - STITCH_DEV.CDPRAW.PAI_WEBSCRAPING_RAW
+          - STITCH_DEV.CDPRAW.PAI_YELP_RAW
+          - STITCH_DEV.CDPRAW.PAI_WEBPAGE_RAW
+          - STITCH_DEV.CDPRAW.PAI_CARECREDIT_RAW
+        transformLogic: 
+          - urls are cleaned using regex, and matched up with eachother
+          - urls are inserted into practice master raw table
+          - practice master raw urls are inserted into practice master work table
+        transformDescription: Hygiene applied to the sourced websites
         sampleValues: URL15678257
       - column: location_key
         isPrimary: false
@@ -98,9 +107,12 @@ dataset:
         isNullable: false
         description: name of practice
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables:
+          - STITCH_DEV.CDPRAW.PAI_YELP_RAW
+          - STITCH_DEV.CDPRAW.PAI_GOOGLEMAPS_RAW
+          - STITCH_DEV.CDPRAW.PAI_CARECREDIT_RAW
         transformLogic: null
-        transformDescription: null
+        transformDescription: direct pull from source tables
         sampleValues: null
       - column: customer_number
         isPrimary: false
