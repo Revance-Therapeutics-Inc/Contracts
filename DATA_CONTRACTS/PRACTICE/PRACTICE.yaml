@@ -45,6 +45,8 @@ dataset:
       - STITCH_DEV.CDPRAW.PAI_PRACTICEMASTER_RAW
       - STITCH_TEST.CDPSTAGE.PAI_PRACTICEMASTER_WORK
       - STITCH_TEST.CDPSTAGE.PAI_PRACTICE_PER_LOC
+      - STAGING_DEV.CDP.URL_MASTER
+      - STAGING_DEV.CDP.LOCATION_MATER
     physicalName: STAGING_DEV.CDP.PRACTICE_MASTER
     priorTableName: null
     description: master dimension of all practices
