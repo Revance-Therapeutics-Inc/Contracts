@@ -6,7 +6,7 @@ partionedOn: URL
 quantumName: url quantum
 usagePurpose: To keep inventory of urls that belong to practices, as well as track how relevant these urls and associated practices are using custom scoring.
 description: Tables and attributes related to URLs. Urls are tools for marketing used by only a subset of practices. Some use multiple urls.
-limitations: Financial Reporting; Any other uses that require  1 on 1 accuracy, since one practice can have many urls.
+limitations: Financial Reporting, and any other uses that require  1 on 1 accuracy, since one practice can have many urls.
 version: 0.0.1
 status: current
 uniqueContractId: 25da803a-9bad-4caf-bd28-1318d57af812
