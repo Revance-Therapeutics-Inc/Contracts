@@ -45,6 +45,7 @@ dataset:
       - STITCH_DEV.CDPRAW.PAI_PRACTICEMASTER_RAW
       - STITCH_TEST.CDPSTAGE.PAI_PRACTICEMASTER_WORK
       - STITCH_TEST.CDPSTAGE.PAI_PRACTICE_PER_LOC
+      - STAGING_TEST.SALES.VW_ACCOUNT
       - STAGING_DEV.CDP.URL_MASTER
       - STAGING_DEV.CDP.LOCATION_MATER
     physicalName: STAGING_DEV.CDP.PRACTICE_MASTER
@@ -55,7 +56,7 @@ dataset:
     columns:
       - column: practice_key
         isPrimary: true
-        businessName: practice key 
+        businessName: practice key
         logicalType: text
         physicalType: VARCHAR(16777216)
         maxLen: 10(fixed)
@@ -83,8 +84,8 @@ dataset:
           - STITCH_DEV.CDPRAW.PAI_CARECREDIT_RAW
         transformLogic: 
           - urls are cleaned using regex, and matched up with eachother
-          - urls are inserted into practice master raw table
-          - practice master raw urls are inserted into practice master work table
+          - urls are inserted into practice_master_raw table
+          - practice master raw urls are inserted into practice_master_work table
         transformDescription: Hygiene applied to the sourced websites
         sampleValues: URL15678257
       - column: location_key
@@ -96,8 +97,9 @@ dataset:
         isNullable: false
         description: foreign key for location_master. 
         criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
+        transformSourceTables:
+          - STAGING_DEV.CDP.LOCATION_MASTER
+        transformLogic: insert location key from location_master where address_token and url matches
         transformDescription: null
         sampleValues: LOC11975608
       - column: practice_name
@@ -125,7 +127,9 @@ dataset:
         isNullable: true
         description: foreign key for customer
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables: 
+          - STAGING_TEST.SALES.VW_RSM_SALES
+          - STAGING_TEST.CDP.OPUL_PRACTICES
         transformLogic: null
         transformDescription: null
         sampleValues: null
@@ -136,11 +140,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 18
         isNullable: true
-        description: null
+        description: id given from oce salesforce
         criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
+        transformSourceTables:
+          - STAGING_TEST.SALES.VW_ACCOUNT
+        transformLogic: direct pull from source
+        transformDescription: ACCOUNT_ID renamed to OCE_SALESFORCE_ID
         sampleValues: 0016g00000aAbRVAA0, 0016g00000aAaphAAC
       - column: oce_account_type
         isPrimary: false
@@ -149,11 +154,12 @@ dataset:
         physicalType: VARCHAR(16777216)
         maxLen: 10
         isNullable: true
-        description: null
+        description: account type in oce salesforce
         criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
+        transformSourceTables: 
+          - STAGING_TEST.SALES.VW_ACCOUNT
+        transformLogic: direct pull from source
+        transformDescription: OCE__TYPE__C renamed to OCE_ACCOUNT_TYPE
         sampleValues: PROSPECT, CUTOMER, CONFIGURED
       - column: oce_account_status
         isPrimary: false
@@ -164,9 +170,10 @@ dataset:
         isNullable: true
         description: null
         criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
+        transformSourceTables: 
+          - STAGING_TEST.SALES.VW_ACCOUNT
+        transformLogic: direct pull from source
+        transformDescription: OCE_AC.IS_ACTIVE renamed to OCE_ACCOUNT_STATUS
         sampleValues: true, false
       - column: opul_platform_number
         isPrimary: false
@@ -177,9 +184,10 @@ dataset:
         isNullable: true
         description: number identifying the opul platform(s) that the practice uses. Can contain multiple numbers with a verticle bar(|) between them.
         criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
+        transformSourceTables:
+          - STAGING_TEST.SALES.VW_ACCOUNT
+        transformLogic: direct pull from source
+        transformDescription: HINT_ID__C renamed to OPUL_PLATFORM_NUMBER
         sampleValues: "P01682", "P06046", "P03441 | P03437 | P04026 | P03466 | P04029 | P03442 | P03443"
       - column: opul_salesforce_id
         isPrimary: false
@@ -450,8 +458,9 @@ dataset:
         isNullable: true
         description: The ammount of locations that the account operates in.
         criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
+        transformSourceTables: 
+          - STAGING_DEV.CDP.LOCATION_MASTER
+        transformLogic: direct pull from source
         transformDescription: null
         sampleValues: 1, 2, 3, 14, 28
       - column: phone
