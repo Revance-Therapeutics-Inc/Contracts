@@ -59,9 +59,10 @@ dataset:
         isNullable: false
         description: identifies each location, each one having a distinct location_key. 
         criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
+        transformSourceTables: 
+          - STITCH_DEV.CDPSTAGE.LOCATION_MASTER_STG
+        transformLogic: 'LOC' || LOCATION_KEY
+        transformDescription: Concatenate 'LOC' with source table location_key
         sampleValues: LOC117010389, LOC116976229
       - column: url_key
         isPrimary: false
@@ -72,9 +73,10 @@ dataset:
         isNullable: true
         description: foreign key for URL
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables:
+          - STAGING_DEV.CDP.URL_MASTER
         transformLogic: null
-        transformDescription: null
+        transformDescription: Direct pull from source
         sampleValues: URL26792040, URL26698027
       - column: practice_key
         isPrimary: false
@@ -98,20 +100,22 @@ dataset:
         isNullable: true
         description: Unique number that identifies each custmer registered in OCE. Its part of the OCE URL and useful when extra identification is needed.
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables: 
+          - STAGING_DEV.SALES.VW_ACCOUNT
         transformLogic: null
-        transformDescription: null
+        transformDescription: Direct pull and rename from source
         sampleValues: 0016g00000aAf5qAAC, 0016g00000aAZWaAAO
       - column: customer_number
         isPrimary: false
-        businessName: customer number 
+        businessName: customer number
         logicalType: text
         physicalType: VARCHAR(16777216)
         maxLen: 8(fixed)
         isNullable: true
         description: Unique number asigned to each account in OCE.
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables: 
+          - STAGING_DEV.SALES.VW_ACCOUNT
         transformLogic: null
         transformDescription: null
         sampleValues: CN061735, CN041972
@@ -124,9 +128,11 @@ dataset:
         isNullable: true
         description: Business name of the practice.
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables:
+          - STAGING_DEV.SALES.VW_ACCOUNT
+          - STITCH_DEV.CDPSTAGE.PAI_PRACTICEMASTER_WORK
         transformLogic: null
-        transformDescription: null
+        transformDescription: Direct pull from source tables
         sampleValues: DR. SCHENDEL PLASTIC SURGERY, SUNSHINE DERMATOLOGY
       - column: street
         isPrimary: false
@@ -137,9 +143,15 @@ dataset:
         isNullable: true
         description: Street name and number of where the practice is located.
         criticalDataElementStatus: null
-        transformSourceTables: null
-        transformLogic: null
-        transformDescription: null
+        transformSourceTables:
+          - STAGING_DEV.SALES.VW_ACCOUNT_ADDRESS
+        transformLogic: 
+          - UPPER(COALESCE(AD.OCE__ADDRESSLINE1__C, ' ') 
+          - || ' ' 
+          - || COALESCE(AD.OCE__ADDRESSLINE2__C, ' ')
+          - || ' ' 
+          - || COALESCE(AD.OCE__ADDRESSLINE3__C, ' '))
+        transformDescription: Address Line 1, 2, and 3 from source table concatenated
         sampleValues: 6249 GRAND RIVER AVE, 9660 E 146TH ST
       - column: suite
         isPrimary: false
@@ -202,9 +214,10 @@ dataset:
         isNullable: true
         description: web url of the practice.
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables:
+          - STAGING_DEV.CDP.URL_MASTER
         transformLogic: null
-        transformDescription: null
+        transformDescription: Direct pull from source
         sampleValues: skinspecifics.com, desertbloomplasticsurgery.com
       - column: domain
         isPrimary: false
