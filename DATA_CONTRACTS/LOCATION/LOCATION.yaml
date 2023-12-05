@@ -145,13 +145,11 @@ dataset:
         criticalDataElementStatus: null
         transformSourceTables:
           - STAGING_DEV.SALES.VW_ACCOUNT_ADDRESS
+          - STITCH_DEV.CDPSTAGE.PAI_PRACTICEMASTER_WORK
         transformLogic: 
-          - UPPER(COALESCE(AD.OCE__ADDRESSLINE1__C, ' ') 
-          - || ' ' 
-          - || COALESCE(AD.OCE__ADDRESSLINE2__C, ' ')
-          - || ' ' 
-          - || COALESCE(AD.OCE__ADDRESSLINE3__C, ' '))
-        transformDescription: Address Line 1, 2, and 3 from source table concatenated
+          - UPPER(COALESCE(AD.OCE__ADDRESSLINE1__C, ' ') || ' ' || COALESCE(AD.OCE__ADDRESSLINE2__C, ' ') || ' ' || COALESCE(AD.OCE__ADDRESSLINE3__C, ' ')) for vw source.
+          - Direct pull from PAI source
+        transformDescription: Concatenated columns from STAGING_DEV.SALES.VW_ACCOUNT_ADDRESS and direct pull from STITCH_DEV.CDPSTAGE.PAI_PRACTICEMASTER_WORK
         sampleValues: 6249 GRAND RIVER AVE, 9660 E 146TH ST
       - column: suite
         isPrimary: false
@@ -162,7 +160,9 @@ dataset:
         isNullable: true
         description: suite number of the practice.
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables:
+          - STAGING_DEV.SALES.VW_ACCOUNT_ADDRESS
+          - STITCH_DEV.CDPSTAGE.PAI_PRACTICEMASTER_WORK
         transformLogic: null
         transformDescription: null
         sampleValues: STE 101, STE 100 STUDIOSTE 25, STE 200-B  
@@ -175,7 +175,9 @@ dataset:
         isNullable: true
         description: city where the practice is located.
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables: 
+          - STAGING_DEV.SALES.VW_ACCOUNT_ADDRESS
+          - STITCH_DEV.CDPSTAGE.PAI_PRACTICEMASTER_WORK
         transformLogic: null
         transformDescription: null
         sampleValues: BOCA RATON, NEW YORK, OCEAN SPRINGS
@@ -188,7 +190,9 @@ dataset:
         isNullable: true
         description: state where the practice is located.
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables: 
+          - STAGING_DEV.SALES.VW_ACCOUNT_ADDRESS
+          - STITCH_DEV.CDPSTAGE.PAI_PRACTICEMASTER_WORK
         transformLogic: null
         transformDescription: null
         sampleValues: CA, MS, IL
@@ -201,7 +205,9 @@ dataset:
         isNullable: true
         description: postal code of where the practice is located. 
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables: 
+          - STAGING_DEV.SALES.VW_ACCOUNT_ADDRESS
+          - STITCH_DEV.CDPSTAGE.PAI_PRACTICEMASTER_WORK
         transformLogic: null
         transformDescription: null
         sampleValues: 92649, 49024
@@ -215,9 +221,10 @@ dataset:
         description: web url of the practice.
         criticalDataElementStatus: null
         transformSourceTables:
-          - STAGING_DEV.CDP.URL_MASTER
+          - STAGING_DEV.SALES.VW_ACCOUNT
+          - STITCH_DEV.CDPSTAGE.PAI_PRACTICEMASTER_WORK
         transformLogic: null
-        transformDescription: Direct pull from source
+        transformDescription: Direct pull from sources, use regex to format values from STAGING_DEV.SALES.VW_ACCOUNT
         sampleValues: skinspecifics.com, desertbloomplasticsurgery.com
       - column: domain
         isPrimary: false
@@ -228,9 +235,11 @@ dataset:
         isNullable: true
         description: web domain of the practice.
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables: 
+          - STAGING_DEV.SALES.VW_ACCOUNT
+          - STITCH_DEV.CDPSTAGE.PAI_PRACTICEMASTER_WORK
         transformLogic: null
-        transformDescription: null
+        transformDescription: Direct pull from sources, use regex to format values from STAGING_DEV.SALES.VW_ACCOUNT
         sampleValues: skinspecifics, desertbloomplasticsurgery
       - column: is_primary_address
         isPrimary: false
@@ -241,9 +250,10 @@ dataset:
         isNullable: true
         description: OCE field that indicates which address was registered first.
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables: 
+         - STITCH_DEV.CDPSTAGE.LOCATION_MASTER_STG
         transformLogic: null
-        transformDescription: null
+        transformDescription: direct pull from source
         sampleValues: 1, 0
       - column: is_ship_to
         isPrimary: false
@@ -254,9 +264,10 @@ dataset:
         isNullable: true
         description:  OCE field that indicates if there has been a shippment to the address.
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables: 
+         - STITCH_DEV.CDPSTAGE.LOCATION_MASTER_STG
         transformLogic: null
-        transformDescription: null
+        transformDescription: direct pull from source
         sampleValues: 1, 0
       - column: is_daxi_unlocked
         isPrimary: false
@@ -267,9 +278,10 @@ dataset:
         isNullable: true
         description:  OCE field that indicates if the address can recieve Daxxi. 
         criticalDataElementStatus: null
-        transformSourceTables: null
+        transformSourceTables: 
+         - STITCH_DEV.CDPSTAGE.LOCATION_MASTER_STG
         transformLogic: null
-        transformDescription: null
+        transformDescription: direct pull from source
         sampleValues: 1, 0
       - column: address_with_multi_url
         isPrimary: false
