@@ -1,4 +1,4 @@
-# DC
+# Data_Contracts
 Repo for data contracts
 
 ## Data Contracts
